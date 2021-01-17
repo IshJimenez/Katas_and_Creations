@@ -1,0 +1,2 @@
+# WeekendKatas
+Weekend Katas
