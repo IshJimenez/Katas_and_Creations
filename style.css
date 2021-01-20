@@ -1,0 +1,191 @@
+/* COMMON STYLES 
+  -------------------------------- */
+
+/* LAYOUT */
+/* {position:absolute;} */
+/* {position:relative;} */
+/* {float:left;} */
+/* {float:right;} */
+/* {overflow:hidden;} */
+/* {display:block;} */
+/* {display:inline;} */
+/* {display:none;} */
+/* {margin:0} */
+/* {padding:0;} */
+/* {width:100%;} */
+
+/* TYPOGRAPHY */
+/* {line-height:1;} */
+/* {list-style-type:none;} */
+/* {font-size:1em;} */
+/* {font-style:italic;} */
+/* {font-style:normal;} */
+/* {font-weight:bold;} */
+/* {font-weight:normal;} */
+/* {text-align:center;} */
+/* {text-align:right;} */
+/* {text-align:left;} */
+/* {text-decoration:underline;} */
+/* {text-decoration:none;} */
+/* {text-transform:uppercase;} */
+/* {text-transform:none;} */
+
+/* COLOR */
+/* {background-color: #fff;} */
+/* {background-color: transparent;} */
+/* {border: 1px solid #000;} */
+/* {border: none;} */
+/* {color: #000;} */
+/* {border-radius: 0px;} */
+/* {transition: all 0.3s ease-in-out;} */
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  body {
+    background: rgb(3, 69, 145);
+    margin: 0;
+    display: block;
+    }
+  
+  a {
+    background-color: transparent;
+  }
+  
+  img {
+    border-style: none;
+  }
+  
+  /* TOP NAV */
+  #main-nav {
+    background: black;
+    display: inline-block;
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .top-nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .top-nav li {
+    background: black;
+    color: white;
+    display: inline-block;
+    list-style-type: none;
+    padding: 0px 10px 0px 
+    
+  }
+  
+  /* HERO SPLASH */
+  #header {
+    background: gray;
+    height: 200px;
+    width: 100%;
+    padding: 10px 0px 0px;
+  }
+  .hello-text{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .left-div {
+  }
+  
+  .right-div {
+  }
+  
+  /* WORK */
+  /* #work {   // Makes it pull farther to the left
+    display: flex;
+    justify-content: center;
+  } */
+  
+  #work {
+    display: flex;
+    justify-content: center;
+    height: 525px;
+  }
+  .work-cotainer {
+  }
+  
+  .work-01 {
+    background: white;
+    height: 150px;
+    width: 400px;
+    
+  }
+  .work-01 h2{
+    color: black;
+    text-align: center;
+  }
+  .work-01 p{
+    text-align: center;
+  }
+  .work-02 {
+    background: rgb(6, 6, 180);
+    height: 150px;
+  }
+  .work-02 h2{
+    color: white;
+    text-align: center;
+  }
+  .work-02 p{
+    text-align: center;
+  }
+  .work-03 {
+    background: rgb(180, 180, 207);
+    height: 150px;
+  }
+  .work-03 h2 {
+    color: white;
+    text-align: center;
+  }
+  .work-03 p{
+    text-align: center;
+  }
+  
+  /* ABOUT */
+  #about {
+  }
+  
+  .about-text {
+  }
+  
+  /* CONTACT */
+  #contact {
+    align-content: center;
+  }
+  
+  .bot {
+  }
+  
+  .bot-nav {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .bot-nav li{
+    color: white;
+    display: inline-block;
+    list-style-type: none;
+    padding: 0px 20px 0px;
+    font-weight: bold;
+  }
+  
+  /* FOOTER */
+  #footer {
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .copyright {
+    background: rgb(20, 82, 139);
+    color: white;
+  }
+  
