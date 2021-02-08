@@ -76,3 +76,90 @@ function isPrime(num){
   }
   return result;
 }
+
+// 1: Function product() should return the product of any 2 given numbers
+function product(x, y) {
+  return x * y;
+}
+
+// 2: Function isEven() should return true/false depending whether a given number is even
+var isEven = function(number) {
+
+if(number % 2 === 0){ return true; }else{ return false; }
+
+};
+
+isEven();
+
+// 3: Function maxOfTwoNumbers() should return the greater of 2 given numbers
+function maxOfTwoNumbers(a, b) {
+    if (a > b) {
+        return a;
+    } else {
+      return b;
+    }
+}
+
+// 4: Function maxOfThreeNumbers() should return the greater of 3 given numbers
+function maxOfThreeNumbers(a, b, c) {
+   {
+  max_val = 0;
+  if (a > b)
+  {
+    max_val = a;
+  } else
+  {
+    max_val = b;
+  }
+  if (c > max_val) 
+  {
+    max_val = c;
+  }
+  return max_val;
+}
+}
+
+// 5: Function sumArray() should return the sum of an array of numbers
+function sumArray(numbers) {
+     return numbers.reduce((a, b) => a + b, 0);
+};
+ 
+
+
+// 6: Function maxOfArray() should return the greatest number of a non-empty array
+function maxOfArray(numbers) {
+  return Math.max.apply(null, numbers);
+}
+
+
+
+// 7: Function longestString() should return the longest string in an array
+function longestString(strings) {
+ var answer = strings[0];
+  for (i = 0; i < strings.length; i++) {
+    if (strings[i].length > answer.length) {
+      answer = strings[i];
+    }
+  }
+  return answer;
+}
+
+// 8: Function doesWordExist() should return whether a word is in the array
+function doesWordExist(wordsArr, word) {
+    if (wordsArr.length === 0) return null;
+  return wordsArr.includes(word);
+}
+
+
+// 9: Function findUnique() should return the first non-duplicate (non-repeating) word in an array
+function findUnique(wordsArr) {
+  return wordsArr.filter( (elm, idx, arr) => arr.indexOf(elm) == idx );  
+}
+// 10: Function getFullName() should return the string representing person's full name based on the provided object with first and last name as its properties. Example object { firstName: 'Tony', lastName: 'Stark'}
+function getFullName(personObj) {
+}
+
+// 11: Function maxTwoDimArray() should return the greatest number in a two dimensional array
+function maxTwoDimArray(matrix) {
+  return Math.max(...matrix.map(e => Array.isArray(e) ? maxTwoDimArray(e) : e));
+}
