@@ -163,3 +163,9 @@ function getFullName(personObj) {
 function maxTwoDimArray(matrix) {
   return Math.max(...matrix.map(e => Array.isArray(e) ? maxTwoDimArray(e) : e));
 }
+
+// How many arguments 7kyu
+//args_count(1, 2, 3) -> 3
+// args_count(1, 2, 3, 10) -> 4
+
+let args_count = (...args) => [...args].length;
