@@ -192,3 +192,45 @@ function nextPrime(n){
   n++;
   while(!isPrime(n)) n++;
   return n;
+
+
+
+import { React, useState } from "react";
+
+function Cal() {
+  const [counterz, addSub] = useState(0)
+  
+  console.log(useState(0))
+  
+      return (
+          <div>
+              <h1 className = "counter">
+              {counterz}
+              </h1>
+              <button className="increment" onClick={() => addSub(counterz + 1)}>
+                  increment
+              </button>
+              <button className="decrement" onClick={() => addSub(counterz - 1)}>
+                  decrement
+              </button>
+          </div>
+      );
+  }
+  
+  export default Cal
+
+  Mexican Wave
+ 1.  The input string will always be lower case but maybe empty.
+
+ 2.  If the character in the string is whitespace then pass over it as if it was an empty seat
+ function wave(str){
+  let result = [];
+  
+  str.split("").forEach((char, index) => {
+      if (/[a-z]/.test(char)) {
+          result.push(str.slice(0, index) + char.toUpperCase() + str.slice(index + 1));
+      }
+  });
+  
+  return result;
+}
