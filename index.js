@@ -234,3 +234,23 @@ function Cal() {
   
   return result;
 }
+
+The goal of this exercise is to convert a string to a new string where each character in the new string is "(" if that character appears only once in the original string, or ")" if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.
+function duplicateEncode(str){
+  //create a var to hold string value that IGNORES case
+  let word = str.toLowerCase();
+  //create a var to hold the finished string to return after it's looped through 
+  let special = '';
+  //loop through all letters in string
+  for (var z=0; z < word.length; z++) {
+  //check for any characters that repeat  
+  if (word.lastIndexOf(word[z]) === word.indexOf(word[z])) {
+  //for each character that never dupes, place (  
+    special += '(';
+    } else 
+//for each character that IS a dupe, place )      
+    special += ')';
+  }
+//return the full string value where '(' are non duped and all')' are duped  
+  return special;
+  }
