@@ -277,3 +277,23 @@ findNemo = sentence => {
 	return nemoLoc ? `I found Nemo at ${nemoLoc}!` : "I can't find Nemo :("
 									
 }
+
+Write a function that removes any non-letters from a string, returning a well-known film title.
+
+function lettersOnly(str) {
+  var alpha = "abcdefghijklmnopqrstuvwxyz";
+  var temp = "";
+  for (var i = 0; i < str.length; i++) {
+    for (var j = 0; j < alpha.length; j++) {
+      if (str[i] === alpha[j] || str[i] === alpha[j].toUpperCase()) {
+        temp += str[i];
+      }
+    }
+  }
+  str = temp;
+  return str;
+}
+
+function lettersOnly(str) {
+	return str.match(/[A-Z]|[a-z]/g).join('');
+}
