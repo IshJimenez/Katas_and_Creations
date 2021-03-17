@@ -426,3 +426,7 @@ function encryptThis(text) {
   
   return output.join(' ');
 }
+
+Convert Age to Days
+Create a function that takes the age and return the age in days.
+const calcAge = age => age * 365;
