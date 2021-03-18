@@ -430,3 +430,8 @@ function encryptThis(text) {
 Convert Age to Days
 Create a function that takes the age and return the age in days.
 const calcAge = age => age * 365;
+
+Area of a Triangle
+Write a function that takes the base and height of a triangle and return its area.
+
+const triArea = (base, height) => (base * height) / 2;
