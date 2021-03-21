@@ -451,3 +451,13 @@ The first element in an array always has an index of 0.
 function getFirstValue(arr) {
 	return arr[0];
 }
+
+cubes(3) ➞ 27
+
+cubes(5) ➞ 125
+
+cubes(10) ➞ 1000
+
+function cubes(a) {
+	return a ** 3
+}
