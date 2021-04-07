@@ -1,0 +1,7 @@
+.canvasBoard {
+    border: 1px solid black;
+    background: linear-gradient(white, gray)
+}
+.body1 {
+    margin: 0px;
+}

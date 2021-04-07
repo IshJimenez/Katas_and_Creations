@@ -53,36 +53,86 @@ let c = canvas.getContext('2d');
 // }
 
 //
+// Javascript Object start with capital Letter
+//
+
+// let x = Math.random() * innerWidth;
+// let y = Math.random() * innerHeight;
+// let x1 = 200;
+// let y1 = 200;
+// let dx = (Math.random() - 0.5);
+// let dy = (Math.random() - 0.5) * 9;
+// let radius = 30;
+
+function Circle(x,y,dx,dy, radius) {
+        this.x = x;
+        this.y = y;
+        this.dx = dx;
+        this.dy = dy;
+        this.radius = radius;
+//
+// Create an annoymous function 
+//
+        this.draw = function() {
+                c.beginPath();
+                c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+                c.strokeStyle = "orange"
+                c.stroke();
+                c.fill();
+        }
+        this.update = function() {
+                // Left and Right
+
+        if (this.x + this.radius > innerWidth || this.x - this.radius < 0){
+                this.dx = -this.dx;
+        }
+
+// Top and Botton
+
+        if ( this.y + this.radius > innerHeight || this.y - this.radius < 0) {
+                this.dy = -this.dy;
+        }
+        this.x += this.dx;
+        this.y += this.dy;
+
+        this.draw();
+        }
+}
+
+let circleArray = [];
+
+for (let i = 0; i < 100; i++){
+        let radius = 30;  
+        let x = Math.random() * (innerWidth - radius * 2) + radius;
+        let y = Math.random() * (innerHeight - radius * 2) + radius;
+        let dx = (Math.random() - 0.5);
+        let dy = (Math.random() - 0.5);     
+        circleArray.push(new Circle(x, y, dx, dy, radius));
+}
+
+//
 //      ANIMATION
 //
 // To change x, y declare outside of function
 
-let x = 200;
-let y = 300;
-let x1 = 200;
-let y1 = 200;
-let dx = 5;
-let dy = 5;
-let radius = 30;
+
 
 // clearRect (x, y, width, height)
+
+let circle = new Circle(200, 200, 3, 3, 30);
 
 function animate() {
         requestAnimationFrame(animate);
         c.clearRect(0, 0, innerWidth, innerHeight);
-
-        c.beginPath();
-        c.arc(x, y, radius, 0, Math.PI * 2, false);
-        c.strokeStyle = "orange"
-        c.stroke();
+        
+        for (let i = 0; i < circleArray.length; i++){
+        circleArray[i].update();
+        }
 
 // velocity speed that our projectile moves
 // We will need to create a variable
 
-        if (x + radius > innerWidth || x - radius < 0){
-                dx = -dx;
-        }
-        x += dx;
+
         
         // Add to make it look interesting
 
@@ -95,14 +145,14 @@ function animate() {
 
 animate();
 
-function animate1() {
-        requestAnimationFrame(animate1);
-        c.beginPath();
-        c.arc(x1, y1, 30, 0, Math.PI * 2, false);
-        c.strokeStyle = "yellow"
-        c.stroke();
+// function animate1() {
+//         requestAnimationFrame(animate1);
+//         c.beginPath();
+//         c.arc(x1, y1, 30, 0, Math.PI * 2, false);
+//         c.strokeStyle = "yellow"
+//         c.stroke();
 
-        x1 += 1;
-        }
+//         x1 += 1;
+//         }
 
-animate1();
+// animate1();
