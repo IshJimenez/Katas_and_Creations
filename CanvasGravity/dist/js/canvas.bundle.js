@@ -112,7 +112,9 @@ var mouse = {
   x: innerWidth / 2,
   y: innerHeight / 2
 };
-var colors = ['#2185C5', '#7ECEFD', '#FFF6E5', '#FF7F66']; // Event Listeners
+var colors = ['#353D40', '#D9D9D9', '#A1A5A6', '#F28C0F', '#003F63'];
+var gravity = 1;
+var friction = 0.99; // Event Listeners
 
 addEventListener('mousemove', function (event) {
   mouse.x = event.clientX;
@@ -122,54 +124,93 @@ addEventListener('resize', function () {
   canvas.width = innerWidth;
   canvas.height = innerHeight;
   init();
+});
+addEventListener("click", function () {
+  init();
 }); // Objects
 
-var _Object = /*#__PURE__*/function () {
-  function Object(x, y, radius, color) {
-    _classCallCheck(this, Object);
+var Ball = /*#__PURE__*/function () {
+  function Ball(x, y, dx, dy, radius, color) {
+    _classCallCheck(this, Ball);
 
     this.x = x;
     this.y = y;
+    this.dx = dx;
+    this.dy = dy;
     this.radius = radius;
     this.color = color;
   }
 
-  _createClass(Object, [{
+  _createClass(Ball, [{
     key: "draw",
     value: function draw() {
       c.beginPath();
       c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
       c.fillStyle = this.color;
       c.fill();
+      c.stroke();
       c.closePath();
     }
   }, {
     key: "update",
     value: function update() {
+      if (this.y + this.radius + this.dy > canvas.height) {
+        this.dy = -this.dy * friction;
+      } else {
+        this.dy += gravity; // console.log(this.dy);
+      }
+
+      if (this.x + this.radius + this.dx > canvas.width || this.x - this.radius <= 0) {
+        this.dx = -this.dx;
+      }
+
+      this.x += this.dx; // this.y += 1 brings it down
+
+      this.y += this.dy;
       this.draw();
     }
   }]);
 
-  return Object;
+  return Ball;
 }(); // Implementation
 
 
-var objects;
+var ball; // Changed from let ballArray = []; to below
+
+var ballArray;
 
 function init() {
-  objects = [];
+  // Added ballArray = []; here so that it doesnt keep adding each time you resize the screen
+  ballArray = [];
 
-  for (var i = 0; i < 400; i++) {// objects.push()
+  for (var i = 0; i < 550; i++) {
+    var radius = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["randomIntFromRange"])(8, 25);
+    var x = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["randomIntFromRange"])(radius, canvas.width - radius);
+    var y = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["randomIntFromRange"])(0, canvas.height - radius);
+    var dx = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["randomIntFromRange"])(-2, 2);
+    var dy = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["randomIntFromRange"])(-2, 2);
+    var color = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["randomColor"])(colors);
+    ballArray.push(new Ball(x, y, dx, dy, radius, color));
   }
+
+  ball = new Ball(canvas.width / 2, canvas.height / 2, 2, 30, 'blue');
+  console.log(ballArray);
 } // Animation Loop
 
 
 function animate() {
-  requestAnimationFrame(animate);
+  requestAnimationFrame(animate); //c.clearRect(0, 0, canvas.width, canvas.height) if not added will add effect that will not clear
+  //trippy effect 
+
   c.clearRect(0, 0, canvas.width, canvas.height);
-  c.fillText('HTML CANVAS BOILERPLATE', mouse.x, mouse.y); // objects.forEach(object => {
-  //  object.update()
-  // })
+
+  for (var i = 0; i < ballArray.length; i++) {
+    ballArray[i].update();
+  } // c.fillText('HTML CANVAS BOILERPLATE', mouse.x, mouse.y)
+  // objects.forEach(object => {
+
+
+  ball.update(); // })
 } // utils();
 
 
