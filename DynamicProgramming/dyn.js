@@ -1,4 +1,5 @@
-// Memorization
+//--------------------------Memoization
+//              
 // Js object, key will be the argument to function, value will be return value
 //
 // Write a function `fin(n)` that takes in a number as an argument.
@@ -11,13 +12,13 @@
 // fib(n): 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
 //
 
-// Orginal Code Without Memorization
+// Orginal Code Without Memoization
 // const fib = (n) => {
 //     if(n <= 2) return 1;
 //     return fib(n - 1) + fib(n - 2);
 // };
 
-// Code with Memorization Implemented
+// Code with Memoization Implemented
 const fib = (n, memo = {}) => {
     if(n in memo) return memo[n];
     if(n <= 2) return 1;
@@ -49,3 +50,25 @@ const lib = (n) => {
     lib(n - 2);
     lib(n - 2);
 }
+
+//--------------------------Memoization(gridTraveler)
+// Say that you are a traveler on a 2D grid. You begin in the top-left corner and your
+// goal is to travel to the bottom-right corner. You may only move down orright.
+//
+// In how many ways can you travel to the goal on a grid with dimensions m * n?
+//
+// Write a function `gridTraveler(m, n)` that calculate this.
+//
+//gridTraveler(2, 3)
+
+const gridTraveler = (m, n ) => {
+    if(m === 1 && n === 1) return 1;
+    if(m === 0 || n === 0) return 0;
+    return gridTraveler(m - 1, n) + gridTraveler(m, n - 1);
+}
+
+console.log(gridTraveler(1, 1));
+console.log(gridTraveler(2, 3));
+console.log(gridTraveler(3, 2));
+console.log(gridTraveler(3, 3));
+console.log(gridTraveler(18, 18);
