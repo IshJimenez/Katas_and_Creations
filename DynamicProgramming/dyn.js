@@ -61,14 +61,39 @@ const lib = (n) => {
 //
 //gridTraveler(2, 3)
 
-const gridTraveler = (m, n ) => {
+// const gridTraveler = (m, n ) => {
+//     if(m === 1 && n === 1) return 1;
+//     if(m === 0 || n === 0) return 0;
+//     return gridTraveler(m - 1, n) + gridTraveler(m, n - 1);
+// }
+
+//gridTraveler(a,b) is the same as gridTraveler(b,a)tion
+// Memoization
+
+const gridTraveler = (m, n, memo={}) => {
+    // Are the arguments in the memoization
+    const key = m + ',' + n;
+    //The purpose of the ',' is so the numbers dont get mixed together
+    if(key in memo) return memo[key];
     if(m === 1 && n === 1) return 1;
     if(m === 0 || n === 0) return 0;
-    return gridTraveler(m - 1, n) + gridTraveler(m, n - 1);
-}
+    // if (( m - 1 + ',' + n) in memo){} will make debugging harder and there is no need to check if the child of an object
+    // has the item since the line on 77 will check or that 
+    memo[key] = gridTraveler(m - 1, n, memo) + gridTraveler(m, n - 1, memo);
+    // gridTraveler(m - 1, n) + gridTraveler(m, n - 1) will go inside the memo object
+    return memo[key];
+};
 
-console.log(gridTraveler(1, 1));
-console.log(gridTraveler(2, 3));
-console.log(gridTraveler(3, 2));
-console.log(gridTraveler(3, 3));
-console.log(gridTraveler(18, 18);
+// m = 42
+// n = 3
+// or if you had
+// m =2
+// n = 23
+// key = 423 (would not work)
+// key = 4,23
+
+console.log(gridTraveler(1, 1)); //1
+console.log(gridTraveler(2, 3)); //3
+console.log(gridTraveler(3, 2)); //3
+console.log(gridTraveler(3, 3)); //6
+console.log(gridTraveler(18, 18)); //2333606220
