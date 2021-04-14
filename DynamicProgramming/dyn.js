@@ -84,10 +84,11 @@ const gridTraveler = (m, n, memo={}) => {
     return memo[key];
 };
 
+
 // m = 42
 // n = 3
 // or if you had
-// m =2
+// m = 2
 // n = 23
 // key = 423 (would not work)
 // key = 4,23
@@ -97,3 +98,30 @@ console.log(gridTraveler(2, 3)); //3
 console.log(gridTraveler(3, 2)); //3
 console.log(gridTraveler(3, 3)); //6
 console.log(gridTraveler(18, 18)); //2333606220
+
+// ---------------------Memoization Recipe
+// 1. Make it work 
+//          A) A solution that is recursive
+//          B) Visualize the problem as a tree  
+//          C) We have a large issue to break down to smaller 
+//          issue of the same problem
+//          D) Implement the tree using recursion
+//          E) Think of the leaf as the base grid that will 
+//          be the brute force recursion
+//          F) Test it ( 
+//          E) Code that is slow not same thing as wrong code
+// 2. Make it efficient
+//          A) Add a memo object 
+//          - Needs to include key which are arguments to our function,
+//          value of that object which represent the return value
+//          --Unqiue set of arguments should give particular results
+//          ---Make sure this object is shared with all your recursive calls. 
+//          ----Helps to pass them as arguments. Setting empty argument at top level call.
+//          B) Add a base case to return memo values  
+//          -Not remove any base case from 
+//          brute force solution just adding
+//          --If arguments in memo item as a key we return stored value =memo section logic=
+//                                               =looking up some stored value insdie memo
+//          C) Store return values into the memo
+//          -Going to return values are in function and make sure add those values to our memo
+//          before returning
