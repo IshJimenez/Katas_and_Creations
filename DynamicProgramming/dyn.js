@@ -52,6 +52,7 @@ const lib = (n) => {
 }
 
 //--------------------------Memoization(gridTraveler)
+//
 // Say that you are a traveler on a 2D grid. You begin in the top-left corner and your
 // goal is to travel to the bottom-right corner. You may only move down orright.
 //
@@ -100,6 +101,7 @@ console.log(gridTraveler(3, 3)); //6
 console.log(gridTraveler(18, 18)); //2333606220
 
 // ---------------------Memoization Recipe
+//
 // 1. Make it work 
 //          A) A solution that is recursive
 //          B) Visualize the problem as a tree  
@@ -125,3 +127,31 @@ console.log(gridTraveler(18, 18)); //2333606220
 //          C) Store return values into the memo
 //          -Going to return values are in function and make sure add those values to our memo
 //          before returning
+
+// ---------------------canSum
+//
+// Write a function `canSum(targetSum, numbers)` that takes in a targetSum and an array of 
+// numbers as arguments.
+// The function should return a boolean indicating whether or not is is possible to generate
+// the targetSum using numbers from the array.
+// You can use an element of the array as many times as needed.
+// You may assume that all input numbers are nonnegative.
+// canSum(7, [5,3,4,7]) would be true since 3+4 or 7 = 7
+// canSum(7, [2,4]) would be false since there is no wayto get 7
+
+const canSum = (targetSum, numbers) => {
+    if(targetSum === 0) return true;
+
+    for(let num of numbers) {
+    const remainder = targetSum - num;
+    if (canSum(remainder, numbers) === true) {
+    return true;
+    };
+    }
+};
+
+console.log(canSum(7, [2, 3])); //true
+console.log(canSum(7, [5, 3, 4, 7])); //true
+console.log(canSum(7, [2, 4])); //false
+console.log(canSum(8, [2, 3, 5])); //true
+console.log(canSum(300, [7, 14])); //false
