@@ -54,7 +54,7 @@ const lib = (n) => {
 //--------------------------Memoization(gridTraveler)
 //
 // Say that you are a traveler on a 2D grid. You begin in the top-left corner and your
-// goal is to travel to the bottom-right corner. You may only move down orright.
+// goal is to travel to the bottom-right corner. You may only move down or right.
 //
 // In how many ways can you travel to the goal on a grid with dimensions m * n?
 //
@@ -140,7 +140,7 @@ console.log(gridTraveler(18, 18)); //2333606220
 // canSum(7, [2,4]) would be false since there is no wayto get 7
 
 const canSum = (targetSum, numbers, memo = {}) => {
-    if(targetSum in memo) return memo[targetSun];
+    if(targetSum in memo) return memo[targetSum];
     if(targetSum === 0) return true;
     if(targetSum < 0) return false;
 
@@ -160,3 +160,100 @@ console.log(canSum(7, [5, 3, 4, 7])); //true
 console.log(canSum(7, [2, 4])); //false
 console.log(canSum(8, [2, 3, 5])); //true
 console.log(canSum(300, [7, 14])); //false
+
+// ---------------------howSum
+//
+// Write a function `howSum(targetSum, numbers)` that takes in a targetSum 
+// and an array of numbers as arguments.
+// 
+// The function should return an array containing any combination of elements that add up
+// to exactly the targetSum. If there is no combination that adds up to the targetSum,
+// then return null.
+//
+// If there are multiple combiinations possible, you may return any single one.
+
+const howSum = (targetSum, numbers, memo = {}) => {
+    if (targetSum in memo) return memo[targetSum];
+    if (targetSum === 0) return [];
+    if (targetSum < 0) return null;
+
+    for(let num of numbers) {
+    const remainder = targetSum - num;
+    const remainderResult = howSum(remainder, numbers, memo);
+    if (remainderResult !== null) {
+       memo[targetSum] = [ ...remainderResult, num ];
+       return memo[targetSum]
+    }
+    }
+    memo[targetSum] = null;
+    return null;
+};
+
+// m = target sum
+// n = numbers.length
+
+//Brute force
+// time: O(n*m = m)
+// time is the exponential number of nodes in a tree x height power(target sum)
+// space: O(m^2)
+// height of recursion
+
+//Memoized
+// time: O(n*m^2)
+// space: O(m)
+
+console.log(howSum(7, [2, 3])); // [3, 2, 2]
+console.log(howSum(7, [5, 3, 4, 7])); // [4, 3]
+console.log(howSum(7, [2, 4])); //null
+console.log(howSum(8, [2, 3, 5])); // [2, 2, 2, 2]
+console.log(howSum(300, [7, 14])); //null
+
+// ---------------------bestSum
+//
+// Write a function `bestSum(targetSum, numbers)` that takes in a targetSum and an array of 
+// numbers as arguments.
+//
+// The function should return an array containing the shortest combination of numbers
+// that add up to exactly the targetSum.
+//
+// If there is a tie for the shortest combination, you may return any one of the shortest.
+
+const bestSum = (targetSum, numbers, memo={}) => {
+    if(targetSum in memo) return memo[targetSum];
+    if(targetSum === 0) return [];
+    if(targetSum < 0) return null;
+
+    let shortestCombination = null;
+
+    // using -in- would give you incedis of numbers like 0,1,2 and -of- gives us elements
+    for(let num of numbers){
+        const remainder = targetSum - num;
+        const remainderCombination = bestSum(remainder, numbers, memo);
+        if(remainderCombination !== null) {
+        const combination = [ ...remainderCombination, num ];
+        // if the combination is shorter than the current "shortest", update it
+        if(shortestCombination === null || combination.length < shortestCombination.length) {
+        shortestCombination = combination;
+        }
+        }
+ }
+    memo[targetSum] = shortestCombination;
+    return shortestCombination;
+}
+
+// m = target sum
+// n = numbers.length
+
+//Brute force
+// time: O(n^m * m)
+// space: O(m^2)
+
+//Memoized
+// time: O(m^2 * n)
+// space: O(m^2)
+
+console.log(bestSum(7, [5, 3, 4, 7])); // [7]
+console.log(bestSum(8, [2, 3, 5])); // [3, 5]
+console.log(bestSum(8, [1, 4, 5])); // [4, 4]
+console.log(bestSum(100, [1, 2, 5, 25])); // [25, 25, 25, 25]
+
