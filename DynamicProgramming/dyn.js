@@ -257,3 +257,35 @@ console.log(bestSum(8, [2, 3, 5])); // [3, 5]
 console.log(bestSum(8, [1, 4, 5])); // [4, 4]
 console.log(bestSum(100, [1, 2, 5, 25])); // [25, 25, 25, 25]
 
+// ---------------------canConstruct
+//
+// Write a function `canConstruct(target, wordbank)` that accepts a 
+// target string and an array of strings.
+//
+// The function should return a boolean indicating whether or not the
+// `target` can be constructed by concatenating elements of the `wordbank`
+// array.
+//
+// You can reuse elements of `wordBank` as many times as needed.
+
+    canConstruct(abcdef, [ab, abc, cd, def, abcd])
+
+//             -abcdef-
+//  Take ab    Take abc     Take cd (NO) (taking from middle will create new agenicies)
+//  -cdef-      -def-         (NO) -abef-   (Will affect later moves)
+
+// abc + def = true
+
+canConstruct(skateboard, [bo,rd,ate,t,ska,sk,boar])
+
+// ska + t + ? || sk + ate + boar + ? || sk + ate + bo + ?
+// false
+
+canConstruct('', [ cat, dog, mouse ])
+
+// can take zero elements from an array
+//true
+
+const canConstruct = (target, wordbank) => {
+
+}
