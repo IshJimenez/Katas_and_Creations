@@ -268,24 +268,67 @@ console.log(bestSum(100, [1, 2, 5, 25])); // [25, 25, 25, 25]
 //
 // You can reuse elements of `wordBank` as many times as needed.
 
-    canConstruct(abcdef, [ab, abc, cd, def, abcd])
+    // canConstruct(abcdef, [ab, abc, cd, def, abcd])
 
 //             -abcdef-
-//  Take ab    Take abc     Take cd (NO) (taking from middle will create new agenicies)
-//  -cdef-      -def-         (NO) -abef-   (Will affect later moves)
+//  Take ab    Take abc   Take abcd    Take cd (NO) (taking from middle will create new agenicies)
+//  -cdef-      -def-        -ef-       (NO) -abef-   (Will affect later moves)
+//  Take cd     Take def    Cant take more out
+//  -ef-         -''-       Return F
+// Return F     Return T
+// F, T, F is sent to the top but since we have a way to solve returns T
 
 // abc + def = true
 
-canConstruct(skateboard, [bo,rd,ate,t,ska,sk,boar])
+// canConstruct(skateboard, [bo,rd,ate,t,ska,sk,boar])
+
+    //             -skateboard-
+    //  Take ska        Take sk   
+    //  -reboard-     -ateboard-             
+    //  Take t         Take ate   
+    //  -eboard-         -board-       
+//  Return F        Take bo     Take boar
+//                  -ard-       -d-
+//                  Return F    Return F
+// F, F, F is sent to the top but since we have a way to solve returns F
+
+// abc + def = true
+
 
 // ska + t + ? || sk + ate + boar + ? || sk + ate + bo + ?
 // false
 
-canConstruct('', [ cat, dog, mouse ])
+// canConstruct('', [ cat, dog, mouse ])
 
 // can take zero elements from an array
 //true
 
-const canConstruct = (target, wordbank) => {
-
+const canConstruct = (target, wordBank, memo={}) => {
+    if(target in memo) return memo[target]
+    if (target === '') {
+        return true;
+    }
+    for (let word of wordBank) {
+    if (target.indexOf(word) === 0) {
+        const suffix = target.slice(word.length)
+        if (canConstruct(suffix, wordBank, memo) === true) {
+            memo[target] = true;
+            return true;
+        }
+    }
+    }
+    memo[target] = false;
+    return false;
 }
+
+console.log(canConstruct("abcdef", ['ab','abc','cd','def','abcd'])) //true
+console.log(canConstruct("skateboard", ['bo','rd','ate','t','ska','sk','boar'])) //false
+console.log(canConstruct("enterapotentpot", ['a','p','ent','enter','ot','o','t'])) //true
+console.log(canConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef", [
+    'e',
+    'ee',
+    'eee',
+    'eeee',
+    'eeeee',
+    'eeeeee',
+])) // false
