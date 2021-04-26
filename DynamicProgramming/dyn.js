@@ -385,3 +385,35 @@ console.log(countConstruction("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef", [
 // that constructs the `target`.
 //
 // You may reuse elements of `wordBank` as many times as needed.
+
+const allConstruct = (target, wordBank, memo = {}) => {
+    if (target in memo) return memo[target];
+    if (target === '') return [[]];
+
+    const result = [];
+
+    for (let word of wordBank) {
+    if (target.indexOf(word) === 0) {
+        const suffix = target.slice(word.length);
+        const suffixWays = allConstruct(suffix, wordBank, memo);
+        const targetWays = suffixWays.map(way => [ word, ...way ]);
+        result.push(...targetWays)
+    }
+    }
+
+    memo[target] = result;
+    return result;
+}
+
+console.log(allConstruct("purple", ['purp','p','ur','le','purl'])) // Wrote it down on notebook. Remember to add 
+console.log(allConstruct("abcdef", ['ab','abc','cd','def','abcd'])) // Wrote it down on notebook. Remember to add 
+console.log(allConstruct("skateboard", ['bo','rd','ate','t','ska','sk','boar'])) // Look Above
+console.log(allConstruct("enterapotentpot", ['a','p','ent','enter','ot','o','t'])) // Looke Above
+console.log(allConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef", [
+    'e',
+    'ee',
+    'eee',
+    'eeee',
+    'eeeee',
+    'eeeeee',
+])) // Yeah what he said
