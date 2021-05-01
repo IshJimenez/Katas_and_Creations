@@ -125,3 +125,20 @@ canvas {
         return false
     }
 }
+//  ------------------ To get UI or not get UI
+//
+
+[
+    {   
+        id: 1,
+        name: "Patty",
+        isPlayerControlled: true
+        ...
+    },
+    {
+        id: 2,
+        name:"Enemy Hacker Guy",
+        isPlayerControlled: false
+        ...
+    }
+]

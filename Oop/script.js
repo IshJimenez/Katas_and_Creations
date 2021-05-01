@@ -158,3 +158,16 @@ user1.increment()
 // Feels more like other styles of other languages(e.g Python)
 //      Cons
 // 99%
+
+// Creating objects in JS
+// Basic format
+
+const user1 = {
+    name: "Will",
+    score: 3,
+    increment: function(){
+        user1.score++;
+    }
+};
+user1.increment();
+
