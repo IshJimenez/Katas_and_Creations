@@ -182,3 +182,18 @@ user2.score = 7;
 user2.incremenet = function() {
     user2.score++
 }
+
+// New answer
+function userCreator(name, score) {
+    const newUser = {}
+        newUser.name = name;
+        newUser.score = score;
+        newUser.increment = function() {
+            newUser.score++;
+        }
+        return newUser;
+    }
+
+    const user1 = userCreator("Will", 7);
+    const user2 = userCreator("Bill", 17);
+    user1.increment()
