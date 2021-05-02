@@ -171,3 +171,14 @@ const user1 = {
 };
 user1.increment();
 
+// 
+
+const user2 = {};
+// Create an empty object
+
+user2.name = "Tim";
+user2.score = 7;
+
+user2.incremenet = function() {
+    user2.score++
+}
