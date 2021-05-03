@@ -183,6 +183,15 @@ user2.incremenet = function() {
     user2.score++
 }
 
+// Can create using object.create
+
+const user3 = Object.create(null);
+
+user3.name = "Evo";
+user3.score = 11;
+user3.increment = function(){
+    user3.score++;
+}
 // New answer
 function userCreator(name, score) {
     const newUser = {}
@@ -197,3 +206,22 @@ function userCreator(name, score) {
     const user1 = userCreator("Will", 7);
     const user2 = userCreator("Bill", 17);
     user1.increment()
+
+// New Solution
+
+function userCreator(name, score) {
+    const newUser = Object.create(userFunctionStore)
+    n;ewUser.name = name;
+    newUser.score= score;
+    return newUser;
+};
+
+const userFunctionStore = {
+    increment: function(){this.score++;},
+    login: function(){console.log("Hey you're in")}
+};
+
+const user1 = userCreator("Will", 3);
+const user2 = userCreator("Tim", 5);
+user1.increment();
+
