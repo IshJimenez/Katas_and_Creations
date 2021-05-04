@@ -445,3 +445,15 @@ console.log(fibx(6)); //8
 console.log(fibx(7)); //13
 console.log(fibx(8)); //21
 console.log(fibx(50)); //12586269025
+
+// ---------------------gridTraveler
+//
+// Say that you are a traveler on a 2D grid. You begin in the top-left
+// corner and your goal is to travel to the bottom-right corner.
+// You may only move down or right.
+//
+// In how many ways can you travel to the goalon a grid with 
+// dimensions m * n?
+//
+// Write a function `gridTraveler(m,n)` that calculates this.
+//
