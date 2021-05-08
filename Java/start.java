@@ -269,3 +269,113 @@ Java brings the use of strong typing, the selection of data types available, and
 -
 -
 Operators
+
+-Parenthesis
+
+Work just like they normally do in math. You compute the value of whats inside parenthensis before outside.
+
+-Postfix Operators
+
+++ and -- They add/sub 1 from the expression provided.
+
+x++ same as x = x + 1
+
+-- and ++ can be added before the expression.
+
+The diff between postfix operator and these prefix operators
+
+a++ will evaluate the expression after it is done
+
+++a evaluates before it.
+
+int c = 8;
+System.out.println(++c);
+That will print 9 to the console.
+
+c++
+Would print out 8 then increase the value after printing
+
+-Multiplicative Operators 
+% Modulus, /, *
+
+Modulus returns the remainder of a division result.
+
+Bytes, Shorts, Ints and Longs in Java only store whole numbers, which means that when division occur, you get a result
+and a remainder.
+
+Non floating point variables use whole numbers, and divide with remainders instead of decimals.
+
+When dividing with / you get the resuly of integer division. If you use the % you get the remainder instead.
+
+5 / 2 == 2
+5 % 2 == 1
+
+-Additive Operators
++, -
+
+-Bit-Shift Operators
+<< :Left-Shift
+>> :Right-Shift
+// >>> :Right shift (ignore sign) -----(Made the font white so commented it out...)
+
+-Modifiy the binary representation of numbers
+
+int a = 4;      // 00000011 == 3
+a = a << 2;     // 00001100 == 12
+
+Work on the binary value of a primitive types value.
+
+These shift the digits of the binary representation of a value left or right a certain number of spaces, resulting
+in a different value.
+
+-Relational Operators
+
+Compare two values to produce a boolean result
+<, >, <==, >==, instanceof
+
+instanceof: Determines if an object is an instance of a particular class
+
+== equal To
+!= not equal to
+= assignment 
+
+-Bitwise Operators
+Used to manipulate the binary representation of values.
+
+&   :bitwise AND
+^   :bitwise XOR
+|   :bitwise OR
+
+Logical Operators
+
+&& :logical AND || :logical OR
+These operators join two other boolean expressions to produce a new boolean result.
+
+-Ternary Operators
+Make a quick if-Then statement (no else clause) expression_1 ? expression_2 : expression_3
+
+The first expression must be a boolean expression and is followed by a ?
+
+If the boolean expression is T the second statement will execute.
+
+If the first expression is F, the third statement will execute.
+
+int a = 3;
+int b = 0
+(a < 4) ? (b = 1) : (b = 2);
+//prints "1"
+System.out.println(b)
+
+-Assignment Operators 
+= 
+
+The operator with the lowest precedence is of course the assignment operator, are the arithmetic-assignment combo operators.
+
+
+Arthmetic-assignment
++=, -=, /=, %=, &=, ^=, |=, <<=, >>>=
+
+These operators are the same as applying an expression on the right side of the assignment operator to the variable on the left, and
+storing the result back into the same variable.
+
+d += 3 same as d = d + 3
