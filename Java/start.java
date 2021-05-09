@@ -379,3 +379,89 @@ These operators are the same as applying an expression on the right side of the 
 storing the result back into the same variable.
 
 d += 3 same as d = d + 3
+
+Write a class named a1 in which you print the message “Hey, fool!” to the console
+
+package program;
+
+public class a1 {
+		
+	public static void main(String[] args) {
+		System.out.println("Hey, Fool");
+	}
+
+}
+
+Write a class named a2 in which you declare a variable, x. In the next line, set the value of x to
+10. Print the value of x to the console.
+
+package program;
+
+public class a2 {
+	public static void main(String[] args) {
+		int x;
+		x = 10;
+		System.out.println(x);
+}
+}
+
+Write a class named a3 in which you declare the variables, x and y. Set the value of x to 15 and
+set the value of y to 10. Create a third variable, z and assign the result of the sum of x and y to z. Print the
+value of z to the console.
+
+package program;
+
+public class a3 {
+	public static void main(String[] args) {
+		int x;
+		int y;
+		int z;
+		x = 15;
+		y = 10;
+		z = x + y;
+		System.out.println(z);
+}
+}
+
+Write a class named a4 in which you declare an array of 5 numbers. Print its length to the
+console. (Use the .length property)
+
+package program;
+
+public class a4 {
+	public static void main(String[] args) {
+	int[] intArray = new int [5];
+	System.out.println(intArray.length);
+}
+}
+
+Write a class named a5 in which you declare an array of ten strings. Print the 2nd element.
+(Remember that arrays indexes start at 0, not 1).
+
+package program;
+
+public class a5 {
+	public static void main(String[] args) {
+		String[] strArray = new String[10];
+		 System.out.print(strArray[1]);
+	}
+}
+
+Write a class named a6 that declares an array of two numbers (10 and 11). Add the two
+numbers together and print the result.
+
+package program;
+
+public class a6 {
+	public static void main(String[] args) {
+		int[] array = {10, 11};
+        int sum = 0;
+        for ( int num : array) {
+            sum = sum + num
+        }
+
+        System.out.println(sum);
+	}
+}
+
+
