@@ -464,4 +464,60 @@ public class a6 {
 	}
 }
 
+Write a class named a7 that declares an array of three numbers (8, 22, 34). Subtract the first
+two and add the third; (8- 22 + 34). Print the result.
 
+package program;
+
+public class a7 {
+	public static void main(String[] args) {
+		int[] array = {8, 22, 34};
+        int sum = array[0] - array[1] + array[2];
+
+        System.out.println(sum);
+	}
+}
+
+Write a class named a8, that declares two floats (105.678 and 222.4871). Multiply them and print
+the result.
+
+package program;
+
+public class a8 {
+	public static void main(String[] args) {
+
+		float first = 105.678f;
+        float second = 222.4871f;
+
+        float product = first * second;
+
+        System.out.println(product);
+	}
+}
+
+Write a class named a9 that declares a boolean variable on. Set its value to true. Print the result.
+
+package program;
+
+public class a9 {
+	public static void main(String[] args) {
+
+    boolean xe = true;
+    if (xe == true) {
+          System.out.println("true");
+}
+}
+}
+
+Write a class named a10 that declares an array of five strings. Print the 5th element
+
+package program;
+
+public class a10 {
+	public static void main(String[] args) {
+
+    String[] superr = {"Batman","Superman","Ironman","WonderW","Spiderman"};
+    System.out.println(superr[4]);
+
+    }
+}
