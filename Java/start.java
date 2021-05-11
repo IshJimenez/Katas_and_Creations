@@ -105,8 +105,12 @@ THen the main() method ends, and the program is done.
 -
 -
 -
-
-VARIABLES
+-
+VARIABLES..
+-
+-
+-
+-
 
 Temporarilly store data in RAM
 
@@ -187,7 +191,16 @@ and stored in the variable on the left side.
 
 In Java x = 3, not 3 = x
 
-Arrays
+-
+-
+-
+-
+ARRAYS..
+-
+-
+-
+-
+
 
 A collection of promitive values or object references
 
@@ -268,7 +281,11 @@ Java brings the use of strong typing, the selection of data types available, and
 -
 -
 -
-Operators
+OPERATORS..
+-
+-
+-
+-
 
 -Parenthesis
 
@@ -366,8 +383,9 @@ int b = 0
 //prints "1"
 System.out.println(b)
 
+===
 -Assignment Operators 
-= 
+===
 
 The operator with the lowest precedence is of course the assignment operator, are the arithmetic-assignment combo operators.
 
@@ -520,4 +538,298 @@ public class a10 {
     System.out.println(superr[4]);
 
     }
+}
+
+-
+-
+-
+-
+STATEMENTS..
+-
+-
+-
+-
+There are two types of statemnets in Java.
+
+----Expression statemnets
+
+Expression statments are made from expressions, which compute values and most likey use operators.
+
+Statemnts can be grouped into blocks with the {} operators.
+
+An expression in Java computes a value.
+
+Variable declarations are expressions, either by being assigned a value or implicitly assigned a default value.
+
+"int s"
+
+s is an expression as is "s = 99" part of int s = 99
+
+An expression could also be a method invocation that returns a result, a mathematical equation, or any combination.
+
+All that matters is that a value be returned.
+
+THe type of data returned by an expression depends on the types of elements used there in.
+
+F = 8 returns an int, because the assignment operator returns the same type of data to the left side (f) that is used on the right side.
+
+H > 1 will return a boolean result, because the //> operator returns a boolean result. (made text white >)
+
+Method invocation are also statemnts, as are object creation statments that use the "new" keyword. 
+
+A block is a grouping of zero or more statments between moustaches {}
+
+You can use a bllock anywhere a single statment is allowed.
+
+----Control statemnets
+
+Can be further divided into decision statements and loop statments.
+
+A decision statement, just like the name implies, forces the program to make a "decision" regarding which code to execute next.
+
+Its sometimes referred to as a "conditional branch" in the program flow.
+
+--Decision statments are used to check if a particular confition has been met and then take appropriate action based on he outcome.
+
+Is "w" to 2 ? 
+Is the user first name "Bob" 
+
+Check if particular condition has been met and take the appropiate outcome.
+
+--Loop Sraner
+
+package examp;
+
+public class IfElseExamp {
+
+	public static void main(String[] args) {
+
+        int y = 4;
+
+        if ( y % 2 == 0)
+        System.out.println("Num " + y + " is even");
+        else
+        System.out.println("Num " + y + " is not even");
+
+    }
+}
+
+Switch statments
+
+Evaluates a single expression to take action based on the value.
+
+bytes, short, int, char, and Strings are all viable types for switch statements.
+
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+
+Execution can fall through a case if there is no break statment.
+
+If no cases are met the default will run.
+
+Loop Statments 
+
+Executes a statement or block of statements repeatedly until a condition is met.
+
+Java has the for, while, and do-while loop
+
+-for
+
+Runs x amount of times 
+
+for (intialization, termination, increment) statement
+
+class forLoopDemo {
+    public static void main(String args[]){
+        for (int x = 2; x <= 4; x++)
+            System.out.println("Value of x:" + x);
+    }
+    System.out.println("Exited loop");
+}
+}
+
+After loop concludes the variable x is out of scope.
+
+Complier will not allow you do nothing anything else with it.
+
+-While Loop
+
+int i = 0;
+while (i < 5) {
+  System.out.println(i);
+  i++;
+}
+
+-Do while
+While run at least once
+
+int i = 0;
+do {
+  System.out.println(i);
+  i++;
+}
+while (i < 5);
+
+-Break Statements
+
+Can be used in any control flow statment
+Cause the program to exit the current block, ending any loop or condition statement
+
+-Continue Statement 
+
+Terminates the current iteration of a loop
+
+1.	Write a class named B1 which uses a conditional statement to check if a number is even. 
+
+package program2;
+
+public class B1 {
+	public static void main(String args[]){
+		
+		int y = 4;
+
+        if ( y % 2 == 0)
+        System.out.println("Num " + y + " is even");
+}
+}
+
+2.	Write a class named B2 which creates an integer variable x. Set x to some value. 
+Then write a conditional statement that checks if x is greater than 3. If so, print the message, “x is greater than 3” to the console. 
+
+package program2;
+
+public class B2 {
+	public static void main(String args[]){
+		
+		int x = 4;
+
+        if ( x > 3)
+        System.out.println("x is greater than 3");
+}
+}
+
+3.	Write a class named B3 which creates an integer variable x. Set x to some value. 
+Then write a conditional statement that checks if x is greater than or equal 3. 
+If so, print the message, “x is greater than or equal 3” to the console. 
+
+package program2;
+
+public class B3 {
+	public static void main(String args[]){
+		
+		int x = 4;
+
+        if ( x >= 3)
+        System.out.println("x is greater than or equal 3");
+}
+}
+
+4.	Write a class named B4 which creates an integer variable x. Set x to some value. 
+Then write a conditional statement that checks if x is equal to 3. If so, print the message, “x is equal to 3” to the console. 
+Write an associate else-statement that prints the message “x is NOT equal to 3” to the console.
+
+package program2;
+
+public class B4 {
+	public static void main(String args[]){
+		
+		int x = 4;
+
+        if ( x == 3)
+        System.out.println("x is equal to 3");
+        else 
+         System.out.println("x is NOT equal to 3");
+}
+}
+
+5.	Write a class named B5 which creates a float variable x. Set x to some value. 
+Then write an if-statement that checks if x is equal to 3. If so, print the message, “x is equal to 3”. 
+Write an else-if statement to check if x is greater than 5, and, if so, prints the message, “x is greater than 5”. 
+Write another else-if statement to check if x is less than or equal to 0. 
+If so, it prints the message, “x is less than or equal to 0”. 
+Write an else-statement to prints the message, “x is none of the other options”. 
+
+package program2;
+
+public class B5 {
+	public static void main(String args[]){
+		
+		int x = 4;
+
+        if ( x == 3)
+        System.out.println("x is equal to 3");
+        else if ( x <= 0)
+        System.out.println("x is less than or equal to 0");
+        else
+        System.out.println("x is none of the other options");
+}
+}
+
+6.	Write a class named B6 which uses a for-loop to print only the even numbers between 0 and 10, inclusive. 
+
+package program2;
+
+public class B6 {
+	public static void main(String args[]){
+		
+for ( int i = 0; i <= 10; i++) {
+	if ( i % 2 == 0 ) {
+        System.out.println(i);
+}
+}
+}
+}
+
+7.	Write a class named B7 which uses a do-while loop to print only the odd number between 1 and 9, inclusive.
+
+package program2;
+
+public class B7 {
+	public static void main(String args[]){
+		
+int i = 0;
+    do {
+    if(i%2 == 1)
+    System.out.println(i);
+    i++;
+}
+    while (i < 10);
+}
+}
+
+8.	Write a class named B8 which uses a while loop to print the statement “In loop” 7 times.
+
+package program2;
+
+public class B8 {
+	public static void main(String args[]){
+		
+	int i = 0;
+    while (i < 7) {
+	System.out.println("In Loop");
+	i++;
+}
+}
+}
+
+9.	Write a class named B9 that uses a for-loop to navigate through an array of 10 double numbers and prints each element of the array. 
+
+package program2;
+
+public class B9 {
+	public static void main(String args[]){
+	int[] fun = { 10, 19, 18, 11, 34, 45, 23, 33, 22, 26};
+	for (int i = 0; i < fun.length; i++)
+	{
+	    System.out.println(  fun[i] );
+	}
+}
 }
