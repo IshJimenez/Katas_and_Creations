@@ -833,3 +833,93 @@ public class B9 {
 	}
 }
 }
+
+10.	Write a class named B10 that uses a double for-loop (a for-loop within a for-loop). 
+The outer loop should navigate through an integer array that has 10 elements corresponding to the numbers 1 through 10, inclusive. 
+The inner loop should count from 1 to 10, and prints the value of the current count multiplied by a the current index of the array. 
+You should end up printing the multiples of 1 through 10 from 1 to 10. Ex: 1*1, 1*2, 1*3…1*10, 2*1, 2*2, 2*3…10*9, 10*10.
+
+package program2;
+
+public class B10 {
+
+	public static void main(String[] args) {
+		double[] a = {1.1,2.2,3.3,4.4,5.5,6.6,7.7,8.8,9.9,10.0};
+		
+		for (int i = 0; i < a.length; i++){
+			System.out.println(a[i]);
+		}
+	}
+}
+
+-
+-
+-
+-
+Strings
+-
+-
+-
+-
+
+Reference variables in Java are not an object on its own right, its a link to an instance of an object in memory.
+
+When a string object is created, either in the primitive style or as a new object, a String object is created in memory that holds the
+value we assign to it.
+
+Strings are immutable, so if we try to change the value of the string in our reference variable, the JVM actually creataes a new String object, and redirects our reference.
+
+If I have two strings that equal the same value the JMV decides that its safe for these 2 variables to share same instance and they will both be directed
+to the same object in memory.
+
+If you used
+
+two = new string ("Hello");
+
+Will force the JVM to have duplicate Strings in memory.
+
+Nowhere in Java but with Strings can you create an object of a class without using the "new" operator.
+
+Using the primitive approach we have the following line of code.
+
+package examp;
+
+public class StringTest {
+
+	public static void main(String[] args) {
+		
+        String stringA = "Hello";
+        String stringB = new String("Hello");
+
+			System.out.println("string A" + stringA);
+            System.out.println("string B" + stringB);
+
+            if (stringA == stringB)
+            System.out.println("string A and string B point to same object");
+            else
+             System.out.println("string A and string B dont point to same object");
+		}
+	}
+
+String is an object not a primitive
+
+Java creates the "Hello" object in memory using a simple assignment.
+
+For the 2nd line we have passed the desired string as a constructor argument.
+
+They both have the same value but not the same object.
+
+1.Write a class named C1 that declares two strings, “James” and (your name) and concatenates
+them together. Print the result
+
+package program3;
+
+public class C1 {
+	public static void main(String[] args) {
+	
+	String stringA = "James";
+    String stringB = new String("Bond");
+
+		System.out.println(stringA  + " " + stringB);
+}
+}
