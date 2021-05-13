@@ -923,3 +923,24 @@ public class C1 {
 		System.out.println(stringA  + " " + stringB);
 }
 }
+
+Write a class named C2 that uses a 2 if-statement to compare the strings “abc” and “ABC”.
+The first if-statement should use the double equals (==) operator and the other that uses the .equals()
+method of one of the strings to compare to the other. Print a message in both if-statements to indicate
+that the strings are equal
+
+package program3;
+
+public class C2 {
+	
+	public static void main(String[] args) {
+		String one = "abc";
+		String two = new String("abc");
+		
+		if (one == two){
+			System.out.println("The strings are equivalent");
+		}else {
+			System.out.println("The strings are NOT equivalent");
+		}
+	}
+}
