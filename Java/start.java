@@ -924,14 +924,36 @@ public class C1 {
 }
 }
 
-Write a class named C2 that uses a 2 if-statement to compare the strings “abc” and “ABC”.
+2.Write a class named C2 that uses a 2 if-statement to compare the strings “abc” and “ABC”.
 The first if-statement should use the double equals (==) operator and the other that uses the .equals()
 method of one of the strings to compare to the other. Print a message in both if-statements to indicate
 that the strings are equal
 
 package program3;
 
-public class C2 {
+public class C3 {
+	
+	public static void main(String[] args) {
+		String one = "abc";
+		String two = "ABC";
+		
+		if (one == two) {
+			System.out.println("The strings are equal using (==) ");
+		}
+		
+		if (one.equals(two)){
+			System.out.println("The strings are equal using (.equals)");
+		}
+	}
+}
+
+3.Write a class named C3 that declares 2 strings “abc” and “abc”. The first should use the
+string literal syntax and the other should use the new keyword. Write a comparison operator that prints
+a message if they are equal or otherwise. (Use an if/else-statement)
+
+package program3;
+
+public class C3 {
 	
 	public static void main(String[] args) {
 		String one = "abc";
