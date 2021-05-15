@@ -961,8 +961,37 @@ public class C3 {
 		
 		if (one == two){
 			System.out.println("The strings are equivalent");
-		}else {
+		} else {
 			System.out.println("The strings are NOT equivalent");
 		}
 	}
 }
+
+4.Write a class named C4 that declares a string "abcdefghijklmnopqrstuvwxyz". Use the
+indexOf() method to print the index of "s" and "f".
+
+package program3;
+
+public class C4 {
+	
+	public static void main(String[] args) {
+		String onet = "abcdefghijklmnopqrstuvwxyz";
+	
+			System.out.println(onet.indexOf('s', 0));
+			System.out.println(onet.indexOf('f', 0));
+		}
+	}
+
+5.Write a class named C5 that uses the substring() method to print the last 5 characters of
+"Hello My Name is Java".
+
+package program3;
+
+public class C5 {
+	
+	public static void main(String[] args) {
+		String onett = "Hello My Name is Java";
+	
+			System.out.println(onett.substring(15));
+		}
+	}
