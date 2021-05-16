@@ -995,3 +995,18 @@ public class C5 {
 			System.out.println(onett.substring(15));
 		}
 	}
+
+6.Write a class named C6 that finds the index of the 2nd space character in "Hello My Name is
+Java"; Print this number. (Hint: you may have to combine two String methods)
+
+package program3;
+
+public class C6 {
+	public static void main(String[] args) {
+		String str = "Hello My Name is Java";
+		
+		int index = str.indexOf(" ", str.indexOf(" ") + 1);
+		
+		System.out.println("The second space is at: " + index);
+}
+}
