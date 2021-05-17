@@ -1010,3 +1010,20 @@ public class C6 {
 		System.out.println("The second space is at: " + index);
 }
 }
+
+7.Write a class named Assignment7 that declares the string "http://example.com?
+// access_token=EFEc8328h29jndjd02h12$3829&ds98d". Print only the token from the string (the part
+AFTER the “=”. (Hint: Use the substring() method)
+
+package program3;
+
+public class C7 {
+	
+	public static void main(String[] args) {
+		String onettt = "http://example.com?access_token=EFEc8328h29jndjd02h12$3829&ds98d";
+	
+			System.out.println(onettt.substring(32));
+		}
+	}
+
+
