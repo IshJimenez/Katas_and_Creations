@@ -867,10 +867,11 @@ Reference variables in Java are not an object on its own right, its a link to an
 When a string object is created, either in the primitive style or as a new object, a String object is created in memory that holds the
 value we assign to it.
 
-Strings are immutable, so if we try to change the value of the string in our reference variable, the JVM actually creataes a new String object, and redirects our reference.
+Strings are immutable, so if we try to change the value of the string in our reference variable, the JVM actually creataes a new String object, 
+and redirects our reference.
 
-If I have two strings that equal the same value the JMV decides that its safe for these 2 variables to share same instance and they will both be directed
-to the same object in memory.
+If I have two strings that equal the same value the JMV decides that its safe for these 2 variables to share same instance and they will both be 
+directed to the same object in memory.
 
 If you used
 
@@ -1026,4 +1027,72 @@ public class C7 {
 		}
 	}
 
+8. Write a class named C8 that checks if two strings are anagrams. Recall that an anagram is
+a word that can be formed by rearranging the letters of another. For example, angel is an anagram of
+angle and glean. (Hint You will have to use the string methods that you are familiar with along with one
+or more loops)
+
+package program3;
+
+public class C8 {
+
+public static void main(String[] args) {
+		String one = "";
+		String two = "";
+		
+		
+		//check if strings are exactly the same
+		if (one.equals(two)) {
+			System.out.println("The strings are equal and not anagrams");
+		}
+		if (one.length() != two.length()){
+			System.out.println("The strings are different lengths");
+		}
+		
+		
+		int[] map = new int[one.length()];
+		//initialize array to -1 values
+		for (int i = 0; i < map.length; i++){
+			map[i] = -1;
+		}
+		
+		//loop through letters of 1st and check if they are in the 2nd
+		for (int i = 0; i < one.length(); i++){
+			char c = one.charAt(i);
+			
+			int index = two.indexOf(c);
+			
+			//if index is -1 the letter is not in the first
+			if (index == -1){
+				System.out.println("The strings are not anagrams");
+				System.exit(0);
+			}
+			
+			//loop through array if present, if so, update by one and try again
+			for (int j = 0; j < map.length; j++){
+				
+				//check if duplicate letter
+				if (map[j] == index){
+					index = two.indexOf(c, index + 1);
+					
+					
+					
+					if (index == -1){
+						System.out.println("the strings are not anagrams");
+						System.exit(0);
+					}
+					
+					continue;
+				}
+				
+				
+			}
+			
+			//store current index in map
+			map[i] = index;
+		}
+		
+		System.out.println("The strings are anagrams!");
+	}
+}
 
