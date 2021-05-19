@@ -1096,3 +1096,215 @@ public static void main(String[] args) {
 	}
 }
 
+-
+-
+-
+-
+CLASSES
+-
+-
+-
+-
+A class is a astrcture that can have states and behaviors. 
+
+It serves as a template for objects, which are instances of a class with a specific state.
+
+A Wizard class might have a state consisting of many possible properties such as size, weight, power, spellRange..etc
+
+The Wizard class would be a blueprint for specific wizards. 
+
+Gandalf would have his unique behaviors but he would share common behaviors with other Wizards.
+
+=
+Access Modifiers
+=
+
+Keywords that control the ability for outside code to access or change the states and behaviors of a class.
+
+Java has four access modifiers public, private, protected and default(If no other access modifier is declared)
+
+For fields, methods, and constructors any of these modifiers may be used.
+
+However only "public" and "default" make sense for classes.
+
+AM control how access to data is shared between class and other classes in the same package, other packages, and child or subclasses.
+
+Public can be accessed or modified by any other class in the application, no mater if its in the same package, or another.
+
+Protected data can be used by any class in the same package, or any sublcasses even if they are in another package.
+
+Default will be accessible by any class or sublcass in the same package, butinvisible to code oustide of the package.
+
+Private data is only accesible within the same class it is declared. It cant even be used by subclasses.
+
+If you want to manipulate, its best to do that by making the data in a class private, and creating simple methods called accessor/getters and 
+mutator/setters methods.
+
+An accessor/getter method just returns the value of a variable stored in an object.
+
+A setter method allows the user to change the value.
+
+package example;
+
+public class Wizards {
+	
+	private int maxRange;
+	
+	public int getMaxRange(){
+		return maxRange;
+	}
+	
+	public void setMaxRange(int maxRange) {
+		if (maxRange >= 0)
+		this.maxRange = maxRange;
+		else
+		this.maxRange = 0;
+	}
+	public void start(){
+		System.out.println("The wizard has this " + maxRange + " range.");
+	}
+}
+
+Start method is public and for now simply reports back the maxRange.
+
+package examples;
+
+public class WizardTest {
+	public static void main(String[] args) {
+		
+		wizard myWizard = new Wizard();
+
+		myWizard.start()
+}
+}
+
+The new tells the JVM to create a new instance of Robot, and calls the constructor method to initialize the object.
+
+By assigning a reference type variavle to this new instance we create a link to it that we can use to call its methods.
+
+A constructor is used to create an object of a class and set its initial state.
+
+Once we have the object we can use the fields and methods which were defined in the class.
+
+A constructor has the same name as the class and no return type.
+
+All classes have at least one constructor if you dont wirte one JVM will assign a default constructor.
+
+The default constructor will take no arguments, and doesnt set any values.
+
+A class can have many constructors all with the same name, but must be differentiated by the number or type of parameters they accept.
+
+That would be method overloading.
+
+package example;
+
+public class Wizards {
+	
+	private int maxRange;
+
+	////////////////////////////
+	//        Adding constructor
+	////////////////////////////
+
+	public Wizard() {
+		this.maxRange = 1 
+	}
+	
+	public int getMaxRange(){
+		return maxRange;
+	}
+	
+	public void setMaxRange(int maxRange) {
+		if (maxRange >= 0)
+		this.maxRange = maxRange;
+		else
+		this.maxRange = 0;
+	}
+	public void start(){
+		System.out.println("The wizard has this " + maxRange + " range.");
+	}
+}
+
+This is used and the dot operator to refer to the objects instance variable maxRange, to differentiate it from the passed-in variable maxRange.
+
+Java classes follow OOP principles and have both state and behaviors
+
+The new keyword followed by a constructor call creates an object of that class in memory.
+
+With an object in hand, a calling program can make use of that objects fields and methods.
+
+Those methods and constructors can be overloaded.
+
+By having multiple methods that share the same name, but accept a different number or types of parameters.
+
+1. Write a class named Person. The person class should define a name (String) and age (int) instance
+variables. Write another class, Application, in which you instantiate a new Person object. Set the person’s
+age and name properties. Print the age and name properties of the created person. 
+
+package program4;
+
+public class Person {
+	
+	String name;
+	int age;
+		
+}
+
+package program4;
+
+public class Application {
+	
+	public static void main(String[] args) {
+		Person p = new Person();
+		p.age = 22;
+		p.name = "Firstname";
+		System.out.println("Name: " + p.name + ", Age: " + p.age);
+	}
+}
+
+2. Write a class named PrivatePerson. Declare instance variables name (String) and age (int) and mark them
+private. Write getter and setter methods to access these properties. In a Main class, create a new instance
+of Person and print its properties name and age. Place these files in a package named, “two”.
+
+package program4;
+
+package program4;
+
+public class PrivatePerson {
+
+	private String name;
+	private int age;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	
+	
+}
+
+package program4;
+
+public class Application2 {
+
+	public static void main(String[] args) {
+		PrivatePerson pp = new PrivatePerson();
+		pp.setAge(20);
+		pp.setName("Firstname");
+		
+		System.out.println("Name: " + pp.getName() + ", Age: " + pp.getAge());
+	}
+}
+
