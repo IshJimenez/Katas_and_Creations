@@ -1264,11 +1264,9 @@ public class Application {
 
 2. Write a class named PrivatePerson. Declare instance variables name (String) and age (int) and mark them
 private. Write getter and setter methods to access these properties. In a Main class, create a new instance
-of Person and print its properties name and age. Place these files in a package named, “two”.
+of Person and print its properties name and age. Place these files in a package named, “program4b”.
 
-package program4;
-
-package program4;
+package program4b;
 
 public class PrivatePerson {
 
@@ -1295,7 +1293,7 @@ public class PrivatePerson {
 	
 }
 
-package program4;
+package program4b;
 
 public class Application2 {
 
@@ -1305,6 +1303,68 @@ public class Application2 {
 		pp.setName("Firstname");
 		
 		System.out.println("Name: " + pp.getName() + ", Age: " + pp.getAge());
+	}
+}
+
+3.Write a class named TalkablePerson that declares a public talk() method along with name (String) and age
+(int) properties. The talk() method should have a void return type and print the message, “Hello my name is:
+{name}”. Instead of {name} the person’s name property should be printed. In a Main class, create an
+instance of Person and use their talk method. Place these files in a package named, “program4c”.
+
+package program4c;
+
+public class Application3 {
+	public static void main(String[] args) {
+		TalkablePerson tp = new TalkablePerson("Bond", 18);
+		tp.talk();
+	}
+}
+
+package program4c;
+
+public class TalkablePerson {
+	
+	String name;
+	int age;
+	
+	public TalkablePerson(String name, int age) {
+		super();
+		this.name = name;
+		this.age = age;
+	}
+
+	
+	public void talk(){
+		System.out.println("Hello my name is " + this.name );
+	}
+}
+
+Extra Practice 
+
+package program4d;
+
+public class wizard {
+	public static void main(String[] args) {
+		power wi = new power("Merlin", 9000);
+		wi.org();
+	}
+}
+
+package program4d;
+
+public class power {
+	
+	String name;
+	int powerr;
+	
+	public power(String name, int powerr) {
+	super();
+	this.name = name;
+	this.powerr = powerr;
+	}
+	
+	public void org() {
+		System.out.println("His power level is over" + " " + this.powerr );
 	}
 }
 
