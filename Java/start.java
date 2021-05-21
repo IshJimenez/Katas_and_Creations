@@ -1368,3 +1368,30 @@ public class power {
 	}
 }
 
+4.Write a class named ConstructorPerson that declares name (String) and age (int) instance variables. Write
+a no-arg constructor1 that initializes ConstructorPerson with default values. In a Main class, create an
+instance of a ConstructorPerson and print its properties name and age. 
+
+package program4e;
+
+public class ConstructorPerson {
+	
+	String name;
+	int age;
+	
+	public ConstructorPerson() {
+		this.name = "Bond";
+		this.age = 700;
+	}
+}
+
+package program4e;
+
+public class Application {
+	public static void main(String[] args) {
+		ConstructorPerson nat = new ConstructorPerson();
+		System.out.println("Name: " + nat.name + ", Age: " + nat.age);
+	}
+}
+
+
