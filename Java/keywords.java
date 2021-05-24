@@ -73,3 +73,44 @@ If you dont do this, the subclass must also be declared abstract.
 Create a class named StaticClass. Write a static method that computes the sum of two floating point
 numbers. Use this method in an Application class, to compute the sum of two numbers that you pass to
 your static method.
+
+package com.mycompany.main;
+
+import java.util.List;
+
+public class Application {
+
+	public static void main(String[] args) {
+		float x,y;
+		x = 100.55f;
+		y = 1291.324f;
+		
+		System.out.println("Addition result: " + StaticClass.add(x, y));
+		
+		FinalClass fc = new FinalClass();
+		System.out.println("The constant: " + fc.myConstant);
+		
+		ConcreteClass cc =  new ConcreteClass();
+		cc.run();
+	}
+}
+
+package com.mycompany.main;
+
+public class StaticClass {
+
+	public static float add(float x, float y){
+		return x + y;
+	}
+}package com.mycompany.main;
+
+public class StaticClass {
+
+	public static float add(float x, float y){
+		return x + y;
+	}
+}
+
+2. Create a class named FinalClass and define an instance variable, myConstant. 
+Use the final keyword to mark the instance variable as final. 
+This makes it a constant. Add a statement to your Application class to print the value of this constant.
