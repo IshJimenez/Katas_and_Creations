@@ -146,3 +146,41 @@ public class FinalClass {
 3. Write a class named AbstractClass and declare it abstract. It should have an abstract method run(). 
 Declare another class ConcreteClass and it should extend AbstractClass. 
 Implement the run() method. In the Application class, add a statement to create an instance of ConcreteClass and then call the run() method.
+
+package com.mycompany.main;
+
+public abstract class AbstractClass {
+
+	public abstract void run();
+}
+
+package com.mycompany.main;
+
+public class ConcreteClass extends AbstractClass {
+
+	@Override
+	public void run() {
+		System.out.println("Running the class...");
+	}
+}
+
+package com.mycompany.main;
+
+import java.util.List;
+
+public class Application {
+
+	public static void main(String[] args) {
+		float x,y;
+		x = 100.55f;
+		y = 1291.324f;
+		
+		System.out.println("Addition result: " + StaticClass.add(x, y));
+		
+		FinalClass fc = new FinalClass();
+		System.out.println("The constant: " + fc.myConstant);
+		
+		ConcreteClass cc =  new ConcreteClass();
+		cc.run();
+	}
+}
