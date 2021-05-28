@@ -87,11 +87,6 @@ public class Application {
 		
 		System.out.println("Addition result: " + StaticClass.add(x, y));
 		
-		FinalClass fc = new FinalClass();
-		System.out.println("The constant: " + fc.myConstant);
-		
-		ConcreteClass cc =  new ConcreteClass();
-		cc.run();
 	}
 }
 
@@ -131,8 +126,6 @@ public class Application {
 		FinalClass fc = new FinalClass();
 		System.out.println("The constant: " + fc.myConstant);
 		
-		ConcreteClass cc =  new ConcreteClass();
-		cc.run();
 	}
 }
 
