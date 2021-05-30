@@ -117,3 +117,83 @@ public class GameLogic {
         c.roam();
     }
 }
+
+1. Create a package, “one” to place files in.
+Write an interface Movable the declares a method move(). Create a class named Automobile that
+implements the move() method. In a main() method in an Application class, create a Movable object
+that is an instance of an Automobile. Execute the move() method. 
+
+package one;
+
+/**
+ * An Automobile implements the Movable interface
+ *
+ */
+public class Automobile implements Movable {
+
+	public void move(){
+		System.out.println("Moving the object...");
+	}
+}
+
+package one;
+
+public interface Movable {
+
+	public void move();
+}
+
+package one;
+
+public class Application {
+
+	public static void main(String[] args) {
+		Movable mv = new Automobile();
+		mv.move();
+	}
+}
+
+2. Create a package, “two” to place files in.
+Create an interface Animatable that extends Movable (from the above assignment) and declares a
+method animate(). Create a class named MoverAndAnimate that implements Animatable. In an
+Application2 class, create an instance of a MoverAndAnimate and execute both the move() and
+animate() methods.
+
+package two;
+
+public class MoverAndAnimate implements Animatable {
+
+	@Override
+	public void move() {
+		System.out.println("Moving the mover...");
+		
+	}
+
+	@Override
+	public void animate() {
+		System.out.println("Animating the object...");
+	}
+
+	
+}
+
+package two;
+
+import one.Movable;
+
+public interface Animatable extends Movable{
+
+	public void animate();
+}
+
+package two;
+
+public class Application2 {
+
+	public static void main(String[] args) {
+		Animatable a = new MoverAndAnimate();
+		
+		a.animate();
+		a.move();
+	}
+}
