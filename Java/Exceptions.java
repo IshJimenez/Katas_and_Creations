@@ -95,3 +95,39 @@ When performance is of utmost imporatnce, its better to write the code with no e
 When communication with another device needs to be synchronized at a millisecond scale
 
 Lke video games, specially online-multi
+
+1.Write a class CustomException that extends the Exception class. In another class Runner, write a
+method, run() that throws this CustomException. Use a try/catch/block to manage exception handling in
+an Application class that instantiates a Runner and calls its run method. 
+
+public class CustomException extends Exception {
+	private String message;
+	private static final long serialVersionUID = 1L;
+	
+	public CustomException(String message) {
+		super(message);
+		this.message = message;
+	}
+}
+
+public class Runner {
+
+	public void run() throws CustomException {
+		throw new CustomException("Tried running but fell");
+	}
+}
+
+
+public class Application {
+
+	public static void main(String[] args) {
+		//Place your code here
+		Runner runner = new Runner();
+		
+		try {
+			runner.run();
+		} catch (CustomException e) {
+			e.printStackTrace();
+		}
+	}
+}
