@@ -95,3 +95,94 @@ We might want a method that accepts generic types inside a non-generic or concre
 
 In that case, we can delcare the generic typein the method delcaration, before the return type.
 
+Generic Methods
+
+Accepts a generic type "T" input public <T>String myMethod(T input)
+
+In this case, you can declare the generic type in the method declaration, before the return type.
+
+Returns a type T object reference public T otherMethod(String input) {}
+
+Usually when you do this, youre expecting the method to be passed a generic type.
+
+Just be aware, that when you do this youll have no idea what the actual input types are, so youre 
+generally restricted to working with the methods in the Object class.
+
+package example;
+
+public class KeyValuePair <k,V> {
+
+    private K key;
+    privat V value;
+
+    public void put(K newKey, V newValue) {
+        key = newKey;
+        value = newValue;
+    }
+    public K getKey() {
+        return key;
+    }
+    public V getValue() {
+        return value;
+    }
+}
+
+Your generic KeyValuePair class looks like above.
+
+When you create an instance, you set the types of the key and the value, and then you mist
+assign them with setters.
+
+package example;
+
+public class KVPUtilities {
+
+    public static <K,V> boolean equality(keyValuePair<K,V> p1, KeyValuePair<K,V> p2) {
+        return p1.getKey().equals(p2.getKey()) &&
+        p1.getValue().equals(p2.getValue());
+    }
+}
+
+In another class, we have a static method called equality which uses the generalized K and V types.
+
+Important thing here is that by specifying K and V separately, we guarantee that this method only works when comparing 2 KeyValuePair objects
+that use the same type K for their keys, and the same type V for their values.
+
+package example;
+
+public clasa KVPTester {
+
+    public static void main(String[] args) {
+
+        keyValuePair<Integer, String> pairOne = new KeyValuePair<>();
+        keyValuePair<Integer, String> pairTwo = new KeyValuePair<>();
+
+        pairOne.put(1, "Batman");
+        pairTwo.put(2, "Superman");
+
+        System.out.print1n("Is pairOne and pairTwo the same ?" + KVPUtilities.equality(pairOne, pairTwo));
+
+        pairOne.put(2, "Superman");
+
+        System.out.print1n("How about now fool ?" + KVPUtilities.equality(pairOne, pairTwo));
+    }
+}
+
+Here we can call this method like normal 
+
+The generic types for the method will be inferred from the passed-in paramters.
+
+Bounded types
+
+Used to restrict the types accepted by a generic class or method.
+
+Use the extends or Implements keyword <T extends SomeClass>
+
+public <T extends Toy>void put(T input) {}
+
+public class Doll extends Toy {}
+
+public class TinyCar extends Toy {}
+
+If a Toy abstract class, which is extended by a Doll class and a TinyCar class, we could create
+a FancyBox for Doll or TinyCar objects, but not a String.
+
