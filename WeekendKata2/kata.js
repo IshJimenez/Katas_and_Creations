@@ -183,3 +183,30 @@ function generateHashtag(string) {
 
   return stringWithHashtag.length > 140 ? false : stringWithHashtag;
 }
+
+Celsius to Fahrenheit
+Write a JavaScript program to convert temperatures to and from celsius, fahrenheit.
+
+Formula:
+
+°C x 9/5 + 32 = °F (°F - 32) x 5/9 = °C
+
+Example:
+
+37°C x 9/5 + 32 = 98.6°F 37°C = 98.6°F
+
+function cToF(celsius) 
+{
+  var cTemp = celsius;
+  var cToFahr = cTemp * 9 / 5 + 32;
+  var message = cTemp+'\xB0C is ' + cToFahr + ' \xB0F.';
+    console.log(message);
+}
+
+function fToC(fahrenheit) 
+{
+  var fTemp = fahrenheit;
+  var fToCel = (fTemp - 32) * 5 / 9;
+  var message = fTemp+'\xB0F is ' + fToCel + '\xB0C.';
+    console.log(message);
+} 
