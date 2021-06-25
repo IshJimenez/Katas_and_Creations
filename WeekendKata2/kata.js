@@ -337,3 +337,23 @@ function isTriangle(a,b,c) {
   const sides = [a, b, c].sort();
   return ((sides[0] + sides[1]) > sides[2]);
 }
+
+Build a square
+
+I will give you an integer. Give me back a shape that is as long and wide as the integer. The integer will be a whole number between 1 and 50.
+
+Example
+n = 3, so I expect a 3x3 square back just like below as a string:
+
++++
++++
++++
+
+function squareDigits(num){
+  let string = num.toString();  // turn number to a string
+  let results = [];             // create an array to save the new values of the string
+  for (let i = 0; i < string.length; i++){  // iterate through the string
+      results[i] = string[i] * string[i];   // save the square of the number to the array 
+  }
+  return Number(results.join(''));    // turn the array into a string and then into a number
+}
