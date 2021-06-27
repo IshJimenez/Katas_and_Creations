@@ -357,3 +357,11 @@ function squareDigits(num){
   }
   return Number(results.join(''));    // turn the array into a string and then into a number
 }
+
+Given an array of integers, find the one that appears an odd number of times.
+
+There will always be only one integer that appears an odd number of times.
+
+function findOdd(arr) {
+  return arr.find((item) => arr.filter(el => el == item).length % 2)
+}
