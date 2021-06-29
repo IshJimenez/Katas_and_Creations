@@ -377,3 +377,12 @@ for (var year = 2014; year <= 2050; year++)
     if ( d.getDay() === 0 )
         console.log("1st January is being a Sunday  "+year);
     };
+
+    Write a JavaScript function to find the area of a triangle where lengths of the three of its sides are 15, 61, 77.
+
+    var side1 = 15; 
+    var side2 = 61; 
+    var side3 = 77; 
+    var s = (side1 + side2 + side3)/2;
+    var area =  Math.sqrt(s*((s-side1)*(s-side2)*(s-side3)));
+    console.log(area);
