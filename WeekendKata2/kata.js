@@ -494,3 +494,16 @@ function find_FirstNotRepeatedChar(str) {
   return result;
 }
 console.log(find_FirstNotRepeatedChar('abacddbec'));
+
+Write a JavaScript program to pass a 'JavaScript function' as parameter.
+
+function addSuperH(id, refreshCallback)
+{
+    refreshCallback();  
+}
+
+function refreshSuperHList() {
+    console.log('I see you hero');
+}
+
+addSuperH(1, refreshSuperHList);
