@@ -1,0 +1,21 @@
+.frid {
+    width: 300px;
+    height: 300px;
+    border: solid black 2px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.frid div {
+    width: 20px;
+    height: 20px;
+}
+
+.invader {
+    background-color: orange;
+    border-radius: 10px;
+}
+
+.shooter {
+    background-color: teal;
+}
