@@ -542,3 +542,15 @@ if (typeof value === "object" || typeof value === "function")
 console.log(detect_data_type(12));
 console.log(detect_data_type('w3resource'));
 console.log(detect_data_type(false));
+
+Write a JavaScript function that returns array elements larger than a number.
+
+function BiggerElements(val)
+   {
+     return function(evalue, index, array)
+     {
+     return (evalue >= val);
+     };
+   }
+var result = [11, 45, 4, 31, 64, 10]. filter(BiggerElements(10));
+console.log(result);
