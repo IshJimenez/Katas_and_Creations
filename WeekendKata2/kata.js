@@ -554,3 +554,11 @@ function BiggerElements(val)
    }
 var result = [11, 45, 4, 31, 64, 10]. filter(BiggerElements(10));
 console.log(result);
+
+Write a function toFahrenheit that converts a temperature from Celsius to Fahrenheit.
+
+Example: toFahrenheit(0) should return 32.
+
+function toFahrenheit(celsius) {
+  return 1.8 * celsius + 32;
+}

@@ -91,7 +91,7 @@ function moveAlienIn() {
             clearIntveral(invadersId)
         }
     }
-    if(alienRemoved.length === alienIn.length) {
+    if(aliensRemoved.length === alienIn.length) {
         resultsDisplay.innerHTML = 'YOU WON I GUESS'
         clearInterval(invadersId)
     }
@@ -122,8 +122,9 @@ function shoot(e) {
         }
         }
         switch(e.key) {
-            case 'ArrowUp':
+            case 'ArrowDown':
             laserId = setInterval(mLaser, 100)
+            
         
     }
 }
