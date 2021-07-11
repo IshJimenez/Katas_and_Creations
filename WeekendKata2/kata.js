@@ -562,3 +562,12 @@ Example: toFahrenheit(0) should return 32.
 function toFahrenheit(celsius) {
   return 1.8 * celsius + 32;
 }
+
+Write a function firstChar, which returns the first character that is not a space when a string is passed.
+
+Example: firstChar(' Rosa Parks ') should return 'R'.
+
+function firstChar(text) {
+  let trimmedText = text.trim();
+  return trimmedText.charAt(0);
+}
