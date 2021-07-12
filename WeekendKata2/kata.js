@@ -571,3 +571,13 @@ function firstChar(text) {
   let trimmedText = text.trim();
   return trimmedText.charAt(0);
 }
+
+rite a function midrange, that calculates the midrange of 3 numbers. The midrange is the mean of the smallest and largest number.
+
+Example: midrange(3, 9, 1) should return (9+1)/2 = 5.
+
+function midrange(a, b, c) {
+  let min = Math.min(a, b, c);
+  let max = Math.max(a, b, c);
+  return (min + max) / 2;
+}
