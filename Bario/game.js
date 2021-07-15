@@ -68,7 +68,7 @@ const gameLevel = addLevel(map, levelCfg)
         pos(30,6),
         layer('ui'),
         {
-            value: 'Ramon and Morgan Kissed :-)',
+            value: 'Test',
         }
 ])
 
