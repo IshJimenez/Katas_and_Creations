@@ -25,7 +25,7 @@ loadSprite('tright', 'aTRight.png')
 loadSprite('bleft', 'aBLeft.png')
 loadSprite('bright', 'aBRight.png')
 
-scene("game", () => {
+scene("game", ( { score }) => {
     layers(['bg', 'obj', 'ui'], 'obj')
 
 const map = [
@@ -64,11 +64,13 @@ const levelCfg = {
 const gameLevel = addLevel(map, levelCfg)
 
     const scoreLable = add([
-        text('test'),
+        // text('test'),
+        text(score),
         pos(30,6),
         layer('ui'),
         {
-            value: 'Test',
+            // value: 'Test',
+            value: score,
         }
 ])
 
@@ -168,4 +170,5 @@ scene('lose', ({ score }) => {
     add([text(score, 32), origin('center'), pos(width()/2, height()/ 2)])
 })
 
-start("game")
+// start("game")
+start("game", {score: 0})
