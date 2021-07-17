@@ -10,6 +10,8 @@ const MOVE_SPEED = 120
 const JUMP_FORCE = 360
 const BIG_JUMP_FORCE = JUMP_FORCE * 1.5
 let CURRENT_JUMP_FORCE = JUMP_FORCE
+let isJumping = true
+const FALL_DEATH = 400
 
 
 loadSprite('coin', 'aCoin.png')
@@ -25,7 +27,7 @@ loadSprite('tright', 'aTRight.png')
 loadSprite('bleft', 'aBLeft.png')
 loadSprite('bright', 'aBRight.png')
 
-scene("game", ( { score }) => {
+scene("game", ( { level, score }) => {
     layers(['bg', 'obj', 'ui'], 'obj')
 
 const map = [
@@ -54,8 +56,8 @@ const levelCfg = {
     '}': [sprite('box'), solid()],
     '(': [sprite('bleft'), solid(), scale(0.5)],
     ')': [sprite('bright'), solid(), scale(0.5)],
-    '-': [sprite('tleft'), solid(), scale(0.5)],
-    '+': [sprite('tright'), solid(), scale(0.5)],
+    '-': [sprite('tleft'), solid(), scale(0.5), 'pipe'],
+    '+': [sprite('tright'), solid(), scale(0.5), 'pipe'],
     '^': [sprite('badDude1'), solid(), 'dangerous'],
     '#': [sprite('mushroom'), solid(), 'mushroom', body()],
 
@@ -66,15 +68,28 @@ const gameLevel = addLevel(map, levelCfg)
     const scoreLable = add([
         // text('test'),
         text(score),
+        // text(meg),
         pos(30,6),
         layer('ui'),
         {
             // value: 'Test',
             value: score,
+            // value: 'You dont win',
+
         }
 ])
+    // const scoreLable2 = add([
+    //     // text('test'),
+    //     text(Text1),
+    //     pos(40,8),
+    //     layer('ui'),
+    //     {
+    //         // value: 'Test',
+    //         value: 'You dont win.',
+    //     }
+    // ])
 
-add([text('level ' + 'test', pos(4,6))])
+add([text('level ' + parseInt(level + 1)), pos(50,6)])
 
 function big() {
         let timer = 0
@@ -150,7 +165,27 @@ action('dangerous', (d) => {
 })
 
 player.collides('dangerous', (d) => {
-    go('lose', { score: scoreLable.value})
+    if (isJumping) {
+        destroy(d)
+    } else {
+        go('lose', { score: scoreLable.value})
+    }
+})
+
+player.action(() => {
+    camPos(player.pos)
+    if (player.pos.y >= FALL_DEATH) {
+        go('lose', { score: scoreLable.value})
+    }
+})
+
+player.collides('pipe', () => {
+    keyPress('down', () => {
+        go('game', {
+            level: (level + 1),
+            score: scoreLable.value
+        })
+    })
 })
 
     keyDown('left', () => {
@@ -159,8 +194,16 @@ player.collides('dangerous', (d) => {
     keyDown('right', () => {
         player.move(MOVE_SPEED, 0)
     })
+
+player.action(() => {
+    if(player.grounded()) {
+        isJumping = false
+    }
+})
+
     keyDown('space', () => {
         if (player.grounded()) {
+            isJumping = true
             player.jump(CURRENT_JUMP_FORCE)
     }
     })
@@ -171,4 +214,4 @@ scene('lose', ({ score }) => {
 })
 
 // start("game")
-start("game", {score: 0})
+start("game", { level: 0, score: 0})
