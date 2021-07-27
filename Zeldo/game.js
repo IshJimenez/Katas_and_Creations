@@ -32,17 +32,18 @@ loadSprite('bg', 'aBg.png')
 scene ('game', (
     // { level, score }
     ) => {
+        layers(['bg', 'obj', 'ui'], 'obj')
 
     const map = [
-            'cccccccccc',
-            'c        c',
-            'c      } c',
-            'c    }   c',
-            'c        c',
-            'c    }   c',
-            'c   }    c',
-            'c        c',
-            'c         ',
+            'yccc)c^c)cccw',
+            'a           b',
+            ')      }    b',
+            'a    }      b',
+            '%           b',
+            'a    }      b',
+            ')   }       b',
+            'a        *  b',
+            'xdddddddddddz',
         ]
 
     const levelCfg = {
@@ -68,6 +69,30 @@ scene ('game', (
         }
 
 addLevel(map, levelCfg)
+
+add([sprite('bg'), layer('bg')])
+
+const player = add([sprite('linkR'), pos(5,190)])
+
+const MOVE_SPEED = 120
+
+keyDown('left', () => {
+    player.changeSprite('linkL')
+    player.move(-MOVE_SPEED, 0)
+})
+keyDown('right', () => {
+    player.changeSprite('linkR')
+    player.move(MOVE_SPEED, 0)
+})
+keyDown('up', () => {
+    player.changeSprite('linkU')
+    player.move(0, -MOVE_SPEED)
+})
+keyDown('down', () => {
+    player.changeSprite('linkD')
+    player.move(0, MOVE_SPEED)
+})
+
 
 })
 
