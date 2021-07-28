@@ -746,3 +746,20 @@ function findMax(ar)
 var ar = [-5, 10, -3, 12, -9, 5, 90, 0, 1];
 var max = findMax(ar);
 println("Max: ", max);
+
+Print the first 10 Fibonacci numbers without recursion
+
+var f0 = 0;
+println(f0);
+
+var f1 = 1;
+println(f1);
+
+for(var i = 2; i < 10; i++)
+{
+    var fi = f1 + f0;
+    println(fi);
+    
+    f0 = f1;
+    f1 = fi;
+}
