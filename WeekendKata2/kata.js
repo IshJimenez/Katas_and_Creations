@@ -792,3 +792,22 @@ println(3, " is prime? ", isPrime(3));
 println(4, " is prime? ", isPrime(4));
 println(5, " is prime? ", isPrime(5));
 println(9, " is prime? ", isPrime(9));
+
+Calculate the sum of digits of a positive integer number
+
+function sumDigits(n)
+{
+    var s = n.toString();
+    var sum = 0;
+    
+    for(var char of s)
+    {
+        var digit = parseInt(char);
+        sum += digit;
+    }
+    
+    return sum;
+}
+
+var sum = sumDigits(1235231);
+println("Sum: ", sum);
