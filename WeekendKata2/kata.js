@@ -957,3 +957,4 @@ function isSeparator(c)
     var separators = [" ", "\t", "\n", "\r", ",", ";", ".", "!", "?", "(", ")"];
     return separators.includes(c);
 }
+
