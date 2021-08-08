@@ -958,3 +958,19 @@ function isSeparator(c)
     return separators.includes(c);
 }
 
+Create a function that will convert a string in an array containing the ASCII codes of each character
+
+println(getCharCodes("I like Bananas));
+
+function getCharCodes(s)
+{
+    var ar = [];
+    
+    for(var i = 0; i < s.length; i++)
+    {
+        var code = s.charCodeAt(i);
+        ar.push(code);
+    }
+    
+    return ar;
+}
