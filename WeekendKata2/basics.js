@@ -40,3 +40,21 @@ Example: toCase('Mthatha') should return 'mthatha-MTHATHA'.
 function toCase(text) {
 	return text.toLowerCase() + '-' + text.toUpperCase();
   }
+
+  Coding challenge #33. Calculate the sum of numbers received in a comma delimited string
+
+  println(sumC("4.1, 4.2, 4.2, 4, 4.5, 4, 4, 8, 4, 4.3"));
+
+function sumC(x)
+{
+    var art = x.split(",");
+    
+    var sum = 0;
+    
+    for(var n of art)
+    {
+        sum += parseFloat(n);
+    }
+    
+    return sum;
+}
