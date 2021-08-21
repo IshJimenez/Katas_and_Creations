@@ -39,9 +39,9 @@ scene ('game', ({ level, score }) => {
             ')      }    b',
             'a    }      b',
             '%           b',
-            'a    }      b',
-            ')   }       b',
-            'a   }       b',
+            'a           b',
+            ')           b',
+            'a     }     b',
             'a        *( b',
             'xdddddddddddz',
         ],
@@ -74,7 +74,7 @@ scene ('game', ({ level, score }) => {
             '^':  [sprite('topDoor'), 'nextLevel'],
             '$':  [sprite('stairs'), 'nextLevel'],
             '*' : [sprite('slicer'), 'slicer', 'dangerous', { dir: 1}],
-            '}' : [sprite('skeletor'), 'dangerous'],
+            '}' : [sprite('skeletor'), 'dangerous', 'skeletor', { dir: -1, timer: 0}],
             ')' : [sprite('lanterns'), solid(), 'wall'],
             '(' : [sprite('firePot'), solid()],
 
@@ -113,18 +113,43 @@ const MOVE_SPEED = 120
 keyDown('left', () => {
     player.changeSprite('linkL')
     player.move(-MOVE_SPEED, 0)
+    player.dir = vec2(-1,0)
 })
 keyDown('right', () => {
     player.changeSprite('linkR')
     player.move(MOVE_SPEED, 0)
+    player.dir = vec2(1, 0)
 })
 keyDown('up', () => {
     player.changeSprite('linkU')
     player.move(0, -MOVE_SPEED)
+    player.dir = vec2(0, -1)
 })
 keyDown('down', () => {
     player.changeSprite('linkD')
     player.move(0, MOVE_SPEED)
+    player.dir = vec2(0, 1)
+})
+
+function spawnKaboom(p) {
+    const obj = add([sprite('kaboom'), pos(p), 'kaboom'])
+    wait (1, () => {
+        destroy(obj)
+    })
+}
+
+keyPress('space', () => {
+    spawnKaboom(player.pos.add(player.dir.scale(48)))
+})
+
+collides('kaboom', 'skeletor', (k, s) => {
+    camShake(4)
+    wait(1,() => {
+        destroy(k)
+    })
+    destroy(s)
+    scoreLabel.value++
+    scoreLabel.text = scoreLabel.value
 })
 
 const SLICER_SPEED = -120
@@ -133,6 +158,20 @@ action('slicer', (s) => {
 })
 
 collides('slicer', 'wall', (s) => {
+    s.dir = -s.dir
+})
+
+const SKELETOR_SPEED = 65
+action('skeletor', (s) => {
+    s.move(0, s.dir * SKELETOR_SPEED )
+    s.timer -= dt()
+    if (s.timer <= 0) {
+        s.dir = - s.dir
+        s.timer = rand(4)
+    }
+})
+
+collides('skeletor', 'wall', (s) => {
     s.dir = -s.dir
 })
 
