@@ -1102,3 +1102,15 @@ function FirstReverse(str) {
    
 // keep this function call here 
 FirstReverse(readline());
+
+Create a function which returns the number of true values there are in an array.
+
+function numOfTValues(arr) {
+  let count = 0;
+  for( x = 0; x < arr.length; x++){
+    if(arr[x] == true) {
+      count++;
+    }
+  }
+  return count;
+}
