@@ -1147,4 +1147,5 @@ function makePlusFunction(baseNumb) {
 }
 
 let plusDos = makePlusFunction(2)
-console.log(plusDos(13)) ➞ 15
+console.log(plusDos(14)) ➞ 16
+
