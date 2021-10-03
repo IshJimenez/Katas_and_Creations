@@ -59,6 +59,16 @@ scene("game", ({score}) => {
             })
             }
     spwanTree();
+
+    // const sky = add([
+    //     rect(width(), 48),
+    //     pos(0, height() - 48),
+    //     outline(4),
+    //     area(),
+    //     solid(),
+    //     color(127, 180, 255),
+
+    // ])
     
     // keyPress("space", () => {
     //     if (bean.grounded()) {
