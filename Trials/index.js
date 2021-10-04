@@ -48,3 +48,43 @@ function fib(){
     }
     return fibArray
 }
+
+// 3) 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+
+// What is the smallest positive number that is evenly divisible by all of the numbers from 1 to n?
+
+function smallestMulti(n){
+    // Setup the state
+    let incr = 2;
+    let step = 2;
+    let smallestNum = 2;
+    // Loop through all the numbers until we arrive at the correct one
+    // Number.MAX_SAFE_INTEGER 
+    // represents the maximum safe integer in JavaScript
+    while (smallestNum <= Number.MAX_SAFE_INTEGER) {
+    // Starting from the step value
+    for( let x = 2; x <= n; x++){
+    // Checkingg to see if its divisible
+    // (%) returns the remainder left over when one operand is divided by a second
+    const isDivisible = smallestNum % x === 0;
+    if (!isDivisible) {
+        break;
+    }
+    // If its divisible, + the step to be the next 
+    if ( x === incr) {
+    step = smallestNum;
+    // + the global increment by 1
+    incr++
+    }
+    // Inspect to see if x is equal to the last digit
+    if (x === n) {
+        return smallestNum;
+
+    }
+    console.log(smallestNum)
+    }
+    smallestNum += step;
+    }
+}
+
+smallestMulti(5)
