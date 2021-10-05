@@ -41,11 +41,21 @@ scene("game", ({score}) => {
         solid(),
         color(127, 200, 255),
     ])
+
+    const ceiling = add([
+        rect(width(), 48),
+        pos(0, height() - 510),
+        outline(4),
+        area(),
+        solid(),
+        color(227, 100, 255),
+        'tree'
+    ])
     
     function spwanTree() {
             // Add tree
             add([
-                rect(48, rand(24, 64)),
+                rect(rand(28, 58), rand(24, 64)),
                 area(),
                 outline(4),
                 pos(width(), height() - 48),
@@ -54,21 +64,47 @@ scene("game", ({score}) => {
                 move(LEFT, 240),
                 "tree",
             ]);
-            wait(rand(0.6, 1.5), () => {
+            wait(rand(0.6, 1.3), () => {
                 spwanTree();
             })
             }
     spwanTree();
 
-    // const sky = add([
-    //     rect(width(), 48),
-    //     pos(0, height() - 48),
-    //     outline(4),
-    //     area(),
-    //     solid(),
-    //     color(127, 180, 255),
+    function spawnMidSky() {
+    add([
+        rect(rand(28, 48), rand(28, 48)),
+        area(),
+        outline(4),
+        pos(width(), height() - 225),
+        origin("center"),
+        color(255, 150, 155),
+        move(LEFT, 240),
+        "tree"
+    ]);
+    wait(rand(0.7, 1.6), () => {
+        spawnMidSky();
+    })
+    
+}
+    spawnMidSky()
 
-    // ])
+    function spawnHighSky() {
+        add([
+            rect(rand(28, 48), rand(18, 38)),
+            area(),
+            outline(4),
+            pos(width(), height() - 375),
+            origin("center"),
+            color(155, 150, 255),
+            move(LEFT, 240),
+            "tree"
+        ]);
+        wait(rand(0.8, 1.8), () => {
+            spawnHighSky();
+        })
+        
+    }
+spawnHighSky()
     
     // keyPress("space", () => {
     //     if (bean.grounded()) {
@@ -79,11 +115,11 @@ scene("game", ({score}) => {
     // })
 
     mouseClick(()   => {
-        if (bean.grounded()) {
+        // if (bean.grounded()) {
         bean.jump()
         score++;
         scoreLabel.text = score;
-        }
+        // }
     })
     
     bean.collides("tree", () => {
@@ -92,6 +128,7 @@ scene("game", ({score}) => {
         music.stop();
         go("lost", {score})
     })
+ 
 
 // let score = 0;
 const scoreLabel = add([
