@@ -34,8 +34,8 @@ scene("game", ({score}) => {
     
     // Platform for our dear bean
     const floor = add([
-        rect(width(), 48),
-        pos(0, height() - 48),
+        rect(width(), 28),
+        pos(0, height() - 28),
         outline(4),
         area(),
         solid(),
@@ -49,7 +49,7 @@ scene("game", ({score}) => {
         area(),
         solid(),
         color(227, 100, 255),
-        'tree'
+        // 'tree'
     ])
     
     function spwanTree() {
@@ -58,7 +58,7 @@ scene("game", ({score}) => {
                 rect(rand(28, 58), rand(24, 64)),
                 area(),
                 outline(4),
-                pos(width(), height() - 48),
+                pos(width(), height() - 28),
                 origin("botleft"),
                 color(255, 180, 255),
                 move(LEFT, 240),
@@ -78,7 +78,7 @@ scene("game", ({score}) => {
         pos(width(), height() - 225),
         origin("center"),
         color(255, 150, 155),
-        move(LEFT, 240),
+        move(LEFT, 260),
         "tree"
     ]);
     wait(rand(0.7, 1.6), () => {
@@ -93,7 +93,7 @@ scene("game", ({score}) => {
             rect(rand(28, 48), rand(18, 38)),
             area(),
             outline(4),
-            pos(width(), height() - 375),
+            pos(width(), height() - 400),
             origin("center"),
             color(155, 150, 255),
             move(LEFT, 240),
