@@ -1149,3 +1149,14 @@ function makePlusFunction(baseNumb) {
 let plusDos = makePlusFunction(2)
 console.log(plusDos(14)) ➞ 16
 
+
+
+// Calculate the sum of odd numbers greater than 10 and less than 30
+
+let sum = 0
+
+for (let x = 11; x <= 30; x += 2){
+ console.log(i)
+ sum += x
+}
+console.log(sum)
