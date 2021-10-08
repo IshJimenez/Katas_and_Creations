@@ -1,0 +1,65 @@
+.navBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: teal; 
+}
+
+.navC{
+    width: 90vw;
+    max-width: 1120px;
+    background: orange;
+}
+
+.navHeader {
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.NavLogo {
+    /* background: black; */
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+}
+
+.navBtn {
+    padding:0.15rem 0.75rem
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: column;
+}
+
+.navLink {
+    display: block;
+    text-align: center;
+    text-transform: capitalize;
+    color: black;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 1rem 0;
+    border-top: 1px solid gray;
+    transition: 2s;
+}
+
+.cBtn{
+    text-decoration: none;
+    border-radius: 5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: teal;
+    background-color: teal;
+    color: white;
+
+}
+
+.navLink:hover {
+    color: blue;
+    letter-spacing: 20px;
+    font-size: 40px;
+}
