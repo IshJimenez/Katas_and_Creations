@@ -33,6 +33,13 @@
 .navLinks {
     display: flex;
     flex-direction: column;
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s ease-in-out all;
+}
+
+.showLinks {
+    height: 310px;
 }
 
 .navLink {
@@ -63,3 +70,44 @@
     letter-spacing: 20px;
     font-size: 40px;
 }
+
+@media screen and (min-width: 992px) {
+    .navBtn {
+    display: none;
+    }
+    .navBar {
+    height: 6rem;
+    }
+    .navC {
+        display: flex;
+    align-items: center;
+    };
+    .navHeader {
+    height: auto;
+    margin-right: 3rem;
+    }
+    .navLinks {
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    }
+    .navLink {
+    padding: 0;
+    border-top: none;
+    margin-right: 1rem;
+    margin-left: 20px;
+    font-size: 1rem;
+    }
+    .contact {
+    margin-left: auto;
+    }
+}
+
+/*
+Page
+*/
+
+/*
+Footer
+*/
