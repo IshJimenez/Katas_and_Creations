@@ -2,13 +2,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: teal; 
+    /* background: teal;  */
 }
 
 .navC{
     width: 90vw;
     max-width: 1120px;
-    background: orange;
+    /* background: orange; */
 }
 
 .navHeader {
@@ -107,7 +107,32 @@
 /*
 Page
 */
+.page {
+    background: orange;
+    width: 90vw;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    min-height: calc(100vh - (6rem + 4rem));
 
+}
 /*
 Footer
 */
+.pageFooter {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    color: white;
+}
+
+.pageFooter p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.footerLogo, .pageFooter a {
+    color: teal;
+}
