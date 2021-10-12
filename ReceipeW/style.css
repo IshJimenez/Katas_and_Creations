@@ -108,7 +108,7 @@
 Page
 */
 .page {
-    background: orange;
+    /* background: orange; */
     width: 90vw;
     max-width: 1120px;
     margin: 0 auto;
@@ -135,4 +135,12 @@ Footer
 
 .footerLogo, .pageFooter a {
     color: teal;
+}
+/*
+Her0
+*/
+
+.her0 {
+    height: 60vh;
+    background: url('../ReceipeW/assets/recipes/intro.jpg') center/cover no-repeat;
 }
