@@ -71,38 +71,7 @@
     font-size: 40px;
 }
 
-@media screen and (min-width: 992px) {
-    .navBtn {
-    display: none;
-    }
-    .navBar {
-    height: 6rem;
-    }
-    .navC {
-        display: flex;
-    align-items: center;
-    };
-    .navHeader {
-    height: auto;
-    margin-right: 3rem;
-    }
-    .navLinks {
-    height: auto;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    }
-    .navLink {
-    padding: 0;
-    border-top: none;
-    margin-right: 1rem;
-    margin-left: 20px;
-    font-size: 1rem;
-    }
-    .contact {
-    margin-left: auto;
-    }
-}
+
 
 /*
 Page
@@ -142,5 +111,79 @@ Her0
 
 .her0 {
     height: 60vh;
-    background: url('../ReceipeW/assets/recipes/intro.jpg') center/cover no-repeat;
+    background: url('../ReceipeW/assets/recipes/intro3.gif') center/cover no-repeat;
+    margin-bottom: 2rem;
+    border-radius: 0.25rem;
+    position: relative;
+}
+
+.her0Container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(110, 106, 106, 0.6);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.her0Text {
+    text-align: center;
+}
+
+/* .her0Text h1 {
+    color: white;
+} */
+
+.her0Text {
+    /* color: white; */
+    letter-spacing: 5px;
+}
+
+/* 
+@Media Screen 
+*/
+
+@media screen and (min-width: 992px) {
+    .navBtn {
+    display: none;
+    }
+    .navBar {
+    height: 6rem;
+    }
+    .navC {
+        display: flex;
+    align-items: center;
+    };
+    .navHeader {
+    height: auto;
+    margin-right: 3rem;
+    }
+    .navLinks {
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    }
+    .navLink {
+    padding: 0;
+    border-top: none;
+    margin-right: 1rem;
+    margin-left: 20px;
+    font-size: 1rem;
+    }
+    .contact {
+    margin-left: auto;
+    }
+}
+
+@media  screen and (min-width: 768) {
+    .her0Text h1 {
+        font-size: 4rem;
+        margin-bottom: 0;
+    }
 }
