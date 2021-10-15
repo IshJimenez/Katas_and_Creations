@@ -187,3 +187,73 @@ Her0
         margin-bottom: 0;
     }
 }
+/* 
+Recipes
+*/
+
+.recipesContainer {
+    display: grid;
+    gap: 2rem 1rem;
+    border: 2px solid red;
+}
+.recipE {
+    display: block;
+}
+.recipeList {
+    border: 15px solid green;
+    display: grid;
+    gap: 2rem 1rem;
+    padding-bottom: 2rem;
+}
+.recipeImg {
+    width: 60vh;
+    height: 20rem;
+    border-radius: 0.5rem;  
+    margin-bottom: 1rem; 
+   }
+.recipE p, h5 {
+    text-align: center;
+    letter-spacing: 2px; 
+}
+.recipE {
+    text-decoration: none;
+}
+.recipE h5{
+    font-weight: 900;
+    margin-bottom: 0;
+    
+}
+
+.tagsContainer {
+    border: 5px solid blue;
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+}
+.tagsContainer h4 {
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 2px;   
+}
+.tagsList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.tagsList a {
+    text-transform: capitalize;
+    display: block;
+    color: black;
+    transition: 0.3s ease-in-out all;
+    text-decoration: none;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+}
+.tagsList a:hover {
+    color: blue;
+}
+
+/* 
+@Media 
+*/
+
