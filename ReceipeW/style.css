@@ -1,3 +1,4 @@
+
 .navBar{
     display: flex;
     justify-content: center;
@@ -16,6 +17,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .NavLogo {
@@ -81,8 +83,10 @@ Page
     width: 90vw;
     max-width: 1120px;
     margin: 0 auto;
-    padding-top: 2rem;
+    padding-top: 0;
     min-height: calc(100vh - (6rem + 4rem));
+    text-align: center;
+    letter-spacing: 2px; 
 
 }
 /*
@@ -111,7 +115,7 @@ Her0
 
 .her0 {
     height: 60vh;
-    background: url('../assets/recipes/intro3.gif') center/cover no-repeat;
+    background: url('../ReceipeW/assets/recipes/intro3.gif') center/cover no-repeat;
     margin-bottom: 2rem;
     border-radius: 0.25rem;
     position: relative;
@@ -194,38 +198,47 @@ Recipes
 .recipesContainer {
     display: grid;
     gap: 2rem 1rem;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 .recipE {
     display: block;
 }
 .recipeList {
-    border: 15px solid green;
+    /* border: 15px solid green; */
     display: grid;
     gap: 2rem 1rem;
     padding-bottom: 2rem;
 }
 .recipeImg {
-    width: 60vh;
-    height: 20rem;
+    /* width: 50vh; */
+    height: 25vh;
     border-radius: 0.5rem;  
-    margin-bottom: 1rem; 
+    margin-bottom:0; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
    }
 .recipE p, h5 {
     text-align: center;
     letter-spacing: 2px; 
+    margin-bottom: 0;
 }
 .recipE {
     text-decoration: none;
+    color: gray;
 }
 .recipE h5{
+    font-size: 16px;
     font-weight: 900;
     margin-bottom: 0;
+    color: black;
+    
     
 }
 
 .tagsContainer {
-    border: 5px solid blue;
+    /* border: 5px solid blue; */
     order: 1;
     display: flex;
     flex-direction: column;
@@ -251,6 +264,55 @@ Recipes
 }
 .tagsList a:hover {
     color: blue;
+}
+
+/* 
+@Media 
+*/
+
+@media screen and (min-width: 576px) {
+    .recipeList {
+        grid-template-columns: 1fr 1fr;
+    }
+    .recipeImg {
+        height: 10rem;
+        width: 15rem;
+    }
+}
+@media screen and (min-width: 992px) {
+    .recipesContainer {
+        grid-template-columns: 200px 1fr;
+    }
+    .tagsContainer {
+        order: 0;
+        display: flex;
+        align-items: center;
+    }
+    .tagsList {
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .recipeList {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .tagsContainer {
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* 
+Error
+*/
+.ePage  {
+    text-align: center;
+    margin-bottom: 0;
+}
+.ePage h1 {
+    font-size: 10rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 /* 
