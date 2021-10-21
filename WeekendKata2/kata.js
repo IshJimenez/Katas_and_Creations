@@ -1160,3 +1160,4 @@ for (let x = 11; x <= 30; x += 2){
  sum += x
 }
 console.log(sum)
+

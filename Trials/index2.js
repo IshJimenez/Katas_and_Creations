@@ -85,3 +85,9 @@ function abbrevName(name){
   return answer;
 
 }
+
+// Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+
+function invert(array) {
+  return array.map(ele => -ele);
+}
