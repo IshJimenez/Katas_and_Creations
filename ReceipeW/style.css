@@ -212,7 +212,7 @@ Recipes
 .recipeImg {
     /* width: 50vh; */
     height: 25vh;
-    border-radius: 0.5rem;  
+    border-radius: 50%;  
     margin-bottom:0; 
     display: block;
     margin-left: auto;
@@ -333,13 +333,101 @@ About  /////////////////////////////////////////////////////////
     text-align: center;
 }
 .aboutImg {
-    border-radius: 0.5rem;  
-    height: 300px;    
+    border-radius: 50%;  
+    height: 400px;    
+    width: 375px;
 }
 
-/* 
-@Media 
+@media screen and (min-width: 600px) {
+    .aboutPage {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 400px;
+        align-items: center;
+    }
+    .aboutImg {
+        position: relative;
+        height: 100%;
+    }
+}
+
+@media screen and (min-width: 250px) {
+    .aboutImg {
+        display: block;
+        margin: 0 auto;
+    }
+
+/*
+//////////////////////////////////////////////////////////////// 
+Contact  /////////////////////////////////////////////////////////
 */
+
+.contactForm {
+    width: 100%;
+    margin: 0;
+}
+
+.textarea {
+    overflow: auto;
+  }
+.contactCont {
+    display: grid;
+    gap: 2rem 3rem;
+    padding-bottom: 3rem;
+}
+@media screen and (min-width: 550px) {
+
+.contactCont {
+    grid-template-columns: 1fr 450px;
+    align-items: center;
+}
+}
+/*
+//////////////////////////////////////////////////////////////// 
+Tags Page /////////////////////////////////////////////////////////
+*/
+
+.tagsWrap {
+    display: grid;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+.tags {
+    background: gray;
+    text-decoration: none;
+    border-radius: 50%;
+    height: 125px;
+    width: 125px;
+    text-align: center;
+    color: white;
+    display: block;
+    margin: 0 auto;
+    transition: 0.5s ease-in-out all;
+
+}
+.tags h5 {
+    font-size: 20px;
+    position: relative;
+        top: 5px;
+}
+.tags p {
+    position: relative;
+    top: 5px;
+}
+.tags:hover {
+    background: teal;
+}
+
+@media screen and (min-width: 550px) {
+.tagsWrap {
+    grid-template-columns: 1fr 1fr;
+}
+}
+@media screen and (min-width: 992px) {
+    .tagsWrap {
+        grid-template-columns: repeat(3, 1fr);
+}
+}
+
 
 /* 
 @Media 
