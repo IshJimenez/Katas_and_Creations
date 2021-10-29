@@ -167,3 +167,21 @@ function expressionMatter(a, b, c) {
     a * b + c,
   );
 }
+
+// Move all exclamation marks to the end of the sentence
+
+// remove("Hi!") === "Hi!"
+
+// remove("Hi! Hi!") === "Hi Hi!!"
+
+// remove("Hi! Hi! Hi!") === "Hi Hi Hi!!!"
+
+// remove("Hi! !Hi Hi!") === "Hi Hi Hi!!!"
+
+// remove("Hi! Hi!! Hi!") === "Hi Hi Hi!!!!"
+
+
+function remove() {
+  return s.replace(/!/g, '') + s.replace(/[^!]/g, '');
+}
+
