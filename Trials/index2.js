@@ -181,7 +181,19 @@ function expressionMatter(a, b, c) {
 // remove("Hi! Hi!! Hi!") === "Hi Hi Hi!!!!"
 
 
-function remove() {
-  return s.replace(/!/g, '') + s.replace(/[^!]/g, '');
+function remove11() {
+  // return s.replace(/!/g, '') + s.replace(/[^!]/g, '');
+  // Another method
+  
+
+let str = document.getElementById("demo1").innerHTML;
+const output = function() {
+  let res = str.replace(/!/g, "");
+  return (res + "!".repeat(str.length - res.length));
 }
+document.getElementById("demo1").innerHTML = output();
+}
+
+
+
 
