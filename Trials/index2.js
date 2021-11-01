@@ -199,7 +199,31 @@ document.getElementById("demo1").innerHTML = output();
 // P.S. Each array includes only integer numbers. Output is a number too.
 
 function arrayPlusArray(arr1, arr2) {
-  return arr1 + arr2; //something went wrong
+  return arr3 = arr1.concat(arr2).reduce((x,y) => x + y);
 }
 
+// You have an array of non-negative integers. You need to calculate the difference between the 1st biggest number and the 2nd biggest number of the array.
 
+//     diffBig2([10, 5, 2]);
+
+// In this case, the 1st biggest number is 10 and the 2nd biggest number is 5. So, the function returns 5, the result of 10 - 5.
+
+// You can assume that the input array has 2 or more elements.
+
+// The input array has the sort method disabled, so you will have to solve it in another way.
+
+function diffBig2(arr) {
+  var largestNum = 0;
+  var secondNum = 0
+  for (i = 0; i < arr.length; i ++) {
+      if (arr[i] >= largestNum) {
+        secondNum = largestNum;
+        largestNum = arr[i];
+      }
+      else if (arr[i] > secondNum) {
+        secondNum = arr[i];
+      }
+    }
+    
+    return largestNum - secondNum;
+  }
