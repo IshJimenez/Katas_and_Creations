@@ -456,5 +456,112 @@ Tags Page /////////////////////////////////////////////////////////
 
 
 /* 
+Single Recipe 
+*/
+
+.recipeH {
+    display: grid;
+    gap: 2rem;
+}
+
+.recipeHImg {
+    height: 300px;
+    border-radius: 0.25px;
+}
+
+.recipeH p {
+    color: rgb(88, 86, 86);
+}
+
+.recipeIcons p {
+    color: rgb(88, 86, 86);
+    margin-top: 0.5rem;
+}
+
+.recipeIcons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.recipeIcons h5 {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.recipeTags {
+    display: block;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+    font-weight: 650;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.recipeTags a {
+    background: teal;
+    border-radius: 5rem;
+    color: white;
+    padding: 0.25rem 0.25rem;
+    margin: 0 0.25rem;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 992px) {
+    .recipeH{
+        grid-template-columns: 4fr 5fr;
+        align-items: center;
+}
+}
+
+.recipeC {
+    padding: 2rem 0;
+    display: grid;
+    gap: 2rem 4rem;
+}
+
+@media screen and (min-width: 992px) {
+    .recipeC{
+        grid-template-columns: 2fr 1fr;
+}
+}
+
+.singleInstruction header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.singleInstruction header p {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: teal;
+}
+
+.singleInstruction > p {
+    color: rgb(91, 89, 89);
+}
+.singleInstruction header div{
+    height: 2px;
+    background: rgb(96, 99, 99);;
+}
+
+.secondColumn {
+    display: grid;
+    row-gap: 2rem;
+}
+
+.singleIngredient {
+    border-bottom: 2px solid gray;
+    padding-bottom: 0.75rem;
+}
+
+.singleTool {
+    border-bottom: 2px solid gray;
+    padding-bottom: 0.75rem;
+}
+/* 
 @Media 
 */
