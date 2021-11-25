@@ -594,3 +594,7 @@ function peopleWithAgeDrink(old) {
      return "drink whisky"
   }
 };
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  return Math.abs(dadYearsOld - (sonYearsOld*2));
+}
