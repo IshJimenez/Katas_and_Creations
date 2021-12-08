@@ -776,6 +776,14 @@ function countSheeps(arrayOfSheep) {
   return num;
 }
 
+function countSheeps(arrayOfSheep) {
+  let counter = 0
+  arrayOfSheep.forEach(sheep => {
+      if(sheep) counter++
+  })
+  return counter
+}
+
 // Bob needs a fast way to calculate the volume of a cuboid with three values: length, width and the height of the cuboid. Write a function to help Bob with this calculation.
 
 function getVolumeOfCuboid(l, w, h){
