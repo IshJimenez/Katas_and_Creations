@@ -918,3 +918,16 @@ function finalGrade (exam, projects) {
   }
 }
 
+// Create a function called shortcut to remove all the lowercase vowels in a given string.
+
+// Examples
+// "hello"     -->  "hll"
+// "codewars"  -->  "cdwrs"
+// "goodbye"   -->  "gdby"
+// "HELLO"     -->  "HELLO"
+
+function without(string){
+  let vowels = /[aeiou]+/g
+  return string.replace(vowels, "")
+}
+
