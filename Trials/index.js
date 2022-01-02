@@ -88,3 +88,4 @@ function smallestMulti(n){
 }
 
 smallestMulti(5)
+
