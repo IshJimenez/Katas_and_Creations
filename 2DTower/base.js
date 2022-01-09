@@ -9,12 +9,14 @@ canvas.height = 600;
 const cellSize = 100;
 const cellGap = 3;
 const gameGrid = [];
+const defenders = [];
+let defenderCost = 100;
 // -----------------------------------------------------------------------MOUSE
 // ============================================================================
 // ============================================================================
 const mouse = {
-    x: undefined,
-    y: undefined,
+    x: 10,
+    y: 10,
     width: 0.1,
     height: 0.1,
 }
@@ -43,8 +45,10 @@ class Cell {
         this.height = cellSize;
     }
     draw() {
-        ctx.strokeStyle = "black";
-        ctx.strokeRect(this.x, this.y, this.width, this.height);
+        if (mouse.x && mouse.y && collision(this, mouse)){
+            ctx.strokeStyle = "black";
+            ctx.strokeRect(this.x, this.y, this.width, this.height);
+        }
     }
 }
 function createGrid(){
@@ -77,9 +81,20 @@ function handleGameGrid(){
 // ============================================================================
 // ===========================================================================
 function animate(){
+    ctx.clearRect(0,0,canvas.width, canvas.height);
     ctx.fillStyle = 'blue';
     ctx.fillRect(0,0,controlBar.width, controlBar.height);
     handleGameGrid();
     requestAnimationFrame(animate);
 }
 animate();
+
+function collision(first, second){
+    if (!(first.x > second.x + second.width || 
+          first.x + first.width < second.x || 
+          first.y > second.y + second.height ||
+          first.y + first.height < second.y
+          )){
+    return true;
+          }
+}
