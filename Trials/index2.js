@@ -1085,3 +1085,19 @@ const rps = (p1, p2) => {
 function dutyFree(normPrice, discount, hol){
   return Math.floor(hol/((normPrice*discount)/100));
 }
+
+// Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+
+// Note: input will never be an empty string
+
+function fakeBin(x){
+  var ret = [];
+  for(var i = 0; i < x.length; i++){
+    if(x[i] < 5){
+      ret.push(0);
+    } else {
+      ret.push(1);
+    }
+  }
+  return(ret.join(""))
+}
