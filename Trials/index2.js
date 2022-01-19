@@ -1224,3 +1224,9 @@ function iceBrickVolume(radius, bottleLength, rimLength) {
 function remove(s){
   return s.replace(/!*$/g,'');
 }
+
+// Implement a function which convert the given boolean value into its string representation.
+
+function booleanToString(b){
+  return b.toString();
+  }
