@@ -10,7 +10,9 @@ const cellSize = 100;
 const cellGap = 3;
 const gameGrid = [];
 const defenders = [];
+let numberOfResources = 400;
 let defenderCost = 100;
+
 // ------------------------------------------------------------------_____MOUSE
 // ============================================================================
 // ============================================================================
@@ -86,15 +88,29 @@ class Defender {
         ctx.fillStyle = "blue";
         ctx.fillRect(this.x, this.y, this.width, this.height);
         ctx.fillStyle = "gold";
-        ctx.font = "20px Arial";
-        ctx.fillText(math.floor(this.health), this.x, this.y)
+        ctx.font = "40px Arial";
+        ctx.fillText(Math.floor(this.health), this.x + 15, this.y + 40)
     }
 }
 canvas.addEventListener('click', function(){
     const gridPositionX = mouse.x - (mouse.x % cellSize);
     const gridPositionY = mouse.y - (mouse.y % cellSize);
     if (gridPositionY < cellSize) return;
+    for (let i = 0; i < defenders.length; i++) {
+        if (defenders[i].x === gridPositionX && defenders[i].y === gridPositionY)
+        return;
+    }
+    let defenderCost = 100;
+    if (numberOfResources >= defenderCost){
+        defenders.push(new Defender(gridPositionX, gridPositionY))
+        numberOfResources -= defenderCost;
+    }
 })
+function handleDefenders(){
+    for ( let i = 0; i < defenders.length; i++){
+        defenders[i].draw();
+    }
+}
 // ----------------------------------------------------------------_____ENEMIES
 // ============================================================================
 // ============================================================================
@@ -104,11 +120,18 @@ canvas.addEventListener('click', function(){
 // --------------------------------------------------------------_____UTILITIES
 // ============================================================================
 // ===========================================================================
+function handleGameStatus(){
+    ctx.fillStyle = "white";
+    ctx.font = "30px Arial";
+    ctx.fillText("Resources: " + numberOfResources, 10, 65);
+}
 function animate(){
     ctx.clearRect(0,0,canvas.width, canvas.height);
     ctx.fillStyle = 'blue';
     ctx.fillRect(0,0,controlBar.width, controlBar.height);
+    handleGameStatus()
     handleGameGrid();
+    handleDefenders();
     requestAnimationFrame(animate);
 }
 animate();
@@ -122,3 +145,4 @@ function collision(first, second){
     return true;
           }
 }
+
