@@ -1253,7 +1253,7 @@ function hero(bullets, dragons){
 // "1405" --> 1405
 // "-7" --> -7
 
- function guess(str){
+ function guessif (str){
    return Number(str)
  }
 
@@ -1266,3 +1266,19 @@ function hero(bullets, dragons){
  function cockroachSpeed(s) {
   return Math.floor(s*27.7777777778);
 }
+
+// Write a function which calculates the average of the numbers in a given list.
+
+// Note: Empty arrays should return 0.
+
+function find_average(array) {
+  let sum = 0;
+ if (array.length != 0 ){
+   for (let i in array) {
+     sum += array[i]
+   }
+   return sum / array.length
+   } else {
+     return 0
+   }
+ }
