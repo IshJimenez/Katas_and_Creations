@@ -1328,3 +1328,9 @@ function squareArea(A){
   var area = Math.pow(radius, 2);
   return Math.round(area*100)/100
 }
+
+// Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+
+function digitize(n){
+  return n.toString().split('').reverse().map(Number)
+}
