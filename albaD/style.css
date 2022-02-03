@@ -1,0 +1,96 @@
+@media screen and (min-width: 400px) {
+  .welcomeArt1 {
+    background-color: red;
+  }
+}
+
+
+
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* Nav bar and set page ------------------------------------------------------------------------------------------------------ */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+.welcomeContainer{
+  background-color: #dce4f2;
+  /* background-color:rgb(178, 235, 243); */
+  text-align: right;
+  padding:20px;
+}
+.navLinkButton {
+  padding: 2px 10px;
+  text-decoration: none;
+  color: black;
+} 
+.navLinkButton:hover{
+  color: orange;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* Front Page ---------------------------------------------------------------------------------------------------------------- */
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+.welcomeArt1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background-color:#dce4f2;
+    
+  }
+
+.entrance img {
+    border-radius: 25px;
+}
+
+.welcomeArt2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background-color: #bbc6da;
+}
+
+.hereForYou img {
+    border-radius: 25px;
+}
+.welcomeArt3 {
+  background-color: #8a9cbd;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* Footer  ------------------------------------------------------------------------------------------------------------------- */
+
+.footerContainer {    
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #253645; 
+  color: white; 
+} 
+.footerL {     
+  display: flex;
+  align-items: center;
+  justify-content: center;   
+} 
+.footerM {  
+}
+.footerM p {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+.footerR {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
