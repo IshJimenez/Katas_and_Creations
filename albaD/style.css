@@ -1,22 +1,159 @@
-@media screen and (min-width: 400px) {
-  .welcomeArt1 {
-    background-color: red;
-  }
-}
-
-
-
 
 /* --------------------------------------------------------------------------------------------------------------------------- */
-/* Nav bar and set page ------------------------------------------------------------------------------------------------------ */
-
-html, body {
+/* -------------------------------------------------- Set page --------------------------------------------------------------- */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
+/* ___________________________________________________________________________________________________________________________ */
+/* __________________________________________________min-width: 192px_________________________________________________________ */
+/* ___________________________________________________________________________________________________________________________ */
+
+@media screen and (min-width: 192px) {
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/*----------------------------------------------------- Front Page ----------------------------------------------------------- */
+  .build {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr)
+  }
+
+  .gridContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+    text-align: center;
+    width: 310px;
+    height: 950px;
+    background-color:#dce4f2;
+  }
+  .art1 {
+    background-color: #dce4f2;
+    height: 1250px;
+    grid-column-start: 0;
+    grid-column-end: -1;
+    /* width: 90%; */
+    padding-left: 50px;
+    
+  }
+  .welcomeArt1 {
+    display: grid;
+    align-items: center;
+    justify-content: center; 
+    background-color:#dce4f2;
+    /* grid-column-start: -2;
+    grid-column-end: -1;    */
+  }
+  .welcomeA1Item {
+    background-color:#dce4f2;
+    font-size: 20px;
+    padding: 10px;
+  }
+  .welcomeA1Item h1 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .welcomeA1Item p {
+    margin: 10px;
+    font-size: 20px;
+  }
+  .entrance {
+    grid-row-start: 0;
+    grid-row-end: 1;
+}
+  .entrance img {
+    border-radius: 125px;
+    height: 250px;
+    width: 250px;
+}
+  .art2 {
+    background-color: #bbc6da;
+    height: 600px;
+    width: 400px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-column-start: 2;
+    grid-column-end: -3;
+  }
+  .welcomeArt2 {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  background-color: #bbc6da;
+  height: 500px;
+}
+.hereForYou{
+  height: 250px;
+}
+.hereForYou img {
+  border-radius: 125px;
+  height: 250px;
+  width: 250px;
+}
+.welcomeArt2Item{
+  grid-column-start: -2;
+  grid-column-end: -1;
+}
+.welcomeA2Item h3 {
+  font-size: 30px;
+  font-weight: 600;
+}
+.welcomeA2Item p {
+  margin: 10px;
+  font-size: 20px;
+}
+.welcomeArt3 {
+background-color: #8a9cbd;
+height: 300px;
+}
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------- Footer --------------------------------------------------------------- */
+
+.footerContainer {    
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #253645; 
+  color: white; 
+} 
+.footerL {     
+  display: flex;
+  align-items: center;
+  justify-content: center;   
+} 
+.footerM {
+  display: flex;
+  align-items: center;
+  justify-content: center;   
+}
+.footerM p {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+.footerR {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+}
+
+
+/* ___________________________________________________________________________________________________________________________ */
+/* ____________________________________________________min-width: 992px_______________________________________________________ */
+/* ___________________________________________________________________________________________________________________________ */
+
+@media screen and (min-width: 992px) {
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------- Navbar -------------------------------------------------------------- */
+
 .welcomeContainer{
   background-color: #dce4f2;
-  /* background-color:rgb(178, 235, 243); */
   text-align: right;
   padding:20px;
 }
@@ -30,7 +167,7 @@ html, body {
 }
 
 /* --------------------------------------------------------------------------------------------------------------------------- */
-/* Front Page ---------------------------------------------------------------------------------------------------------------- */
+/*----------------------------------------------------- Front Page ----------------------------------------------------------- */
 
 .gridContainer {
     display: grid;
@@ -46,7 +183,7 @@ html, body {
     justify-content: center;
     padding: 25px;
     background-color:#dce4f2;
-    
+    height: 350px;   
   }
 
 .entrance img {
@@ -59,6 +196,7 @@ html, body {
     justify-content: center;
     padding: 25px;
     background-color: #bbc6da;
+    height: 300px;
 }
 
 .hereForYou img {
@@ -66,10 +204,11 @@ html, body {
 }
 .welcomeArt3 {
   background-color: #8a9cbd;
+  height: 150px;
 }
 
 /* --------------------------------------------------------------------------------------------------------------------------- */
-/* Footer  ------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------- Footer --------------------------------------------------------------- */
 
 .footerContainer {    
   display: grid;
@@ -93,4 +232,5 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
 }

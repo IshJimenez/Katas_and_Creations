@@ -1,0 +1,120 @@
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------- Set page --------------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+/* ___________________________________________________________________________________________________________________________ */
+/* __________________________________________________min-width: 192px_________________________________________________________ */
+/* ___________________________________________________________________________________________________________________________ */
+
+@media screen and (min-width: 192px) {
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/*----------------------------------------------------- Front Page ----------------------------------------------------------- */
+.build{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    width: 400px;
+    height: 1625px;
+}
+.welcomeAr1 {
+    display: grid;
+    width: 400px;
+    grid-row-start: 0;
+    grid-row-end: 1;    
+}
+.welcomeA1Item {
+    background-color: #dce4f2;
+    text-align: center;
+}
+.welcomeA1Item p {
+    width: 360px;
+    padding: 10px;
+    margin: 5px;
+}
+.welcomeA1Item h1 {
+    font-size: 30px;
+    font-weight: 600;
+    padding-top: 10px;
+  }
+.welcomeA1Pic {
+    grid-row-start: 0;
+    grid-row-end: 1;
+    background-color: #dce4f2;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.welcomeA1Pic img {
+    border-radius: 125px;
+    height: 250px;
+    width: 250px;
+}
+.welcomeAr2 {
+    background-color: #bbc6da;
+    display: grid;
+    width: 400px;
+    text-align: center;
+}
+.welcomeAr2{
+    padding-top: 20px;
+}
+.welcomeAr2Pic img {
+    border-radius: 125px;
+    height: 250px;
+    width: 250px;
+}
+.welcomeA2Item p {
+    width: 360px;
+    padding: 10px;
+    margin: 5px;
+}
+.welcomeA2Item h3 {
+    font-size: 30px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+.welcomeAr3 {
+    background-color: #798bac;
+    display: grid;
+    width: 400px;
+    text-align: center;
+    padding-top: 10px;
+}
+.welcomeAr3 p {
+    width: 360px;
+    padding: 10px;
+    margin: 5px;
+}
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------- Footer --------------------------------------------------------------- */
+.footerContainer {
+    background-color: #0c131f;
+    width: 400px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+.footerContainer p{
+    margin: 15px;
+}
+.footerL{
+    width: 360px;
+    padding-top: 40px;
+}
+.footerM {
+    width: 360px;
+    padding: 20px;
+}
+}
+/* ___________________________________________________________________________________________________________________________ */
+/* __________________________________________________min-width: 192px_________________________________________________________ */
+/* ___________________________________________________________________________________________________________________________ */
+
+@media screen and (min-width: 820px) {
+/* --------------------------------------------------------------------------------------------------------------------------- */
+ /*----------------------------------------------------- Front Page ----------------------------------------------------------- */
+ 
+}
