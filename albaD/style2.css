@@ -11,7 +11,9 @@
       justify-content: flex-end;
       align-items: center;
       background-color: #dce4f2;
-      width: 100%;
+      /* width: 100%; */
+      /* /* margin: 10px; */
+      padding: 20px; 
   }
   .logo {
       cursor: pointer;
@@ -59,6 +61,41 @@
   .bookB:hover {
     background-color: orange;
     color: black;
+}
+.link {
+    background: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0px 15px;
+}
+.dropdown > .link:focus,
+.link:hover {
+    color:orange;
+}
+.dropdown {
+    position: relative;
+}
+.dropdownMenu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: rgb(235, 230, 230);
+    padding: 0.75rem;
+    border-radius: .25rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+.dropdownMenu a {
+    text-decoration: none;
+}
+.dropdown > .link:focus + .dropdownMenu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 /* ___________________________________________________________________________________________________________________________ */
 /* __________________________________________________min-width: 192px_________________________________________________________ */

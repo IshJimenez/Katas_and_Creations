@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style2.css">
+    <script src="app.js" defer></script>
     <title>albania Dental</title>
 </head>
 <body>
-    <header class="navBar">
+    <!-- <header class="navBar">
         <img class="logo" src="mainLogo.JPG" alt="logo">
         <nav>
         <ul class="navLinks">
@@ -30,10 +31,22 @@
                 </li>
             <li><a href="#" class="navLink">PATIENT REVIEWS</a></li>
             <li><a href="#" class="navLink">CONTACT</a></li>
-            <!-- <li><a href="#" class="navLinkButton">BOOK NOW</a></li> -->
         </ul>
         </nav>
             <a class="cta" href="#"><button class="bookB">BOOK NOW</button></a>
+    </header> -->
+    <header class="navBar">
+            <div class="dropdown" data-dropdown>
+                <button class="link" data-dropdownButton>PATIENT INFORMATION</button>
+            <div class="dropdownMenu">
+               <a href="#">Hours/Directions</a>
+               <a href="#">About Dr.Jimenez</a>
+               <a href="#">Covid-19</a>
+               <a href="#">Insurance</a>
+            </div>
+            </div>
+            <a href="#" class="link">General and Preventative</a>
+            <button class="link" data-dropdownButton>BOOK NOW</button>
     </header>
     <section class="build">
         <article>
@@ -91,6 +104,5 @@
          
         </div>
     </footer>
-    <script src="app.js"></script>
 </body>
 </html>
