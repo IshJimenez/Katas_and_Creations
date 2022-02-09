@@ -69,7 +69,7 @@
     cursor: pointer;
     padding: 0px 15px;
 }
-.dropdown > .link:focus,
+.dropdown.active > .link,
 .link:hover {
     color:orange;
 }
@@ -92,7 +92,7 @@
 .dropdownMenu a {
     text-decoration: none;
 }
-.dropdown > .link:focus + .dropdownMenu {
+.dropdown.active > .link + .dropdownMenu {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
