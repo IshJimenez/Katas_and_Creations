@@ -1,10 +1,10 @@
 document.addEventListener("click", e => {
     const isDropdownButton = e.target.matches("[data-dropdownButton]")
-    if (!isDropdownButton && e.target.closet("[data-dropdown]") != null) return
+    if (!isDropdownButton && e.target.closest("[data-dropdown]") != null) return
 
 let currentDropdown
 if (isDropdownButton) {
-    currentDropdown = e.target.closet("[data-dropdown]")
+    currentDropdown = e.target.closest("[data-dropdown]")
     currentDropdown.classList.toggle("active")
 }
 
