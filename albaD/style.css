@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 nav {
-  background-color: aqua;
+  background-color: #dce4f2;
 }
 nav:after{
   content: '';
@@ -33,9 +33,31 @@ nav ul li a {
   font-size: 18px;
   padding: 7px 15px;
 }
+nav ul li a:hover {
+  color: orange;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #33ffff,
+              0 0 5px #66ffff;
+}
+nav ul ul li a:hover {
+  color: cyan;
+  box-shadow: none;
+}
 nav ul ul {
   position: absolute;
+  top: 90px;
+  opacity: 0;
+  border-top: 3px solid cyan;
+  visibility: hidden;
+  transition: top .3s;
+}
+nav ul ul ul {
+  border-top: none;
+}
+nav ul li:hover > ul {
   top: 70px;
+  opacity: 1;
+  visibility: visible;
 }
 nav ul ul li {
   position: relative;
@@ -44,6 +66,13 @@ nav ul ul li {
   float: none;
   display: list-item;
   border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+nav ul ul li a {
+  line-height: 50px;
+}
+ .logo {
+  float: left;
+  padding-left: 20px;
 }
 /* ___________________________________________________________________________________________________________________________ */
 /* __________________________________________________min-width: 192px_________________________________________________________ */
