@@ -74,6 +74,57 @@ nav ul ul li a {
   float: left;
   padding-left: 20px;
 }
+.show, input {
+  display: none; 
+}
+@media all and (max-width: 962px) {
+  nav ul {
+    margin-right: 0px;
+    float: left;
+  }    
+  nav .logo{
+    padding-left: 30px;
+    width: 100%;
+  }
+  nav ul li, nav ul ul li{
+    display: block;
+    width: 100%;
+  }
+  nav ul ul {
+    top: 70px;
+    position: static;
+    border-top: none;
+    float: none;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  .show{
+    display: block;
+    color: red;
+    font-size: 20px;
+    padding: 0 20px;
+    line-height: 70px;
+    cursor: pointer;
+  }
+  .show:hover {
+    color:red;
+  }
+  .icon{
+    display: block;
+    color:rgb(0, 0, 0);
+    background-color: yellow;
+    position: absolute
+  }
+  .icon span{
+    display: block;
+    background-color: yellow;
+  }
+  nav ul li a:hover{
+    box-shadow: none;
+  }
+}
+
 /* ___________________________________________________________________________________________________________________________ */
 /* __________________________________________________min-width: 192px_________________________________________________________ */
 /* ___________________________________________________________________________________________________________________________ */
