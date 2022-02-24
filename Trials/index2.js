@@ -1501,3 +1501,8 @@ function removeExclamationMarks(s) {
 }
 
 
+// Write a function that returns the number of seconds in the given minutes
+
+function seconds(m) {
+  return m * 60
+}
