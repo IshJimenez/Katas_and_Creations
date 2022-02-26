@@ -6,6 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+            Host : "smtp.gmail.com",
+            Username : "testingrobot245@gmail.com",
+            Password : "eykxajbpekerzofl",
+            To : 'testingrobot245@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "New Contact Form Inquiry",
+            Body : "Name: " + document.getElementById("name").value
+            + "<br> Email: " + document.getElementById("email").value
+            + "<br> Phone no: " + document.getElementById("phone").value
+            + "<br> Message: " + document.getElementById("message").value
+            }).then(
+            message => alert("Message Sent Succesfully")
+    );
+        }
+    </script>
     <title>Book Now</title>
 </head>
 <body>
@@ -55,14 +74,30 @@
     </header>
     <section>
         <div>
-            <form>
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text">
-                <label for="message">Message</label>
-                <textarea name="message"></textarea>
+            <div class="formContainer">
+            <form onsubmit="sendEmail(); reset(); return false;">
+            <h2>Contact Us</h2>
+            <p class="formP">You can contact us about anything you need to.</p>
+            <p class="formP">We’d love to hear from you!</p>
+            <p class="formP">We’ll get back to you as soon as possible.</p>
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="phone" placeholder="Phone Number" required>
+                <textarea id="message" rows="4" placeholder="How can we help you"></textarea>
                 <button type="submit">Submit</button>
             </form>
+            </div>
+            <div class="storeHrs">
+                <p>Monday 10AM - 5PM</p>
+                <p>Tuesday 11AM - 85PM</p>
+                <p>Wednesday Appoinment Only</p>
+                <p>Thursday 10AM - 5PM</p>
+                <p>Friday 9AM - 5PM</p>
+                <p>Saturday Closed</p>
+                <p>Sunday   Closed</p>
+            </div>
         </div>
+    
     </section>
 </body>
 </html>
