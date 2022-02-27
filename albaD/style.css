@@ -10,6 +10,9 @@
   --hm3-width: 50px;
   --hm4-width: 107px;
   --main-color: #dce4f2;
+  --main-color2: #bbc6da;
+  --main-color3: #798bac;
+  --footer-color: #0c131f;
 }
 /* --------------------------------------------------------------------------------------------------------------------------- */
 /* -------------------------------------------------- NavBar --------------------------------------------------------------- */
@@ -86,16 +89,23 @@ nav ul ul li a {
 }
 /* --------------------------------------------------------------------------------------------------------------------------- */
 /* -------------------------------------------------- Form Container --------------------------------------------------------------- */
-.formContainer {
-  width:100%;
+.formContainer{
+  display: grid;
+        grid-template-columns: 10fr 1fr; 
+        grid-template-rows: 1fr;
+        grid-column-gap: 2fr;
+        background: var(--main-color);
+}
+
+
+.formC {
   height: 70vh;
-  background: red;
+  background: var(--main-color);
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 form {
-  background: yellow;
+  background: var(--main-color3);
   display: flex;
   flex-direction: column;
   padding: 2vw 4vw;
@@ -104,7 +114,7 @@ form {
   border-radius: 10px;
 }
 form h2{
-  color: green;
+  color: var(--footer-color);
   font-weight: 800;
   margin-bottom: 20px;
   display: flex;
@@ -114,18 +124,19 @@ form h2{
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
+  color: white;
 }
 form input, form textarea {
   border: 0;
   margin: 10px 0;
   padding: 20px;
   outline: none;
-  background: #33ffff;
+  background: var(--main-color);
   font-size: 16px;
 }
 form button {
   padding: 15px;
-  background: blue;
+  background: var(--footer-color);
   color: white;
   font-size: 18px;
   border: 0;
@@ -138,6 +149,10 @@ form button {
 /* --------------------------------------------------------------------------------------------------------------------------- */
 /* -------------------------------------------------- StoreHrs --------------------------------------------------------------- */
 
+.storeHrs {
+  background-color: red;
+  margin-left: 50px;
+}
 
 /* --------------------------------------------------------------------------------------------------------------------------- */
 /* -------------------------------------------------- Main Page Body --------------------------------------------------------------- */
