@@ -177,13 +177,15 @@ form button {
 /* -------------------------------------------------- HrsDirections --------------------------------------------------------------- */
 .hrsDContainer {
   background-color: var( --main-color);
+  display: flex;
+  text-align: center;
+  flex-direction: column;
 }
 .hrsDImg {
   border-radius: 125px;
   height: 250px;
   width: 250px;
 }
-
 
 /* --------------------------------------------------------------------------------------------------------------------------- */
 /* -------------------------------------------------- Main Page Body --------------------------------------------------------------- */
@@ -194,51 +196,6 @@ form button {
     display: block;
     width: 100%;
   }
-  /* nav ul {
-    margin-right: 0px;
-    float: left;
-  }    
-  nav .logo{
-    padding-left: 30px;
-    width: 100%;
-  }
-  nav ul li, nav ul ul li{
-    display: block;
-    width: 100%;
-  }
-  nav ul ul {
-    top: 70px;
-    position: static;
-    border-top: none;
-    float: none;
-    display: none;
-    opacity: 1;
-    visibility: visible;
-  } */
-  /* .show{
-    display: block;
-    color: rgb(231, 217, 19);
-    font-size: 20px;
-    padding: 0 20px;
-    line-height: 70px;
-    cursor: pointer;
-  } */
-  /* .show:hover {
-    color:red;
-  } */
-  /* .icon{
-    display: block;
-    color:rgb(0, 0, 0);
-    background-color: yellow;
-    position: absolute
-  }
-  .icon span{
-    display: block;
-    background-color: yellow;
-  }
-  nav ul li a:hover{
-    box-shadow: none;
-  } */
 
 /* HAMBURGER */
   #menuToggle
@@ -488,8 +445,22 @@ background-color: rgb(0, 0, 0);
       padding: 20px;
   }
   }
-
-  /* ___________________________________________________________________________________________________________________________ */
+/* ---------------------------------------------------- hrsDirections --------------------------------------------------------------- */  
+/* ---------------------------------------------------- hrsDirections --------------------------------------------------------------- */
+/* ---------------------------------------------------- hrsDirections --------------------------------------------------------------- */
+.hrsDContainer{
+  width: 375px;
+}
+.hrsDD {
+  padding: 20px 0px;
+}
+.hrsDP{
+  margin: 20px;
+}
+#map {
+ width:50%;
+}
+/* ___________________________________________________________________________________________________________________________ */
 /* __________________________________________________min-width: 760px_________________________________________________________ */
 /* ___________________________________________________________________________________________________________________________ */
 
