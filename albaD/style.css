@@ -14,6 +14,9 @@
   --main-color2: #bbc6da;
   --main-color3: #798bac;
   --footer-color: #0c131f;
+  --mainImgBR: 125px;
+  --mainImgH: 250px;
+  --mainImgW: 250px;
 }
 /* --------------------------------------------------------------------------------------------------------------------------- */
 /* -------------------------------------------------- NavBar --------------------------------------------------------------- */
@@ -534,6 +537,100 @@ form button {
   grid-column-end: 3;
 }
 
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------- Restorative --------------------------------------------------------------- */
+
+.restoSection {
+  background-color: var(--main-color);
+  text-align: center;
+  line-height: 200%;
+  padding-right: 4%;
+  padding-left: 4%; 
+}
+.restoSection h1 {
+  padding: 40px;
+  font-size: 300%;
+}
+.restoSection p {
+  font-size: 150%;
+}
+.restoSection img {
+  border-radius: var(--mainImgBR);
+  height: var(--mainImgH);
+  width: var(--mainImgW);
+}
+.restoDiv1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 20% 1fr;
+}
+.restoDiv2, .restoDiv3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 20% 1fr;
+}
+.restobasic {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 20% 1fr;
+}
+.restoDiv1h2 h2 {
+  grid-column-start: 1;
+  grid-column-end: -3;
+  grid-row-start:1;
+  grid-row-end: 2;
+}
+.restoDiv1P {
+  grid-column-start: 2;
+  grid-column-end: -3;
+  grid-row-start: -2;
+  grid-row-end: -1;
+}
+.restoDivImg {
+  grid-column-start: 2;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: -1;
+  padding-top: 2%;
+}
+.restoDiv1, .restoDiv2 {
+  margin: 4%;
+}
+
+.restoDiv2Img img{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.restoDiv2Txt h2, .restoDiv3Txt h2, .restobasic h2{
+  margin: 4%;
+}
+.restobasic p{
+  padding-bottom: 4%;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------- Teeth --------------------------------------------------------------- */
+.teethSection {
+  background-color: var(--main-color);
+  text-align: center;
+  line-height: 200%;
+  padding-right: 4%;
+  padding-left: 4%; 
+}
+.teethSection h1 {
+  padding: 40px;
+  font-size: 300%;
+}
+.teethSection p {
+  font-size: 150%;
+}
+.teethSection img {
+  border-radius: var(--mainImgBR);
+  height: var(--mainImgH);
+  width: var(--mainImgW);
+}
 /* --------------------------------------------------------------------------------------------------------------------------- */
 /* -------------------------------------------------- Main Page Body --------------------------------------------------------------- */
 
