@@ -550,6 +550,10 @@ form button {
 .restoSection h1 {
   padding: 40px;
   font-size: 300%;
+  text-transform: uppercase;
+}
+.restoSection h2 {
+  text-transform: uppercase;
 }
 .restoSection p {
   font-size: 150%;
@@ -622,14 +626,214 @@ form button {
 .teethSection h1 {
   padding: 40px;
   font-size: 300%;
+  text-transform: uppercase;
 }
 .teethSection p {
   font-size: 150%;
+  line-height: 200%;
+}
+.teethSection h3 {
+  font-size: 150%;
+  line-height: 200%;
+  text-transform: uppercase;
 }
 .teethSection img {
   border-radius: var(--mainImgBR);
   height: var(--mainImgH);
   width: var(--mainImgW);
+}
+.teethMPicDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+.teethDiv1 h3 {
+  padding: 1% 0 1%  0;
+}
+.teethDiv1 p {
+  padding: 0 2% 0 2%;
+}
+.teethMPic1 {
+  padding-top: 5%;
+  padding-left: 45%;
+  padding-bottom: 2%;
+}
+.teethMPic2 {
+  padding-right: 45%;
+  padding-top: 5%;
+  padding-bottom: 2%;
+}
+.teethDiv2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr;
+}
+.teethDiv2 p{
+  padding: 0% 10% 0% 10%;
+}
+.teethDiv2 h3 {
+  padding: 1% 0% 1% 0%;
+}
+.teethMPicDiv2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 2% 0 0% 0;
+}
+.teethMPicDiv2 h3 {
+  padding-top: 2%;
+}
+.teethMPic2-1 {
+  padding-left: 35%;
+}
+.teethMPic2-2 {
+  padding-right: 35%;
+}
+.teethEnd {
+  padding: 2%;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------- Special --------------------------------------------------------------- */
+.specialSection {
+  background-color: var(--main-color);
+  text-align: center;
+  line-height: 200%;
+  padding-right: 4%;
+  padding-left: 4%; 
+}
+.specialSection  h1 {
+  padding: 40px;
+  font-size: 300%;
+  text-transform: uppercase;
+}
+.specialSection  p {
+  font-size: 150%;
+  line-height: 200%;
+}
+.specialSection h2 {
+  font-size: 200%;
+  line-height: 200%;
+  text-transform: uppercase;
+}
+.specialSection h3  {
+  font-size: 150%;
+  line-height: 200%;
+  text-transform: uppercase;
+}
+.specialSection  img {
+  border-radius: var(--mainImgBR);
+  height: var(--mainImgH);
+  width: var(--mainImgW);
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------- Ortho --------------------------------------------------------------- */
+.orthoSection {
+  background-color: var(--main-color);
+  text-align: center;
+  line-height: 200%;
+  padding-right: 4%;
+  padding-left: 4%; 
+}
+
+.orthoSection img{
+  border-radius: var(--mainImgBR);
+  height: var(--mainImgH);
+  width: var(--mainImgW);
+}
+
+.orthoSection h1 {
+  padding: 40px;
+  font-size: 300%;
+  text-transform: uppercase;
+}
+.orthoSection p {
+  font-size: 150%;
+  line-height: 200%;
+}
+.orthoSection h2 {
+  font-size: 150%;
+  line-height: 200%;
+  text-transform: uppercase;
+}
+.orthoDiv1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 2%;
+}
+.orthoDiv1Img img {
+  margin-top: 2%;
+}
+.orthoDiv2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 2%;
+}
+.orthoDiv3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 2%;
+}
+.orthoDiv3 h3 {
+  font-size: 150%;
+  line-height: 200%;
+  text-transform: uppercase;
+}
+.orthoDiv3 li {
+  font-size: 150%;
+  line-height: 200%;
+}
+.orthoDiv4 {
+  padding: 0 2% 0 2%;
+}
+.orthoDiv4 h3{
+  font-size: 150%;
+  line-height: 200%;
+  text-transform: uppercase;
+}
+.orthoDiv4Txt2, .orthoDiv4Txt3, .orthoDiv4Txt4 {
+  margin-bottom: 1%;
+}
+.orthoDiv4Txt3, .orthoDiv4Txt4  {
+  margin-top: 1%;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------- Patient --------------------------------------------------------------- */
+
+.patientSection {
+  background-color: var(--main-color);
+  text-align: center;
+  line-height: 200%;
+  padding-right: 4%;
+  padding-left: 4%; 
+}
+
+.patientSection img{
+  border-radius: var(--mainImgBR);
+  height: var(--mainImgH);
+  width: var(--mainImgW);
+}
+
+.patientSection h1 {
+  padding: 40px;
+  font-size: 300%;
+  text-transform: uppercase;
+}
+.patientSection p {
+  font-size: 150%;
+  line-height: 200%;
+}
+.patientSection h3 {
+  font-size: 150%;
+  line-height: 200%;
+  text-transform: uppercase;
 }
 /* --------------------------------------------------------------------------------------------------------------------------- */
 /* -------------------------------------------------- Main Page Body --------------------------------------------------------------- */
