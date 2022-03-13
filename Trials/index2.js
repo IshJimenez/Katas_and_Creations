@@ -1537,3 +1537,9 @@ function getFirstValue(arr) {
 function triArea(base, height) {
 	return base * height /2
 }
+
+// Create a function that takes length and width and finds the perimeter of a rectangle.
+
+function recPerimeter(w, l){
+  return 2 * w + 2 * l
+}
