@@ -9,6 +9,7 @@
     <title>Patient Reviews</title>
 </head>
     <body>
+        <section class="patientSection" id="blur">
         <header>
             <nav role="navigation">
                 <div>
@@ -53,13 +54,15 @@
             </div>
                 </nav>
         </header>
-    <section class="patientSection">
-        <img src="orthoMainPic.JPG" alt="Picture of someone smiling holding a ClearCorrect Tray in their hands">
+    <!-- <section class="patientSection" id="blur"> -->
+        <img src="orthoMainPic.JPG" class="patientMPic" alt="Picture of someone smiling holding a ClearCorrect Tray in their hands">
         <h1>Albania Dental Patient Reviews</h1>
-        <button class="patientBut1">WRITE A REVIEW</button>
+        <button class="patientBut1" onclick="toggle()">WRITE A REVIEW</button>
         <a href="book.html">
             <button>REQUEST APPOINMENT</button>
         </a>
+
+        
         <div>
             <h3>Xiaofeng C.</h3>
             <p>My daughter had her braces done and they were very efficient and professional! The results are amazing and her teeth have straightened very quickly! The staff are super friendly and I would definitely recommend!</p>
@@ -95,5 +98,23 @@
         </div>
 
     </section>
+    <div id="popup">
+        <h2>Would you recommend us?</h2>
+            <div class="popDiv">
+                <div>
+                    <a href="https://www.google.com/search?q=albania+dental&rlz=1C1CHBF_enUS763US763&oq=albania+dental&aqs=chrome..69i57j69i61j69i60l2j35i39j0.2360j0j9&sourceid=chrome&ie=UTF-8" onclick="toggle()">
+                        <img src="patientRLog2.JPG" class="patientLogo2" alt="Picture of google symbol that leads to link">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.facebook.com/ALBANIADENTAL/reviews/?ref=page_internal" onclick="toggle()">
+                        <img src="patientRLog1.JPG" class="patientLogo1" alt="Picture of facebook symbol that leads to link">
+                    </a>
+                </div>
+            </div>
+            <a href="#" class="popupB" onclick="toggle()">
+                <button>Close</button>
+            </a>
+    </div>
 </body>
 </html>

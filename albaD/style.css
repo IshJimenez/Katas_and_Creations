@@ -18,6 +18,9 @@
   --mainImgH: 250px;
   --mainImgW: 250px;
 }
+* h1, * h2 {
+  text-transform: uppercase;
+}
 /* --------------------------------------------------------------------------------------------------------------------------- */
 /* -------------------------------------------------- NavBar --------------------------------------------------------------- */
 nav {
@@ -814,11 +817,58 @@ form button {
   padding-right: 4%;
   padding-left: 4%; 
 }
+.patientSection#blur.active {
+  filter: blur(20px);
+  pointer-events: none;
+  user-select: none;
+}
+#popup{
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  padding: 50px;
+  box-shadow: 0 5px 30px rgba(0,0,0,.30);
+  background-color: var(--main-color3);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  display: grid;
+  text-align: center;
+  text-transform: uppercase;
+}
+#popup h2 {
+  margin: 2%;
+  padding-bottom: 2%;
+  letter-spacing: 2px;
+}
+.popupB {
+  text-transform: uppercase;
 
-.patientSection img{
+}
+#popup.active {
+  top: 50%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+.popDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+}
+
+.patientMPic{
   border-radius: var(--mainImgBR);
   height: var(--mainImgH);
   width: var(--mainImgW);
+}
+.patientLogo1, .patientLogo2{
+  border-radius: var(--mainImgBR);
+  height: 125px;
+  width: 125px;
 }
 
 .patientSection h1 {
