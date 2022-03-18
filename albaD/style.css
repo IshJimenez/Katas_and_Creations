@@ -269,6 +269,30 @@ form button {
 /* ----------------------------------------------- General and Preventative --------------------------------------------------------------- */
 .generalSection {
   background-color: var( --main-color);
+  background-color: var(--main-color);
+  text-align: center;
+  line-height: 200%;
+  padding-right: 4%;
+  padding-left: 4%; 
+}
+.generalSection img {
+  border-radius: 125px;
+  height: 250px;
+  width: 250px;
+}
+.generalSection h1 {
+  padding: 40px;
+  font-size: 300%;
+}
+.generalSection p {
+  font-size: 150%;
+  line-height: 200%;
+}
+.generalSection h2 {
+  padding: 20px;
+  font-size: 200%;
+  margin-bottom: 1%;
+  margin-top: 1%;
 }
 .general1Div {
   display: grid;
@@ -277,26 +301,20 @@ form button {
 }
 .g2Div{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 60%;
   grid-template-rows: 52% 2fr;
 }
 .g3Div {
   display: grid;
   grid-template-columns: 60% 1fr;
-  grid-template-rows: 42% 1fr;
-}
-.g1Txt, .g2Txt, .g3Txt {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
- .g6Div {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 15% 1fr;
+  grid-template-rows: 46% 1fr;
 }
 .g4Div, .g5Div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 18% 1fr;
+}
+.g6Div {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 15% 1fr;
@@ -306,92 +324,35 @@ form button {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 10% 1fr 10%;
 }
-.generalSection {
-  text-align: center;
-  background-color: var( --main-color);
-  justify-content: center;
+.g1Txt, .g2Txt, .g3Txt {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
-.generalSecImg img {
-  border-radius: 125px;
-  height: 250px;
-  width: 250px;
+
+.g1Txt_1, .g1Txt_2 {
+  padding-bottom: 1%;
 }
-.generalSecTxt {
-  padding: 25px 50px;
-  line-height: 200%;
-}
-.generalSecTxt h1 {
-  padding: 40px;
-  font-size: 300%;
-}
-.generalSecTxt p {
-  font-size: 150%;
-}
-.genera11Div {
- 
-}
-.g1Txt {
-  padding: 20px;
-}
-.g1Txt h2 {
-  padding: 20px;
-  font-size: 200%;
-  margin-bottom: 0;
-}
-.g1Txt p {
-  font-size: 150%;
-  padding-left: 2%;
-  padding-right: 2%;
-  line-height: 200%; 
-}
-.g1Txt_1 {
-  padding: 20px;
-}
-.g1Txt_2 {
-  padding: 20px 20px 80px 20px;
-  margin-bottom: 0;
-}
-.g1Txt2 p{
-  line-height: 200%; 
-}
-.g1Txt2 {
-  font-size: 150%;
-  margin: 20px;
-  line-height: 150%;
-  padding-left: 2%;
+.g1Txt2_1 {
+  padding-top: 5%;
 }
 .g1Txt2_2 {
-  padding-top: 10%;
+  padding-top: 2%;
 }
-.g1Pic img{
-  border-radius: 125px;
-  height: 400px;
-  width: 400px;
+.g1Pic img {
+  margin-top: 15%;
 }
-.g2Txt {
-  padding: 20px;
-}
-.g2Txt h2{
-  padding: 20px;
-  font-size: 200%;
-  margin-bottom: 2%;
-}
-.g2Txt p {
-  font-size: 150%;
-  padding-left: 2%;
-  padding-right: 2%;
-  line-height: 200%; 
+
+.g2Div h2 {
+  margin-top: -2%;
 }
 .g2Txt_2 {
-  padding: 30px 20px 0px 20px;
-  margin-bottom: 0;
-}
-.g2Li p {
-  font-size: 150%;
-  line-height: 150%;
+  padding-top: 1%;
 }
 .g2Li {
   grid-column-start: 2;
+  margin-top: -5%;
 }
 .g2Pic {
   grid-column-start: 0;
@@ -403,101 +364,57 @@ form button {
   list-style: none;
 }
 .g2Pic img{
-  border-radius: 125px;
-  height: 400px;
-  width: 400px;
+  margin-top: 5%;
+  margin-left: 60%;
 }
-.g3Txt {
-  padding: 20px;
-}
+
 .g3Txt h2{
-  padding: 20px;
-  font-size: 200%;
-  margin-bottom: 1%;
+ margin-top: 4%;
 }
-.g3Txt p{
-  font-size: 150%;
-  padding-left: 2%;
-  padding-right: 12%;
-  line-height: 200%; 
-}
+
 .g3Txt_2 {
   padding-top: 1%;
-}
-.g3Txt2 {
-  font-size: 150%;
-  margin: 20px 0px 20px 0px;
-  line-height: 150%;
-  padding-left: 2%;
-  line-height: 200%; 
-  padding-top: 20px;
- 
 }
 .g3Txt2_2 {
   padding-top: 2%;
 }
 .g3Pic img{
-  border-radius: 125px;
-  height: 400px;
-  width: 400px;
+  margin-top: 15%;
 }
 .g4Div h2{
   grid-column-start: 0;
   grid-row-start: 1;
   grid-column-start: 1;
   grid-column-end: 3;
-  padding: 20px;
-  font-size: 200%;
-  margin-bottom: 2%;
+  padding-top: 2%;
 }
-.g4Txt {
-  font-size: 150%;
-}
-.g4Txt p {
-  padding-top: 4%;
-  padding-right: 4%;
-  line-height: 200%; 
-}
+
 .g4Pic img{
-  border-radius: 125px;
-  height: 400px;
-  width: 400px;
+ margin-top: 10%;
 }
 .g5Div h2 {
   grid-column-start: 0;
   grid-row-start: 1;
   grid-column-start: 1;
   grid-column-end: 3;
-  padding: 20px;
-  font-size: 200%;
-  margin-bottom: 2%;
 }
 .g5Txt {
-  font-size: 150%;
+ 
 }
 .g5Txt p {
-  padding-top: 4%;
-  padding-left: 4%;
-  line-height: 180%;
+ 
 }
 .g5Pic img {
-  border-radius: 125px;
-  height: 400px;
-  width: 400px;
+  margin-top: 5%;
 }
 .g6Div h2 {
   grid-column-start: 0;
   grid-row-start: 1;
   grid-column-start: 1;
   grid-column-end: 3;
-  padding: 20px;
-  font-size: 200%;
-  margin-bottom: 2%;
 }
 .g6Li p{
-  font-size: 150%;
-  line-height: 180%;
-  padding-right: 4%;
+
 }
 .g6LiUl {
   padding-top: 2%;
@@ -509,31 +426,21 @@ form button {
   list-style: none;
 }
 .g6Pic img{
-  border-radius: 125px;
-  height: 400px;
-  width: 400px;
+  margin-top: 10%;
 }
-.g7Div {
-  font-size: 150%;
-}
+
 .g7Div h2{
   grid-column-start: 0;
   grid-row-start: 1;
   grid-column-start: 1;
   grid-column-end: 3;
-  padding: 20px;
-  font-size: 150%;
-  margin-bottom: 2%;
+
 }
 .g7Txt p {
-  padding-top: 5%;
-  padding-left: 4%;
-  line-height: 180%;
+ 
 }
 .g7Pic img{
-  border-radius: 125px;
-  height: 400px;
-  width: 400px;
+ 
 }
 .g7Txt2 {
   grid-column-start: 1;
@@ -884,6 +791,9 @@ form button {
   font-size: 150%;
   line-height: 200%;
   text-transform: uppercase;
+}
+.stars {
+  width: 10%;
 }
 /* --------------------------------------------------------------------------------------------------------------------------- */
 /* -------------------------------------------------- Main Page Body --------------------------------------------------------------- */
