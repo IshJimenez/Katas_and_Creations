@@ -1556,6 +1556,15 @@ function nextEdge(side1, side2) {
 	return side1 + side2 - 1;
 }
 
+// Print numbers from 1 to 10
+
+function answer(){
+  for(let i=1; i<=10; i++){
+      console.log(i)
+  }
+}
+
+
 // Write a function that accepts an array of strings. Return the longest string.
 
 function longestString1(arr) {
@@ -1566,3 +1575,4 @@ function longestString1(arr) {
 		}
 	}
 	return longest; 
+
