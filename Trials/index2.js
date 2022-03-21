@@ -1564,6 +1564,13 @@ function answer(){
   }
 }
 
+// Print the odd numbers less than 100
+
+function answer2(){
+  for (let i=0; i<=100; i += 2) {
+    console.log(i)
+  }
+}
 
 // Write a function that accepts an array of strings. Return the longest string.
 
