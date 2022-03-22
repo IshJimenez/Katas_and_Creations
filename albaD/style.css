@@ -274,6 +274,7 @@ form button {
   line-height: 200%;
   padding-right: 4%;
   padding-left: 4%; 
+  /* height: 5400px; */
 }
 .generalSection img {
   border-radius: 125px;
@@ -449,6 +450,27 @@ form button {
   grid-column-start: 1;
   grid-column-end: 3;
 }
+.gFooterContainer {
+  background-color: #0c131f;
+  width: 1800px;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+.gFooterContainer p{
+  margin: 10px;
+}
+.gFooterL{
+  width: 1800px;
+  padding-top: 40px;
+}
+.gFooterM {
+  width: 1800
+  
+  px;
+  padding: 20px;
+}
+
 
 /* --------------------------------------------------------------------------------------------------------------------------- */
 /* ----------------------------------------------- Restorative --------------------------------------------------------------- */
