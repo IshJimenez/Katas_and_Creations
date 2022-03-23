@@ -452,24 +452,30 @@ form button {
 }
 .gFooterContainer {
   background-color: #0c131f;
-  width: 1800px;
-  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15% 1fr 1fr;
   color: white;
   text-align: center;
 }
-.gFooterContainer p{
-  margin: 10px;
+
+.gFooterL p{
+  margin-top: 1%;
 }
-.gFooterL{
-  width: 1800px;
-  padding-top: 40px;
+
+.gFooterM h2{
+  margin-top: .5%;
+  margin-bottom: .5%;
 }
-.gFooterM {
-  width: 1800
-  
-  px;
-  padding: 20px;
+
+.gFooterM p{
+  padding-bottom: .5%;
 }
+
+.gFooterR {
+  margin-top: 1%;
+}
+
 
 
 /* --------------------------------------------------------------------------------------------------------------------------- */
@@ -730,9 +736,10 @@ form button {
   line-height: 200%;
   text-transform: uppercase;
 }
-.orthoDiv4Txt2, .orthoDiv4Txt3, .orthoDiv4Txt4 {
+.orthoDiv4Txt2, .orthoDiv4Txt3 {
   margin-bottom: 1%;
 }
+
 .orthoDiv4Txt3, .orthoDiv4Txt4  {
   margin-top: 1%;
   padding-left: 15%;
