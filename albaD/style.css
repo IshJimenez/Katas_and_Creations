@@ -54,13 +54,13 @@ nav ul li a {
   padding: 7px 15px;
 }
 nav ul li a:hover {
-  color: orange;
-  border-radius: 5px;
-  box-shadow: 0 0 5px #33ffff,
-              0 0 5px #66ffff;
+  color: white;
+  /* border-radius: 5px;
+  box-shadow: 0 0 2px #33ffff,
+              0 0 2px #66ffff; */
 }
 nav ul ul li a:hover {
-  color: rgb(255, 0, 136);
+  color: white;
   box-shadow: none;
 }
 
@@ -68,7 +68,7 @@ nav ul ul {
   position: absolute;
   top: 90px;
   opacity: 0;
-  border-top: 3px solid cyan;
+  border-top: 3px solid var( --main-color3);
   visibility: hidden;
   transition: top .3s;
 }
@@ -148,7 +148,7 @@ form input, form textarea {
   background: var(--main-color);
   font-size: 16px;
 }
-form button {
+.submitBut {
   padding: 15px;
   background: var(--footer-color);
   color: white;
@@ -157,7 +157,7 @@ form button {
   outline: none;
   cursor: pointer;
   width: 150px;
-  margin: 20px auto 0;
+  margin: 20px auto;
   border-radius: 30px;
 }
 /* --------------------------------------------------------------------------------------------------------------------------- */
@@ -504,8 +504,8 @@ form button {
   background-color: var(--main-color);
   text-align: center;
   line-height: 200%;
-  padding-right: 4%;
-  padding-left: 4%; 
+  padding-right: 2%;
+  padding-left: 2%; 
 }
 .restoSection h1 {
   padding: 40px;
@@ -523,12 +523,14 @@ form button {
   height: var(--mainImgH);
   width: var(--mainImgW);
 }
+.notMainPic {
+  margin: 2%;
+}
 .restoDiv1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 20% 1fr;
   background-color: var(--main-color2);
-
 }
 .restoDiv2, .restoDiv3 {
   display: grid;
@@ -537,6 +539,33 @@ form button {
 }
 .restoDiv2 {
   background-color: var(--main-color3);
+}
+.restoDiv3 {
+  background-color: var(--main-color2);
+}
+.restoDiv5 {
+  background-color: var(--main-color2);
+}
+.restoDiv6 {
+  background-color: var(--main-color3);
+}
+.restoDiv7 {
+  background-color: var(--main-color2);
+}
+.restoDiv9 {
+  background-color: var(--main-color2);
+}
+.resto2Div1{
+  background-color: var(--main-color2);
+}
+.resto2Div2{
+  background-color: var(--main-color3);
+}
+.resto2Div3{
+  background-color: var(--main-color2);
+}
+.resto2Div5{
+  background-color: var(--main-color2);
 }
 .restobasic {
   display: grid;
@@ -548,6 +577,7 @@ form button {
   grid-column-end: -3;
   grid-row-start:1;
   grid-row-end: 2;
+  margin: 2%;
 }
 .restoDiv1P {
   grid-column-start: 2;
@@ -562,10 +592,6 @@ form button {
   grid-row-end: -1;
   padding-top: 2%;
 }
-.restoDiv1, .restoDiv2 {
-  margin: 4%;
-}
-
 .restoDiv2Img img{
   grid-column-start: 1;
   grid-column-end: 2;
@@ -573,10 +599,10 @@ form button {
   grid-row-end: 2;
 }
 .restoDiv2Txt h2, .restoDiv3Txt h2, .restobasic h2{
-  margin: 4%;
+  margin: 2%;
 }
 .restobasic p{
-  padding-bottom: 4%;
+  padding-bottom: 2%;
 }
 
 /* --------------------------------------------------------------------------------------------------------------------------- */
@@ -585,8 +611,8 @@ form button {
   background-color: var(--main-color);
   text-align: center;
   line-height: 200%;
-  padding-right: 4%;
-  padding-left: 4%; 
+  padding-right: 2%;
+  padding-left: 2%; 
 }
 .teethSection h1 {
   padding: 40px;
@@ -611,6 +637,10 @@ form button {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
+  background-color: var(--main-color2);
+}
+.teethDiv1 {
+  background-color: var(--main-color3);
 }
 .teethDiv1 h3 {
   padding: 1% 0 1%  0;
@@ -632,6 +662,8 @@ form button {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2fr;
+  background-color: var(--main-color2);
+  
 }
 .teethDiv2 p{
   padding: 0% 10% 0% 10%;
@@ -644,6 +676,7 @@ form button {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   padding: 2% 0 0% 0;
+  background-color: var(--main-color2);
 }
 .teethMPicDiv2 h3 {
   padding-top: 2%;
@@ -656,6 +689,7 @@ form button {
 }
 .teethEnd {
   padding: 2%;
+  background-color: var(--main-color3);
 }
 
 /* --------------------------------------------------------------------------------------------------------------------------- */
@@ -664,11 +698,11 @@ form button {
   background-color: var(--main-color);
   text-align: center;
   line-height: 200%;
-  padding-right: 4%;
-  padding-left: 4%; 
+  padding-right: 2%;
+  padding-left: 2%; 
 }
 .specialSection  h1 {
-  padding: 40px;
+  padding: 40px 20px 20px;
   font-size: 300%;
   text-transform: uppercase;
 }
@@ -691,15 +725,20 @@ form button {
   height: var(--mainImgH);
   width: var(--mainImgW);
 }
-
+.special2 {
+  background-color: var(--main-color2);
+}
+.special3{
+  background-color: var(--main-color3);
+}
 /* --------------------------------------------------------------------------------------------------------------------------- */
 /* -------------------------------------------------- Ortho --------------------------------------------------------------- */
 .orthoSection {
   background-color: var(--main-color);
   text-align: center;
   line-height: 200%;
-  padding-right: 4%;
-  padding-left: 4%; 
+  padding-right: 2%;
+  padding-left: 2%; 
 }
 
 .orthoSection img{
@@ -727,6 +766,7 @@ form button {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   padding: 2%;
+  background-color: var(--main-color2);
 }
 .orthoDiv1Img img {
   margin-top: 2%;
@@ -736,12 +776,14 @@ form button {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   padding: 2%;
+  background-color: var(--main-color3);
 }
 .orthoDiv3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   padding: 2%;
+  background-color: var(--main-color2);
 }
 .orthoDiv3 h3 {
   font-size: 150%;
@@ -822,7 +864,18 @@ form button {
   grid-template-rows: 1fr;
   justify-content: center;
 }
-
+.patientBut {
+  padding: 15px;
+  background: var(--footer-color);
+  color: white;
+  font-size: 18px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  margin: 20px 2%;
+  border-radius: 30px;
+}
 .patientMPic{
   border-radius: var(--mainImgBR);
   height: var(--mainImgH);
