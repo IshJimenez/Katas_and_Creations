@@ -1582,6 +1582,12 @@ for(let i = 11; i <= 30; i += 2)
     console.log(sum)
 }
 
+// Create a function that will convert from Celsius to Fahrenheit
+
+function cToF(n)
+{
+    return n * 1.8 + 32;
+}
 
 // Write a function that accepts an array of strings. Return the longest string.
 
