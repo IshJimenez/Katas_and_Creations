@@ -1589,6 +1589,13 @@ function cToF(n)
     return n * 1.8 + 32;
 }
 
+// Create a function that will convert from Fahrenheit to Celsius
+
+function fToC(n)
+{
+    return (n - 32) / 1.8;
+}
+
 // Write a function that accepts an array of strings. Return the longest string.
 
 function longestString1(arr) {
