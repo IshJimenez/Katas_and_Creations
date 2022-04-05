@@ -1596,6 +1596,18 @@ function fToC(n)
     return (n - 32) / 1.8;
 }
 
+// Calculate the sum of numbers in an array of numbers
+
+function sumArr(ar)
+{
+    let sum = 0;
+    for(let i = 0; i < ar.length; i++)
+    {
+        sum += ar[i];
+    }   
+    return sum;
+}
+
 // Write a function that accepts an array of strings. Return the longest string.
 
 function longestString1(arr) {
