@@ -42,7 +42,7 @@ nav ul {
 nav ul li {
   float: left;
   display: inline-block;
-  background: var( --main-color);
+  background: var(--main-color);
   margin: 0 0px;
   
 }
@@ -936,8 +936,9 @@ form input, form textarea {
 }
 #menuToggle a:hover
 {
-  color: rgb(60, 231, 12);
+  color: black;
 }
+
 #menuToggle input
 {
   display: block;
@@ -1000,7 +1001,7 @@ form input, form textarea {
 #menu
 {
   position: absolute;
-  width: 400px;
+  width: 450px;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
@@ -1020,24 +1021,32 @@ form input, form textarea {
   font-size: 22px;
 }
 .navM1 :hover {
-width: 200px;
-text-align: end;
-background-color: rgb(0, 0, 0);
+/* width: 400px; */
+text-align: left;
 }
 #menu li:hover {
-  background-color: red;
+  background-color: var(--main-color3);
+  text-align: right;
+}
+#menu li a:hover {
+  color: white;
 }
 #menu li ul :hover{
-  color: aqua;
-  background-color: black;
-  width: 200px;
+  color: white;
+  background-color: var(--main-color2);
+  width: 300px;
   text-align: center;
-  margin-left: 5
-  0px;
+  margin-left: 20px;
   padding-top: 25px;
+  letter-spacing: 2px;
 }
+/* .navM2, .navM3 a:hover{
+  margin-right: 500px;
+} */
+
 #menu li ul {
-  background-color: black;
+  margin-top: 30px;
+  background-color: var(--main-color3);
 }
 #menuToggle input:checked ~ ul
 {
