@@ -1608,6 +1608,12 @@ function sumArr(ar)
     return sum;
 }
 
+// Write a function that reverses a string.
+
+function reverse(string){
+  return string.split('').reverse().join('');
+}
+
 // Write a function that accepts an array of strings. Return the longest string.
 
 function longestString1(arr) {
