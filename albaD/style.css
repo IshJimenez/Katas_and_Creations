@@ -352,6 +352,7 @@ form input, form textarea {
   grid-template-rows: 10% 1fr 10%;
   background-color: var(--main-color2);
   padding-top: .5%;
+  padding-bottom: 20%;
 }
 .g1Txt, .g2Txt, .g3Txt {
   grid-column-start: 1;
@@ -519,11 +520,22 @@ form input, form textarea {
   font-size: 300%;
   text-transform: uppercase;
 }
+
 .restoSection h2 {
   text-transform: uppercase;
+  padding: 20px;
+  font-size: 200%;
+  margin-bottom: 1%;
+  margin-top: 1%;
+  color: white;
+  letter-spacing: 3px;
 }
+
 .restoSection p {
   font-size: 150%;
+  line-height: 200%;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 .restoSection img {
   border-radius: var(--mainImgBR);
@@ -1073,9 +1085,18 @@ form input, form textarea {
 }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (min-width: 168px) {
   /* --------------------------------------------------------------------------------------------------------------------------- */
   /*----------------------------------------------------- Front Page ----------------------------------------------------------- */
+  * h1{
+    letter-spacing: 3px;
+    line-height: 150%;
+    padding-left: 1%;
+    padding-right: 1%;
+    overflow-wrap: break-word;
+    font-size: 250%;
+  }
+  
   .build{
       display: grid;
       grid-template-rows: repeat(3, 1fr);
@@ -1200,6 +1221,9 @@ form input, form textarea {
 }
 /* --------------------------------------------------------------------------------------------------------------------------- */
 /* ----------------------------------------------- General and Preventative --------------------------------------------------------------- */
+.generalSection {
+  height: 16225px;
+}
 .general1Div {
   display: grid;
   grid-template-columns: 1fr;
@@ -1208,7 +1232,10 @@ form input, form textarea {
 .generalSecTxt h1{
   letter-spacing: 3px;
   line-height: 150%;
+  padding-left: 1%;
+  padding-right: 1%;
   overflow-wrap: break-word;
+  font-size: 250%;
 }
 .g1Txt {
   margin-bottom: 10%;
@@ -1286,14 +1313,108 @@ form input, form textarea {
 .g4Div {
   display: grid;
   grid-template-columns: 15%;
-  grid-template-rows: 41% 25%;
+  grid-template-rows: 8% 18% 78%;
 }
 .g4Pic {
   grid-row-start: 2;
   grid-row-end: 3;
-  margin-top: 92%;
-  padding-left: 80%;
+  margin-left: 75%;
 }
+.g4Txt {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 3;
+  grid-column-end: -2;
+}
+.g4Txt p, .g5Txt p , .g6Li{
+  margin-bottom: 8%;
+}
+.g5Div {
+  display: grid;
+  grid-template-columns: 15%;
+  grid-template-rows: 6% 18% 78%;
+}
+.g5Pic, .g6Pic, .g7Pic  {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  margin-left: 75%;
+}
+.g5Txt, .g6Li, .g7Txt {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 3;
+  grid-column-end: -2;
+}
+.g6Div {
+  display: grid;
+  grid-template-columns: 15%;
+  grid-template-rows: 8% 20% 78%;
+}
+.g7Div {
+  display: grid;
+  grid-template-columns: 15%;
+  grid-template-rows: 8% 15% 68% 4%;
+}
+.g5Txt, .g6Li, .g7Txt {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 3;
+  grid-column-end: -2;
+}
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------- Restorative --------------------------------------------------------------- */
+
+.restoSection h1{
+  letter-spacing: 3px;
+  line-height: 150%;
+  padding-left: 1%;
+  padding-right: 1%;
+  overflow-wrap: break-word;
+  font-size: 250%;
+}
+.restoDiv1 {
+  display: grid;
+  grid-template-columns: 15%;
+  grid-template-rows: 10% 22% 78%;
+}
+.restoDiv1h2 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  overflow-wrap: normal;
+  padding-left: 135%;
+}
+.restoDivImg  {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  margin-right: 75%;
+}
+.restoDiv1P {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 3;
+  grid-column-end: -2;
+  padding-bottom: 8%;
+}
+.restoDiv2, .restoDiv3, .restobasic {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+.restoDiv2Txt, .restoDiv3Txt {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------- Teeth --------------------------------------------------------------- */
+.teethSection h1{
+  letter-spacing: 3px;
+  line-height: 150%;
+  padding-left: 1%;
+  padding-right: 1%;
+  overflow-wrap: break-word;
+  font-size: 250%;
+}
+
 }
 /* ___________________________________________________________________________________________________________________________ */
 /* __________________________________________________min-width: 760px_________________________________________________________ */
