@@ -1616,12 +1616,27 @@ function reverse(string){
 
 // Write a function that accepts an array of strings. Return the longest string.
 
-function longestString1(arr) {
-	var longest = ''; 
-	for (var i = 0; i < arr.length; i++) { 
-		if (arr[i].length > longest.length) { 
-			longest = arr[i]; 
-		}
-	}
-	return longest; 
+      // function longestString1(arr) {
+      //   let longest = ''; 
+      //   for (let i = 0; i < arr.length; i++) { 
+      //     if (arr[i].length > longest.length) { 
+      //       longest = arr[i]; 
+      //     }
+      //   }
+      //   return longest; 
 
+
+  // Calculate the average of the numbers in an array of numbers
+  
+  function averageArray(ar)
+  {
+    let n = ar.length;
+    let sum = 0;
+      
+      for(let i = 0; i < n; i++)
+      {
+          sum += ar[i];
+      }
+      
+      return sum / n;
+  }
