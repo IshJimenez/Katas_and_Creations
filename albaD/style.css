@@ -103,9 +103,126 @@ nav ul ul li a {
 .intro {
   display: none; 
 }
-
 /* --------------------------------------------------------------------------------------------------------------------------- */
-/* -------------------------------------------------- Form Container --------------------------------------------------------------- */
+  /*----------------------------------------------------- Front Page ----------------------------------------------------------- */
+  * h1{
+    letter-spacing: 3px;
+    line-height: 150%;
+    padding-left: 1%;
+    padding-right: 1%;
+    overflow-wrap: break-word;
+    font-size: 250%;
+  }
+  
+  .build{
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: 1fr;
+      /* width: 400px; */
+      /* height: 2355px; */
+      line-height: 200%;
+  }
+  .welcomeAr1 {
+      display: grid;
+      /* width: 400px; */
+      grid-row-start: 0;
+      grid-row-end: 1;   
+      gap: 0px; 
+      background-color: var(--main-color);
+  }
+  .welcomeA1Item {
+      background-color: var(--main-color);
+      text-align: center;
+  }
+  .welcomeA1Item p {
+      /* width: 360px; */
+      padding: 10px;
+      margin: 5px;
+  }
+  .welcomeA1Item h1 {
+      font-size: 30px;
+      font-weight: 600;
+      padding-top: 10px;
+    }
+  .welcomeA1Pic {
+      grid-row-start: 0;
+      grid-row-end: 1;
+      background-color: var(--main-color);
+      display: flex;
+      justify-content: center;
+      padding-top: 40px;
+      padding-bottom: 20px;
+  }
+  .welcomeA1Pic img {
+      border-radius: 125px;
+      height: 250px;
+      width: 250px;
+  }
+  .welcomeAr2 {
+      background-color: var(--main-color2);
+      display: grid;
+      /* width: 400px; */
+      text-align: center;
+  }
+  .welcomeAr2{
+      padding-top: 20px;
+  }
+  .welcomeAr2Pic img {
+      border-radius: 125px;
+      height: 250px;
+      width: 250px;
+  }
+  .welcomeA2Item p {
+      width: 360px;
+      padding: 10px;
+      margin: 5px;
+  }
+  .welcomeA2Item h3 {
+      font-size: 30px;
+      font-weight: 600;
+      padding-top: 10px;
+  }
+  .welcomeAr3 {
+      background-color: var(--main-color3);
+      display: grid;
+      /* width: 400px; */
+      text-align: center;
+      padding-top: 10px;
+  }
+  .welcomeAr3 p {
+      width: 360px;
+      padding: 1%;
+      margin: 1%;
+  }
+  .starsFrontPage {
+    margin-right: 3%;
+  }
+  /* --------------------------------------------------------------------------------------------------------------------------- */
+  /* ---------------------------------------------------- Footer --------------------------------------------------------------- */
+  .gFooterContainer {
+      background-color: var(--footer-color);
+      padding: 10px;
+      color: white;
+      text-align: center;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 15% 1fr 1fr;
+      padding-top: 1%;
+  }
+  .footerContainer p{
+      margin: 15px;
+  }
+  .footerL{
+      padding-top: 40px;
+  }
+  .footerM {
+      padding: 20px;
+  }
+  .iFooterContainer{
+    margin-top: 25.5%;
+  }
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------- Book --------------------------------------------------------------- */
 .formContainer{
   display: grid;
         grid-template-columns: 10fr 1fr; 
@@ -352,7 +469,7 @@ form input, form textarea {
   grid-template-rows: 10% 1fr 10%;
   background-color: var(--main-color2);
   padding-top: .5%;
-  padding-bottom: 20%;
+  padding-bottom: 0%;
 }
 .g1Txt, .g2Txt, .g3Txt {
   grid-column-start: 1;
@@ -920,6 +1037,12 @@ form input, form textarea {
   line-height: 200%;
   text-transform: uppercase;
 }
+.review1, .review3, .review5, .review7{
+  background-color: var(--main-color2);
+}
+.review2, .review6 {
+  background-color: var(--main-color3);
+}
 .stars {
   width: 10%;
 }
@@ -1085,7 +1208,7 @@ form input, form textarea {
 }
 }
 
-@media screen and (min-width: 168px) {
+@media screen and (max-width: 420px) {
   /* --------------------------------------------------------------------------------------------------------------------------- */
   /*----------------------------------------------------- Front Page ----------------------------------------------------------- */
   * h1{
@@ -1191,6 +1314,7 @@ form input, form textarea {
       grid-template-columns: 1fr;
       grid-template-rows: 15% 1fr 1fr;
       width: 400px;
+      padding-top: 1%;
   }
   .footerContainer p{
       margin: 15px;
@@ -1204,7 +1328,7 @@ form input, form textarea {
   .iFooterContainer{
     margin-top: 25.5%;
     }
-/* ---------------------------------------------------- hrsDirections --------------------------------------------------------------- */  
+
 /* ---------------------------------------------------- hrsDirections --------------------------------------------------------------- */
 /* ---------------------------------------------------- hrsDirections --------------------------------------------------------------- */
 .hrsDContainer{
@@ -1354,6 +1478,7 @@ form input, form textarea {
   display: grid;
   grid-template-columns: 15%;
   grid-template-rows: 8% 15% 68% 4%;
+  padding-bottom: 20%;
 }
 .g5Txt, .g6Li, .g7Txt {
   grid-row-start: 3;
@@ -1414,7 +1539,113 @@ form input, form textarea {
   overflow-wrap: break-word;
   font-size: 250%;
 }
+.teethMPicDiv {
+  display: grid;
+  grid-template-columns: 30%;
+  grid-template-rows: 1fr 1fr;
+}
 
+.teethMPic1 h3 {
+margin-left: 30px;
+width: 200px;
+}
+.teethMPic2 {
+  padding-left: 50%;
+}
+.teethMPic2 h3{
+  margin-left: 30px;
+  width: 200px;
+}
+.teethMPicDiv2 {
+  display: grid;
+  grid-template-columns: 40%;
+  grid-template-rows: 1fr;
+}
+.teethMPicDiv2 h3 {
+  width: 300px;
+  padding-right: 40px;
+}
+.teethMPic2{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: -40%;
+}
+.teethMPic2-2 {
+  margin-left: 50px;
+}
+.teethDiv2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 49% 1fr;
+}
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------- Ortho --------------------------------------------------------------- */
+
+.orthoSection h1{
+  letter-spacing: 3px;
+  line-height: 150%;
+  padding-left: 1%;
+  padding-right: 1%;
+  overflow-wrap: break-word;
+  font-size: 250%;
+}
+.orthoDiv1, .orthoDiv2, .orthoDiv3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 29% 1fr;
+}
+.orthoDiv2Img {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.orthoDiv2Txt {
+  padding-top: 10%;
+  margin-bottom: -8%;
+}
+.orthoDiv3 {
+  padding-bottom: 8%;
+}
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------- Patient --------------------------------------------------------------- */
+.stars {
+  width: 20%;
+}
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------- Book --------------------------------------------------------------- */
+.formContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 49%;
+  margin-bottom: 25%;
+}
+.formC {
+  margin-top: 10%;
+  text-align: center;
+}
+.storeHrs {
+  margin-right: 15%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  padding-top: 2%;
+  padding-bottom: 0%;
+  background-color: var(--main-color2);
+}
+.storeHrs p {
+  color: black;
+  letter-spacing: 1px;
+}
+.day {
+  font-size: 150%;
+  line-height: 75%;
+  letter-spacing: 3px;
+}
+.bookBody {
+  background-color: var(--main-color);
+}
+.dayM {
+  padding-top: 30%;
+}
 }
 /* ___________________________________________________________________________________________________________________________ */
 /* __________________________________________________min-width: 760px_________________________________________________________ */
