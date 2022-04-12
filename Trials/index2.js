@@ -1625,9 +1625,13 @@ function reverse(string){
       //   }
       //   return longest; 
 
+ // Find the largest element of an array:
 
-  // Calculate the average of the numbers in an array of numbers
+  let nums = [2, 24, 31, 37, 42, 49, 52, 58, 62, 69, 74, 79, 86, 88, 92, 99]
+  console.log('Highest num in this house is: ', Math.max(...nums));
   
+  // Calculate the average of the numbers in an array of numbers
+
   function averageArray(ar)
   {
     let n = ar.length;
@@ -1640,3 +1644,4 @@ function reverse(string){
       
       return sum / n;
   }
+
