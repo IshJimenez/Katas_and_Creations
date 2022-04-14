@@ -113,18 +113,17 @@ nav ul ul li a {
     overflow-wrap: break-word;
     font-size: 250%;
   }
-  
-  .build{
-      display: grid;
-      grid-template-rows: repeat(3, 1fr);
-      grid-template-columns: 1fr;
-      /* width: 400px; */
-      /* height: 2355px; */
-      line-height: 200%;
+  .build {
+    height: 1200px;
   }
+  .build p {
+    line-height: 200%;
+  }
+ 
   .welcomeAr1 {
       display: grid;
-      /* width: 400px; */
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
       grid-row-start: 0;
       grid-row-end: 1;   
       gap: 0px; 
@@ -135,9 +134,9 @@ nav ul ul li a {
       text-align: center;
   }
   .welcomeA1Item p {
-      /* width: 360px; */
       padding: 10px;
       margin: 5px;
+      line-height: 200%;
   }
   .welcomeA1Item h1 {
       font-size: 30px;
@@ -153,7 +152,7 @@ nav ul ul li a {
       padding-top: 40px;
       padding-bottom: 20px;
   }
-  .welcomeA1Pic img {
+  .welcomeA1Pic img, .welcomeAr2Pic img{
       border-radius: 125px;
       height: 250px;
       width: 250px;
@@ -161,19 +160,14 @@ nav ul ul li a {
   .welcomeAr2 {
       background-color: var(--main-color2);
       display: grid;
-      /* width: 400px; */
+      justify-content: center;
       text-align: center;
   }
   .welcomeAr2{
       padding-top: 20px;
   }
-  .welcomeAr2Pic img {
-      border-radius: 125px;
-      height: 250px;
-      width: 250px;
-  }
+
   .welcomeA2Item p {
-      width: 360px;
       padding: 10px;
       margin: 5px;
   }
@@ -185,12 +179,13 @@ nav ul ul li a {
   .welcomeAr3 {
       background-color: var(--main-color3);
       display: grid;
-      /* width: 400px; */
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      justify-content: center;
       text-align: center;
       padding-top: 10px;
   }
   .welcomeAr3 p {
-      width: 360px;
       padding: 1%;
       margin: 1%;
   }
@@ -1222,84 +1217,11 @@ form input, form textarea {
   
   .build{
       display: grid;
-      grid-template-rows: repeat(3, 1fr);
       grid-template-columns: 1fr;
-      width: 400px;
-      height: 2355px;
       line-height: 200%;
+      height: 2365px;
   }
-  .welcomeAr1 {
-      display: grid;
-      width: 400px;
-      grid-row-start: 0;
-      grid-row-end: 1;   
-      gap: 0px; 
-      background-color: var(--main-color);
-  }
-  .welcomeA1Item {
-      background-color: var(--main-color);
-      text-align: center;
-  }
-  .welcomeA1Item p {
-      width: 360px;
-      padding: 10px;
-      margin: 5px;
-  }
-  .welcomeA1Item h1 {
-      font-size: 30px;
-      font-weight: 600;
-      padding-top: 10px;
-    }
-  .welcomeA1Pic {
-      grid-row-start: 0;
-      grid-row-end: 1;
-      background-color: var(--main-color);
-      display: flex;
-      justify-content: center;
-      padding-top: 40px;
-      padding-bottom: 20px;
-  }
-  .welcomeA1Pic img {
-      border-radius: 125px;
-      height: 250px;
-      width: 250px;
-  }
-  .welcomeAr2 {
-      background-color: var(--main-color2);
-      display: grid;
-      width: 400px;
-      text-align: center;
-  }
-  .welcomeAr2{
-      padding-top: 20px;
-  }
-  .welcomeAr2Pic img {
-      border-radius: 125px;
-      height: 250px;
-      width: 250px;
-  }
-  .welcomeA2Item p {
-      width: 360px;
-      padding: 10px;
-      margin: 5px;
-  }
-  .welcomeA2Item h3 {
-      font-size: 30px;
-      font-weight: 600;
-      padding-top: 10px;
-  }
-  .welcomeAr3 {
-      background-color: var(--main-color3);
-      display: grid;
-      width: 400px;
-      text-align: center;
-      padding-top: 10px;
-  }
-  .welcomeAr3 p {
-      width: 360px;
-      padding: 1%;
-      margin: 1%;
-  }
+  
   .starsFrontPage {
     margin-right: 3%;
   }
@@ -1313,8 +1235,6 @@ form input, form textarea {
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 15% 1fr 1fr;
-      width: 400px;
-      padding-top: 1%;
   }
   .footerContainer p{
       margin: 15px;
@@ -1651,84 +1571,7 @@ width: 200px;
 /* __________________________________________________min-width: 760px_________________________________________________________ */
 /* ___________________________________________________________________________________________________________________________ */
 
-@media screen and (min-width: 760px) {
-  /* --------------------------------------------------------------------------------------------------------------------------- */
-   /*----------------------------------------------------- Front Page ----------------------------------------------------------- */
-   .build{
-      /* display: grid;
-      grid-template-rows: repeat(3, 1fr);
-      grid-template-columns: 1fr; */
-      width: 775px;
-      height: 1275px;
-  }
-  .welcomeAr1 {
-      display: grid;
-      width: 775px;
-      grid-row-start: 0;
-      grid-row-end: 1;    
-  }
-  .welcomeA1Item {
-      background-color: var(--main-color);
-      text-align: center;
-  }
-  .welcomeA1Item p {
-      width: 735px;
-      padding: 10px;
-      margin: 5px;
-  }
-  .welcomeAr2 {
-      background-color: var(--main-color2);
-      display: grid;
-      width: 775px;
-      text-align: center;
-  }
-  .welcomeA2Item p {
-      width: 735px;
-      padding: 10px;
-      margin: 5px;
-  }
-  .welcomeA2Item h3 {
-      font-size: 30px;
-      font-weight: 600;
-      padding-top: 10px;
-  }
-  .welcomeAr3 {
-      background-color: var(--main-color3);
-      display: grid;
-      width: 775px;
-      text-align: center;
-      padding-top: 10px;
-  }
-  .welcomeAr3 p {
-      width: 735px;
-      padding: 1%;
-      margin: 1%;
-  }
-  /* --------------------------------------------------------------------------------------------------------------------------- */
-  /* ---------------------------------------------------- Footer --------------------------------------------------------------- */
-  .footerContainer {
-      background-color: var(--footer-color);
-      width: 775px;
-      padding: 10px;
-      color: white;
-      text-align: center;
-  }
-  .footerContainer p{
-      margin: 10px;
-  }
-  .footerL{
-      width: 735px;
-      padding-top: 40px;
-  }
-  .footerM {
-      width: 735px;
-      padding: 20px;
-  }
-  .iFooterContainer{
-    width: 735px;
-    margin-top: 25.5%;
-    }
-  }
+
   
   /* ___________________________________________________________________________________________________________________________ */
   /* __________________________________________________min-width: 1020px_________________________________________________________ */
