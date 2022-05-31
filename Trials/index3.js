@@ -32,6 +32,19 @@ fizzbuzz(30);
 
 // circuitPower(480, 20) ➞ 9600
 
-fucntion answer(voltage, current) {
+function answer(voltage, current) {
     return voltage * current
 }
+
+// Given an n-sided regular polygon n, return the total sum of internal angles (in degrees).
+
+// Examples
+// sumPolygon(3) ➞ 180
+
+// sumPolygon(4) ➞ 360
+
+// sumPolygon(6) ➞ 720
+
+function myFunction(a) {
+    return (a - 2) * 180;
+    }
