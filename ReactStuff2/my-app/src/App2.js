@@ -12,6 +12,8 @@ function PracticePage(){
                 <li>Mars is the second smallest planet in the solar system after Mercury </li>
                 <li>Mars has 2 moons called Deimos and Phobos</li>
             </ul>
+            <h1>Value</h1>
+            <
         </div>
     );
 }

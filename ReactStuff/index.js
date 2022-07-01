@@ -36,3 +36,57 @@ const element = <h1 className="header">Hero has unlocked JSX</h1>
 
 // JSX
 ReactDOM.render(element, document.querySelector("#root3"))
+
+// To render multiple things would need to be wrapped in a parent 
+
+ReactDOM.render(
+    <div>
+        <h1 className = "header2">This is the section for hero's party</h1>
+        <p>Erik</p>
+        <p>8th mystery player</p>
+        <p>Serena</p>
+        </div>,
+        document.querySelector("#root4")
+)
+
+// Above can be set as follow
+
+const heroSection = (
+<div>
+    <h1 className = "header2">This is the section for hero's party</h1>
+    <p>Erik</p>
+    <p>8th mystery player</p>
+    <p>Serena</p>
+</div>
+)
+
+ReactDOM.render(
+    heroSection, document.querySelector("#root5")
+)
+
+/* 
+Challenge: 
+
+Create a navbar in JSX:
+    - Use the semantic `nav` element as the parent wrapper
+    - Have an h1 element with the brand name of your "website"
+    - Insert an unordered list for the other nav elements
+        - Inside the `ul`, have three `li`s for "Pricing",
+        "About", and "Contact"
+    - Don't worry about styling yet - it'll just be plain-looking HTML for now
+*/
+
+const navBar = (
+    <nav>
+        <h1>Anemonia</h1>
+        <ul>
+            <li>Pricing</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+)
+
+ReactDOM.render(
+    navBar, document.querySelector("#root6")
+)
