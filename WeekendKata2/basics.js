@@ -73,3 +73,8 @@ function isArray(input){
   return false;
 }
 
+Write a JavaScript function to clone an array.
+
+ let arrayC = function(arr1) {
+  return arr1.slice(0);
+ }
