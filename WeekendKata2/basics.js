@@ -78,3 +78,14 @@ Write a JavaScript function to clone an array.
  let arrayC = function(arr1) {
   return arr1.slice(0);
  }
+
+ Write a JavaScript function to get the last element of an array. Passing a parameter 'n' will return the last 'n' elements of the array.
+
+ let last = function(arr, n) {
+  if (arr == null) 
+    return void 0;
+  if (n == null)
+  return arr[arr.length - 1];
+  return arr.slice(Math.max(arr.length - n, 0))
+ }
+
