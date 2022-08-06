@@ -89,3 +89,14 @@ Write a JavaScript function to clone an array.
   return arr.slice(Math.max(arr.length - n, 0))
  }
 
+ Write a simple JavaScript program to join all elements of the following array into a string.
+
+ Expected Output:
+"Red,Green,White,Black"
+"Red,Green,White,Black"
+"Red+Green+White+Black"
+
+newColor = ["Red", "Green", "White", "Black"];
+console.log(newColor.toString());
+console.log(newColor.join());
+console.log(newColor.join('+'));
