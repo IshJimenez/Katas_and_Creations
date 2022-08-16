@@ -125,3 +125,11 @@ function myFunction(a, b) {
 function myFunction (a, b){
 return a.filter(x => x !== b)
 }
+
+// Write a function that takes an array (a) as argument
+// Return the number of elements in a
+
+function myFunction(a) {
+   
+  return a.length;
+}
