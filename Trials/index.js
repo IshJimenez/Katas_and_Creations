@@ -104,3 +104,12 @@ function myFUnction(a){
 function myFunction (str){
 return  str.slice(-3);
 }
+
+
+// Write a function that takes a string as argument
+// Create an ojbect that has a proeprty with key 'key' and a value equal to the string
+// Return the object 
+
+function myFunction(a) {
+    return { key : a };
+ }
