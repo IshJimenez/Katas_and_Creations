@@ -122,3 +122,17 @@ function myFunction(a) {
    
     return {[a]:b}
  }
+
+ // Write a function that takes two arrays (a and b) as arguments
+ // Create an object that has properties with keys 'a' and corresponding values 'b'
+ // Return the object
+
+ function myFunction(a,b) {
+    let app = {}
+    let index = 0;
+    for(let i of a){
+        app[i] = b[index]
+        index++
+    }
+    return app
+ }
