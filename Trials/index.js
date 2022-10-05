@@ -144,3 +144,16 @@ function myFunction(a) {
  function myFunction(obj, key) {
     return obj[key]
   }
+
+// Write a function that takes an object an object as argunebt
+// Somehow the properties and kets of the object got mixed up
+// Swap the JS object's key with its values and return the resulting object
+
+function myFunction(obj) {
+    let temo = {}
+    for (let i in obj){
+     tenmo[obj[i]]=i
+    }
+    // console.log(temo)
+    return temo
+}
