@@ -152,8 +152,19 @@ function myFunction(a) {
 function myFunction(obj) {
     let temo = {}
     for (let i in obj){
-     tenmo[obj[i]]=i
+     temo[obj[i]]=i
     }
     // console.log(temo)
     return temo
+}
+
+// Write a function that takes an obect (a) as argument
+// Return the sum of al object values 
+
+function myFunctionSum(a) {
+    let endValue = 0;
+    for(let i in a ) {
+        endValue+=a[i]
+    }
+    return endValue
 }
