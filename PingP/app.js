@@ -53,7 +53,7 @@ class Court {
     get bounds() {
         return {
             upper: gameSettings.courtMargY + gameSettings.wallSize,
-            lower: this._canvas.height - (gameSettings.courtMagin + gameSettings.wallSize),
+            lower: this._canvas.height - (gameSettings.courtMargY + gameSettings.wallSize),
             left: 0,
             right: this._canvas.width
         }
@@ -82,8 +82,24 @@ class Paddle {
         this._startPosX = posX;
         this._startPosY = posY;
     }
+    static get speed() {return 150;}
+
+    get collisionBox() {
+        return new Rectangle(this.posX, this.posY, this.width, this.height);
+    }
+    draw(canvas){
+        
+    }
+    reset() {
+        this.posX = this._startPosX;
+        this.posY = this._startPosY;
+    }
 
 } 
+
+class Paddle {
+    constructor(posX, posY, wid)
+}
 class Rectangle {
     constructor(x, y, wit, heit) {
         this.x = x;
