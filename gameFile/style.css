@@ -1,3 +1,16 @@
 #body {
     background-color: silver;
+    text-align: center;
+}
+#title {
+    margin-top: 80px;
+}
+#buttonDiv {
+    display: grid;
+    justify-content: center;
+   grid-gap: 20px;
+    
+}
+#Rock, #Kami, #Tijeras {
+    width: 80px;
 }

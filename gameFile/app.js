@@ -13,7 +13,7 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
     getResult()
 }))
 function generateEnenmyChoice(){
-    const randomNumber = Math.floor(Math.random() * 3 ) + 1
+    const randomNumber = Math.floor(Math.random() * possibleChoices.length ) + 1
     
     if (randomNumber === 1) {
         enemeyChoice = 'Rock'
@@ -28,7 +28,7 @@ function generateEnenmyChoice(){
 }
 function getResult(){
     if (enemeyChoice === youtChoice){
-        result = "TIE"
+        result = "TIE Try Again To Beat The Machine"
     }
     if (enemeyChoice === 'Rock' && youtChoice === 'Kami'){
         result = "YOU ARE A WINNER"
