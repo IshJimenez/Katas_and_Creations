@@ -1,6 +1,14 @@
 #body {
-    background-color: silver;
+    background-color: #0C192C;
     text-align: center;
+    min-height: 100vh;
+    color: white;
+}
+.bodyDiv {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 #title {
     margin-top: 80px;
@@ -13,4 +21,36 @@
 }
 #Rock, #Kami, #Tijeras {
     width: 80px;
+    background-color: #32CDCB;
+}
+.bubbles {
+    position: relative;
+    display: flex;
+}
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: orange;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px rgb(224, 162, 17),
+    0 0 50px orange,
+    0 0 150px orange;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--1));
+}
+.bubbles span:nth-child(even) {
+    background: #CB32CD;
+    box-shadow: 0 0 0 10px rgb(192, 51, 214),
+    0 0 50px #CB32CD,
+    0 0 150px #CB32CD;
+}
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0)
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
 }

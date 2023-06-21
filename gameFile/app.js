@@ -40,7 +40,7 @@ function getResult(){
         result = "YOU WON"
     }
     if (enemeyChoice === 'Kami' && youtChoice === 'Rock'){
-        result = "THR MACHINE HAS WON"
+        result = "THE MACHINE HAS WON"
     }
     if (enemeyChoice === 'Tijeras' && youtChoice === 'Kami'){
         result = "YOU LOSE REALLY WOW"
