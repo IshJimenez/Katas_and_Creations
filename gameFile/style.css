@@ -3,6 +3,8 @@
     text-align: center;
     min-height: 100vh;
     color: white;
+    letter-spacing: 5px;
+    font-family: 'Roboto', sans-serif;
 }
 .bodyDiv {
     position: relative;
@@ -11,17 +13,23 @@
     overflow: hidden;
 }
 #title {
-    margin-top: 80px;
+    margin-top: 10px;
+}
+#mainDiv {
+    position:  sticky;
 }
 #buttonDiv {
     display: grid;
     justify-content: center;
    grid-gap: 20px;
+   
     
 }
 #Rock, #Kami, #Tijeras {
+    height: 80px;
     width: 80px;
     background-color: #32CDCB;
+    border-radius: 50%;
 }
 .bubbles {
     position: relative;
