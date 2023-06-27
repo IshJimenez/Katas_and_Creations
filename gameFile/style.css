@@ -1,10 +1,20 @@
+:root {
+    --colGren: #CBEB3F;
+    --colPur1: #BC5FEB;
+    --colPur2: #9d19e9;
+    --colOrg1: 
+}
+
 #body {
     background-color: #0C192C;
     text-align: center;
     min-height: 100vh;
     color: white;
-    letter-spacing: 5px;
+    letter-spacing: 7px;
     font-family: 'Roboto', sans-serif;
+}
+#body h1 {
+    color: var(--colGren);
 }
 .bodyDiv {
     position: relative;
@@ -18,6 +28,24 @@
 #mainDiv {
     position:  sticky;
 }
+.greenTxt {
+    color:  var(--colGren);
+}
+.whitTxt {
+    color:white;
+}
+#yourChoice {
+    color: var(--colPur1);
+    font-weight: bold;
+}
+#enemyChoice {
+    color: white;
+    font-weight: bold;
+}
+#result {
+    color: white;
+    font-weight: bold;
+}
 #buttonDiv {
     display: grid;
     justify-content: center;
@@ -25,11 +53,19 @@
    
     
 }
-#Rock, #Kami, #Tijeras {
+#ROCK, #KAMI, #TIJERAS {
     height: 80px;
     width: 80px;
-    background-color: #32CDCB;
+    background-color: var(--colGren);
     border-radius: 50%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+}
+#ROCK:hover, #KAMI:hover, #TIJERAS:hover {
+    background-color: var(--colPur1);
+    color: white;
 }
 .bubbles {
     position: relative;
