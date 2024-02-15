@@ -2,11 +2,14 @@
     --colGren: #CBEB3F;
     --colPur1: #BC5FEB;
     --colPur2: #9d19e9;
-    --colOrg1: 
+    --colPur3: #9d0ff0;
+    --colOrg1: #EB901D;
+    --colOrg2: #f08b0f;
+    --backCol: #0D192D;
 }
 
 #body {
-    background-color: #0C192C;
+    background-color: var(--backCol);
     text-align: center;
     min-height: 100vh;
     color: white;
@@ -23,7 +26,8 @@
     overflow: hidden;
 }
 #title {
-    margin-top: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 #mainDiv {
     position:  sticky;
@@ -75,20 +79,20 @@
     position: relative;
     width: 30px;
     height: 30px;
-    background: orange;
+    background: var(--colOrg1);
     margin: 0 4px;
     border-radius: 50%;
-    box-shadow: 0 0 0 10px rgb(224, 162, 17),
-    0 0 50px orange,
-    0 0 150px orange;
+    box-shadow: 0 0 0 10px var(--colOrg2),
+    0 0 50px var(--colOrg1),
+    0 0 150px var(--colOrg1);
     animation: animate 15s linear infinite;
     animation-duration: calc(125s / var(--1));
 }
 .bubbles span:nth-child(even) {
-    background: #CB32CD;
-    box-shadow: 0 0 0 10px rgb(192, 51, 214),
-    0 0 50px #CB32CD,
-    0 0 150px #CB32CD;
+    background: var(--colPur2);
+    box-shadow: 0 0 0 10px var(--colPur3),
+    0 0 50px var(--colPur2),
+    0 0 150px var(--colPur2);
 }
 @keyframes animate {
     0% {

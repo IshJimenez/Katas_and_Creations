@@ -34,13 +34,13 @@ function getResult(){
         result = "You Won Wow Think You're So Cool But Can You Win Again"
     }
     if (enemeyChoice === 'ROCK' && youtChoice === 'TIJERAS'){
-        result = "Dam You Got Beat Bad Sorry Not Sorry"
+        result = "Dam You Got Beat Sorry Not Sorry"
     }
     if (enemeyChoice === 'KAMI' && youtChoice === 'TIJERAS'){
         result = "You Won Bet You Cheated Though So"
     }
     if (enemeyChoice === 'KAMI' && youtChoice === 'ROCK'){
-        result = "I Have Won And You Have Not HaHaHa Loserrr"
+        result = "I Have Won And You Have Not HaHaHa Loser"
     }
     if (enemeyChoice === 'TIJERAS' && youtChoice === 'KAMI'){
         result = "You LOST You LOSER Yeah I Won In Your Face"
